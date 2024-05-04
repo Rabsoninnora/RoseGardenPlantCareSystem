@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1411</width>
-    <height>707</height>
+    <height>734</height>
    </rect>
   </property>
   <property name="font">
@@ -157,6 +157,19 @@ background-image: url(:/images/home1.jpeg);</string>
      <width>201</width>
      <height>51</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Copyright_line">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>680</y>
+     <width>611</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
    </property>
   </widget>
  </widget>
