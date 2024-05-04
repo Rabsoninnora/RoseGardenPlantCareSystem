@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewPlants</class>
+ <widget class="QDialog" name="ViewPlants">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>739</width>
+    <height>454</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>The Rose Garden Nursery  System 1.0</string>
+  </property>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
