@@ -1,6 +1,7 @@
 #include "mainwindowplantcare.h"
 #include "./ui_mainwindowplantcare.h"
 #include <QMessageBox>
+#include<QLineEdit>
 
 
 MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
@@ -31,7 +32,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
     {
         QMessageBox::information(this, "Welcome","Login is successful!");
         //hide first window
-          hide();
+        //  hide();
          //creating a constructor for second dialog object with this class
          secDialog =new SecDialog(this);
         //calling secDialog object

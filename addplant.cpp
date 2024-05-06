@@ -7,6 +7,8 @@
 #include <QVector> // for arrays in the system code
 #include <QQueue> // Queue data structures
 #include <QPixmap>
+#include <QLabel>
+#include<QLineEdit>
 
 AddPlant::AddPlant(QWidget *parent)
     : QDialog(parent)
@@ -23,27 +25,49 @@ AddPlant::~AddPlant()
 //Read and process Image
 void AddPlant::on_btnBrowse_clicked()
 {
-  QString file_name = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::homePath(), tr("Images (*.png *.xpm *.jpg)"));
+    QString file_name = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::homePath(), tr("Images (*.png *.xpm *.jpg)"));
 
-    if (!file_name.isEmpty()){
-     //open prompt and display Image
-        QMessageBox::information(this, "...", file_name);
+       //check if file_name is not empty
+    if(!file_name.isEmpty()){
+      //open prompt and display image
+        QMessageBox::information(this, "......", file_name);
         QImage img(file_name);
         QPixmap pix = QPixmap::fromImage(img);
 
-     //Get Image dimentions
-        int w = ui->load_Image->width();
-        int h = ui->load_Image->height();
-    //load Image onto the ui
-    //    ui->load_Image->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-   //Get Image width/height, create empty binary matrix
+        //get lable dimensions
+        int w = ui->load_image->width();
+        int h = ui->load_image->height();
+       //load image onto ui
+        ui->load_image->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
+
+       //get image width/height, create empty binary matrix
         unsigned int cols = img.width();
-        unsigned int rows = img.height();
+        unsigned int rows =img.height();
         unsigned int numBlackPixels = 0;
-        QVector <QVector<int>> imgArray(rows, QVector<int>(cols, 0));
+        //created empty Vector/ which is a two dimension array
+        QVector <QVector<int>> imgArray(rows,QVector<int>(cols, 0));
+
         //get pixel data, update matrix
+        for(unsigned int i = 0; i < rows; i++){
+            for(unsigned int j = 0; j < cols; j++){
+                //img.pixel(x,y) where x = cols, y=rows (coordinates)
+                QColor clrCurrent(img.pixel(j,i));
+                int r = clrCurrent.red();
+                int g = clrCurrent.green();
+                int b =clrCurrent.blue();
+                int a =clrCurrent.alpha();
+                //if black, assign 1 to array
+               //black: r = 0, g = 0, b = 0, a = 225
+                if(r+g+b < 20 && a > 240){
+                    imgArray[i][j] = 1;
+                    numBlackPixels+=1;
+                }
+
+            }
 
 
-  }
+        }
+
+    }
 }
 
