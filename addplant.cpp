@@ -62,11 +62,25 @@ void AddPlant::on_btnBrowse_clicked()
                     imgArray[i][j] = 1;
                     numBlackPixels+=1;
                 }
-
+            }
+        }
+       // Store image array to a file ()
+        QString filename ="Home/RoseGardenPlantCareSystem/Files/imgArray.txt";
+        QFile fileout(filename);
+        if(fileout.open(QFile::ReadWrite |QFile::Text)){
+            QTextStream out(&fileout);
+            //loop through two dimension array and add elements in the file
+            for(unsigned int i = 0; i < rows; i++){
+                for(unsigned int j = 0; j < cols; j++){
+                    out << imgArray[i][j];
+                }
+                //end line after each column, go to next row
+                   out<< "  " <<Qt::endl;
             }
 
-
         }
+        //update UI with information (lable text must be QString)
+       // ui->dms->setText(QString::fromStdString("W: " + std::));
 
     }
 }

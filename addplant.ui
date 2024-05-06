@@ -228,7 +228,7 @@
     <string>Image information</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="Dimesion_label">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -241,7 +241,7 @@
     <string>Dimension:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_10">
+  <widget class="QLabel" name="dms">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -254,7 +254,7 @@
     <string>W: 0 H: 0</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_11">
+  <widget class="QLabel" name="percentDarkLable">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -267,7 +267,7 @@
     <string>Occupancy %</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_12">
+  <widget class="QLabel" name="pDark">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -280,7 +280,7 @@
     <string>W: 0 H: 0</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_13">
+  <widget class="QLabel" name="numBlopsLable">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -293,7 +293,7 @@
     <string>No. of Blops:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_14">
+  <widget class="QLabel" name="nBlops">
    <property name="geometry">
     <rect>
      <x>130</x>
@@ -306,7 +306,7 @@
     <string> 0</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_15">
+  <widget class="QLabel" name="maxBlopAreaLable">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -319,7 +319,7 @@
     <string> Max Blop Area</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_16">
+  <widget class="QLabel" name="mBarea">
    <property name="geometry">
     <rect>
      <x>130</x>
