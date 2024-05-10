@@ -64,7 +64,7 @@ void AddPlant::on_btnBrowse_clicked()
                 }
             }
         }
-       // Store image array to a file ()
+       // Store image array to a file (optional)
         QString filename ="Home/RoseGardenPlantCareSystem/Files/imgArray.txt";
         QFile fileout(filename);
         if(fileout.open(QFile::ReadWrite |QFile::Text)){
@@ -80,7 +80,9 @@ void AddPlant::on_btnBrowse_clicked()
 
         }
         //update UI with information (lable text must be QString)
-       // ui->dms->setText(QString::fromStdString("W: " + std::));
+        ui->dms->setText(QString::fromStdString("W: " + std::to_string(cols) + " H: " + std::to_string(rows)));
+        float pD =((float)numBlackPixels/(float)(cols*rows))*100;
+        ui->pDark->setText(QString::fromStdString(std::to_string(pD)));
 
     }
 }

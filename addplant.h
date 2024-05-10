@@ -17,6 +17,10 @@ public:
 
 private slots:
     void on_btnBrowse_clicked();
+    //find image properties, returns an array (QVector)
+   // QVector<int> findProperties(QVector<QVector<int>> &imgArray, unsigned int &rows, unsigned int &cols);
+    //breadth first search, returns max blob area
+  //  int bfSearch(QVector);
 
 private:
     Ui::AddPlant *ui;

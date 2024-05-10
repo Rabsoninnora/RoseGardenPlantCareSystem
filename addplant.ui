@@ -52,7 +52,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Plant name</string>
+       <string>Genus</string>
       </property>
      </widget>
     </item>
@@ -68,7 +68,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Local name</string>
+       <string>Common name</string>
       </property>
      </widget>
     </item>
@@ -186,7 +186,7 @@
   <widget class="QPushButton" name="btnBrowse">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>380</x>
      <y>10</y>
      <width>121</width>
      <height>25</height>
@@ -212,10 +212,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_8">
+  <widget class="QLabel" name="image_information">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -246,7 +246,7 @@
     <rect>
      <x>130</x>
      <y>60</y>
-     <width>81</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -272,7 +272,7 @@
     <rect>
      <x>130</x>
      <y>100</y>
-     <width>81</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -298,7 +298,7 @@
     <rect>
      <x>130</x>
      <y>140</y>
-     <width>21</width>
+     <width>41</width>
      <height>31</height>
     </rect>
    </property>
@@ -324,7 +324,7 @@
     <rect>
      <x>130</x>
      <y>170</y>
-     <width>21</width>
+     <width>41</width>
      <height>31</height>
     </rect>
    </property>

@@ -31,6 +31,15 @@ background-image: url(:/images/home1.jpeg);</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(251, 251, 232);</string>
+   </property>
    <property name="text">
     <string>Add Plant</string>
    </property>
@@ -49,6 +58,15 @@ background-image: url(:/images/home1.jpeg);</string>
      <width>121</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(251, 251, 232);</string>
    </property>
    <property name="text">
     <string>View Species</string>
@@ -72,6 +90,10 @@ background-image: url(:/images/home1.jpeg);</string>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(251, 251, 232);</string>
+   </property>
    <property name="text">
     <string>Gardener Details</string>
    </property>
@@ -90,6 +112,10 @@ background-image: url(:/images/home1.jpeg);</string>
      <width>111</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(251, 251, 232);</string>
    </property>
    <property name="text">
     <string>Add Gardener</string>
@@ -110,6 +136,10 @@ background-image: url(:/images/home1.jpeg);</string>
      <height>61</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(251, 251, 232);</string>
+   </property>
    <property name="text">
     <string>Admin Panel</string>
    </property>
@@ -125,9 +155,18 @@ background-image: url(:/images/home1.jpeg);</string>
     <rect>
      <x>590</x>
      <y>270</y>
-     <width>91</width>
+     <width>101</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(251, 251, 232);</string>
    </property>
    <property name="text">
     <string>View Plants</string>
@@ -167,6 +206,9 @@ background-image: url(:/images/home1.jpeg);</string>
      <width>611</width>
      <height>25</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(251, 251, 232);</string>
    </property>
    <property name="text">
     <string>Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
