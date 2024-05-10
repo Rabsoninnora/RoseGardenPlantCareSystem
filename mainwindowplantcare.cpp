@@ -9,6 +9,8 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
     , ui(new Ui::MainWindowPlantCare)
 {
     ui->setupUi(this);
+    connect(ui->pushButton_login_3,SIGNAL(clicked()), this, SLOT(close()));
+
 
 
 
