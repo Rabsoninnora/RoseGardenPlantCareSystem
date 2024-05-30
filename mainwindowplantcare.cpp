@@ -9,7 +9,7 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
     , ui(new Ui::MainWindowPlantCare)
 {
     ui->setupUi(this);
-
+    //the cancel button on login ui
     connect(ui->pushButton_login_3, SIGNAL(clicked()),this, SLOT(close()));
 
 
