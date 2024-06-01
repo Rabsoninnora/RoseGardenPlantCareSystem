@@ -253,7 +253,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btnBrowse">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>410</x>
      <y>10</y>
      <width>121</width>
      <height>25</height>
@@ -275,9 +275,9 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QLabel" name="load_image">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>330</x>
      <y>50</y>
-     <width>331</width>
+     <width>271</width>
      <height>191</height>
     </rect>
    </property>
@@ -291,7 +291,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QLabel" name="image_information">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>90</x>
      <y>40</y>
      <width>151</width>
      <height>17</height>
@@ -307,7 +307,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QLabel" name="Dimesion_label">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>40</x>
      <y>60</y>
      <width>81</width>
      <height>31</height>
@@ -323,7 +323,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QLabel" name="dms">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>140</x>
      <y>60</y>
      <width>111</width>
      <height>31</height>
@@ -339,7 +339,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QLabel" name="percentDarkLable">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>40</x>
      <y>90</y>
      <width>101</width>
      <height>31</height>
@@ -355,7 +355,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QLabel" name="pDark">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>140</x>
      <y>100</y>
      <width>101</width>
      <height>31</height>
@@ -366,70 +366,6 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
     <string>W: 0 H: 0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="numBlopsLable">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>140</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>No. of Blops:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="nBlops">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>140</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string> 0</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="maxBlopAreaLable">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>170</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string> Max Blop Area</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="mBarea">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>170</y>
-     <width>41</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string> 0</string>
    </property>
   </widget>
  </widget>
