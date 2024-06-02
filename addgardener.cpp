@@ -16,6 +16,12 @@ AddGardener::~AddGardener()
 void AddGardener::on_btnSave_clicked()
 {
     QString EmployeeID = ui->txtEmployeeID->text();
+    QString NationalID = ui->txtNationalID->text();
+    QString Name = ui->txtName->text();
+    QString MiddleName = ui->txtMiddleName->text();
+    QString LastName = ui->txtLastName->text();
+    QString JobTitle = ui->txtJobTitle->text();
+    QString Description = ui->txtDescription->appendPlainText();
 
 }
 
