@@ -59,7 +59,7 @@
    </property>
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="Employee_ID">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -75,14 +75,14 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="txtEmployeeID">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="National_ID">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -98,14 +98,14 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="txtNationalID">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="Name">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -121,14 +121,14 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="txtName">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="Middle_Name">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -144,14 +144,14 @@
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="txtMiddleName">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="4" column="0">
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="Last_Name">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -167,14 +167,14 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="lineEdit_5">
+     <widget class="QLineEdit" name="txtLastName">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="5" column="0">
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="Job_Tible">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -190,14 +190,14 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLineEdit" name="lineEdit_7">
+     <widget class="QLineEdit" name="txtJobTitle">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="Description">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -208,12 +208,12 @@
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string> Descrition</string>
+       <string> Description</string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QPlainTextEdit" name="txtDescription">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>

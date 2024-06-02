@@ -38,7 +38,7 @@ void SecDialog::on_ViewPlants_clicked()
   ptrViewPlants->show();
 }
 
-//methos on_AddPlant_clicked
+//method on_AddPlant_clicked
 void SecDialog::on_AddPlant_clicked()
 {
     ptrAddPlant->show();
