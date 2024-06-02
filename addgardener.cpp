@@ -12,3 +12,10 @@ AddGardener::~AddGardener()
 {
     delete ui;
 }
+
+void AddGardener::on_btnSave_clicked()
+{
+    QString EmployeeID = ui->txtEmployeeID->text();
+
+}
+

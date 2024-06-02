@@ -15,6 +15,9 @@ public:
     explicit AddGardener(QWidget *parent = nullptr);
     ~AddGardener();
 
+private slots:
+    void on_btnSave_clicked();
+
 private:
     Ui::AddGardener *ui;
 };
