@@ -21,7 +21,22 @@ void AddGardener::on_btnSave_clicked()
     QString MiddleName = ui->txtMiddleName->text();
     QString LastName = ui->txtLastName->text();
     QString JobTitle = ui->txtJobTitle->text();
-    QString Description = ui->txtDescription->appendPlainText();
+    QString Description = ui->txtDescription->toPlainText();
+
+    qDebug() << "EmployeeID :"
+             <<EmployeeID
+             << "NationalID :"
+             <<NationalID
+             << "Name :"
+             <<Name
+             << "MiddleName :"
+             <<MiddleName
+             <<"LastName :"
+             <<LastName
+             <<"JobTile :"
+             <<JobTitle
+             <<"Description :"
+             <<Description;
 
 }
 
