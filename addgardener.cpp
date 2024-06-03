@@ -1,5 +1,6 @@
 #include "addgardener.h"
 #include "ui_addgardener.h"
+#include "databaseheader.h"
 
 AddGardener::AddGardener(QWidget *parent)
     : QDialog(parent)
@@ -41,6 +42,28 @@ void AddGardener::on_btnSave_clicked()
              <<Description;
 
     //I am able to get the information, but now it must be saved in the database
+    QSqlDatabase database = QSqlDatabase::addDatabase("SQLITE");
+    database.setDatabaseName("Home/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
+    //Check if database file exists
+    if(QFile::exists("Home/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
+    {
+        qDebug() <<" Databse File Exists ";
+
+    } else {
+        qDebug() <<" Database File Does not Exists";
+        return;
+    }
+   // See if the database can be opened
+    if(!database.open())
+    {
+        qDebug() << "Error: unable to open Database! ";
+        return;
+    } else
+    {
+        qDebug() << "Database opened successfuly ..!";
+    }
 }
+
+QSqlQuery query;
 
