@@ -23,6 +23,8 @@ void AddGardener::on_btnSave_clicked()
     QString JobTitle = ui->txtJobTitle->text();
     QString Description = ui->txtDescription->toPlainText();
 
+
+//Check if the information can be passed // if I can get the information
     qDebug() << "EmployeeID :"
              <<EmployeeID
              << "NationalID :"
@@ -37,6 +39,8 @@ void AddGardener::on_btnSave_clicked()
              <<JobTitle
              <<"Description :"
              <<Description;
+
+    //I am able to get the information, but now it must be saved in the database
 
 }
 
