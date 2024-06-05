@@ -141,7 +141,7 @@ void AddPlant::on_btnSave_clicked()
 
     //posting data in the database in the addPlant Table/Relation
     QSqlQuery query(database);
-    query.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +")");
+    query.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +"')");
     query.exec();
     qDebug() <<" Last error : "<< query.lastError().text();
     database.close();
