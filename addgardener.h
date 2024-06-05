@@ -1,5 +1,6 @@
 #ifndef ADDGARDENER_H
 #define ADDGARDENER_H
+#include "databaseheader.h"
 
 #include <QDialog>
 
