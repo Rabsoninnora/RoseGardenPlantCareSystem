@@ -16,43 +16,11 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);</string>
   </property>
-  <widget class="QLineEdit" name="load_Image">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>40</y>
-     <width>271</width>
-     <height>181</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnBrowse">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>-30</y>
-     <width>121</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>Browse.......</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>230</y>
+     <y>250</y>
      <width>541</width>
      <height>345</height>
     </rect>
@@ -225,7 +193,7 @@
    <property name="geometry">
     <rect>
      <x>560</x>
-     <y>580</y>
+     <y>600</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -242,7 +210,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
    <property name="geometry">
     <rect>
      <x>370</x>
-     <y>580</y>
+     <y>600</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -275,6 +243,102 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
     <string>Browse.......</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image_information">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>30</y>
+     <width>151</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Image information</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Dimesion_label">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>60</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Dimension :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="percentDarkLable">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Occupancy %  :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dms">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>60</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>W: 0 H: 0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pDark">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>100</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>W: 0 H: 0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="load_image">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>40</y>
+     <width>271</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
