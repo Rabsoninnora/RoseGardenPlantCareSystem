@@ -22,6 +22,8 @@ private slots:
     //breadth first search, returns max blob area
    // int bfSearch(QVector <int>&posn, QVector<QVector<int>> &explored, unsigned int &rows, unsigned int &cols, QVector <QVector<int>> &imgArray);
 
+    void on_btnSave_clicked();
+
 private:
     Ui::AddPlant *ui;
 };

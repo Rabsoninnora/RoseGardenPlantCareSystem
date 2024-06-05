@@ -42,7 +42,7 @@ void AddGardener::on_btnSave_clicked()
              <<Description;
 
     //I am able to get the information, but now it must be saved in the database
-    QSqlDatabase database = QSqlDatabase::addDatabase("SQLITE");
+    QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
     //Check if database file exists
@@ -63,7 +63,7 @@ void AddGardener::on_btnSave_clicked()
     {
         qDebug() << "Database opened successfuly ..!";
     }
-
+/// Posting data in the database, the addgardener table/relation
     QSqlQuery query(database);
     query.prepare("insert into addgardener(Employee_id, National_id, Name, Middle_name, Last_name, Job_title, Description) values('"+ Employee_id +"', '"+ National_id +"', '"+ Name +"','"+ Middle_name +"','"+ Last_name +"','"+ Job_title +"', '"+ Description +"')");
     query.exec();

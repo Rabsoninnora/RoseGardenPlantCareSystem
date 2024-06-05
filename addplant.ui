@@ -31,7 +31,7 @@
    </property>
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="0">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="ScientificName">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -47,14 +47,14 @@
      </widget>
     </item>
     <item row="0" column="1">
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="txtScientificName">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="Genus">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -70,14 +70,14 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="txtGenus">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="CommonName">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -93,14 +93,14 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="txtCommonName">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="Species">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -116,14 +116,14 @@
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="txtSpecies">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="4" column="0">
-     <widget class="QLabel" name="label_6">
+     <widget class="QLabel" name="Description">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -139,7 +139,7 @@
      </widget>
     </item>
     <item row="5" column="0">
-     <widget class="QLabel" name="label_7">
+     <widget class="QLabel" name="Status">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -155,7 +155,7 @@
      </widget>
     </item>
     <item row="6" column="0">
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="PriceZMW">
       <property name="font">
        <font>
         <pointsize>14</pointsize>
@@ -171,24 +171,39 @@
      </widget>
     </item>
     <item row="6" column="1">
-     <widget class="QLineEdit" name="lineEdit_5">
+     <widget class="QLineEdit" name="txtPrice">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QPlainTextEdit" name="txtDescription">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="cmbStatus">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
+      <item>
+       <property name="text">
+        <string>Available</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>On Nursery</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Out of Stock</string>
+       </property>
+      </item>
      </widget>
     </item>
     <item row="7" column="0">
@@ -208,7 +223,7 @@
      </widget>
     </item>
     <item row="7" column="1">
-     <widget class="QLineEdit" name="lineEdit_6">
+     <widget class="QLineEdit" name="txtQuantity">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>

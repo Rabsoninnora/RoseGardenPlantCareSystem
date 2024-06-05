@@ -79,3 +79,30 @@ void AddPlant::on_btnBrowse_clicked()
 
 
 
+
+void AddPlant::on_btnSave_clicked()
+{
+    //Data received from the AddPlant form, passed to be posted in the database
+    QString scientific_name = ui->txtScientificName->text();
+    QString Genus = ui->txtGenus->text();
+    QString common_name = ui->txtCommonName->text();
+    QString species = ui->txtSpecies->text();
+    QString description = ui->txtDescription->toPlainText();
+
+
+    //check if the data can be passed/ if I can get this data
+    qDebug()<<"scientific_name"
+            <<scientific_name
+            <<"Genus"
+            <<Genus
+            <<"common_name"
+            <<common_name
+            <<"species"
+            <<species
+            <<"description"
+            <<description;
+
+
+
+}
+
