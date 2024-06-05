@@ -54,6 +54,9 @@ void AddGardener::on_btnSave_clicked()
         qDebug() <<" Database File Does not Exists";
         return;
     }
+
+
+
    // See if the database can be opened
     if(!database.open())
     {
@@ -63,6 +66,8 @@ void AddGardener::on_btnSave_clicked()
     {
         qDebug() << "Database opened successfuly ..!";
     }
+
+
 /// Posting data in the database, the addgardener table/relation
     QSqlQuery query(database);
     query.prepare("insert into addgardener(Employee_id, National_id, Name, Middle_name, Last_name, Job_title, Description) values('"+ Employee_id +"', '"+ National_id +"', '"+ Name +"','"+ Middle_name +"','"+ Last_name +"','"+ Job_title +"', '"+ Description +"')");

@@ -88,6 +88,9 @@ void AddPlant::on_btnSave_clicked()
     QString common_name = ui->txtCommonName->text();
     QString species = ui->txtSpecies->text();
     QString description = ui->txtDescription->toPlainText();
+    QString status = ui->cmbStatus->currentText();
+    QString price = ui->txtPrice->text();
+    QString quantity = ui->txtPrice->text();
 
 
     //check if the data can be passed/ if I can get this data
@@ -100,9 +103,48 @@ void AddPlant::on_btnSave_clicked()
             <<"species"
             <<species
             <<"description"
-            <<description;
+            <<description
+            <<"status"
+            <<status
+            <<"price"
+            <<price
+            <<"quantity"
+            <<quantity;
+    //The data can be passed but now it must be posted inn the database
+    QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
+    database.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
 
+    //checking if the database file exist
+    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
+    {
+        qDebug()<< "Database File Exists ! ";
+    }   else
+    {
+        qDebug() << "Database File Does Not Exists !";
+        return;
+    }
+
+
+
+    //checking if the database can be opened
+
+    if(!database.open())
+    {
+        qDebug() << "Error: Database Not Opened !";
+        return;
+    } else
+    {
+        qDebug() << "Database Succesfuly Opened !";
+    }
+
+
+    //posting data in the database in the addPlant Table/Relation
+    QSqlQuery query(database);
+    query.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +")");
+    query.exec();
+    qDebug() <<" Last error : "<< query.lastError().text();
+    database.close();
 
 }
 

@@ -1,5 +1,6 @@
 #ifndef ADDPLANT_H
 #define ADDPLANT_H
+#include"databaseheader.h"
 
 #include <QDialog>
 
@@ -11,10 +12,13 @@ class AddPlant : public QDialog
 {
     Q_OBJECT
 
+    //the widget ui is public
 public:
     explicit AddPlant(QWidget *parent = nullptr);
     ~AddPlant();
 
+
+//the fuctionality is private but the ui is public
 private slots:
     void on_btnBrowse_clicked();
     //find image properties, returns an array (QVector)
