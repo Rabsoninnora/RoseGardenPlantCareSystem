@@ -25,6 +25,7 @@ AddGardener::~AddGardener()
 
 void AddGardener::on_btnSave_clicked()
 {
+    //pass data to be acceseable for posting to the database
     QString Employee_id = ui->txtEmployeeID->text();
     QString National_id = ui->txtNationalID->text();
     QString Name = ui->txtName->text();
@@ -75,6 +76,7 @@ void AddGardener::on_btnSave_clicked()
     {
         qDebug() << "Database opened successfuly ..!";
     }
+    //
 
 
 /// Posting data in the database, the addgardener table/relation

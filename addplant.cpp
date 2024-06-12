@@ -15,6 +15,20 @@ AddPlant::AddPlant(QWidget *parent)
     , ui(new Ui::AddPlant)
 {
     ui->setupUi(this);
+    qDebug()<<QSqlDatabase::drivers(); //Check the List of Available SQL Drivers
+     QSqlDatabase db_RoseGarden = QSqlDatabase::addDatabase("QMYSQL");
+     db_RoseGarden.setHostName("127.0.0.1");
+     db_RoseGarden.setPort(3306);
+     db_RoseGarden.setUserName("rabson");
+     db_RoseGarden.setPassword("password");
+     db_RoseGarden.setDatabaseName("db_RoseGarden");
+//Check if the Database is connected
+     if(db_RoseGarden.open()){
+         qDebug() << " QMYSQL Database is connected successfuly!";
+     } else
+     {
+         qDebug() << "Database is not connected";
+     }
 }
 
 AddPlant::~AddPlant()
@@ -91,7 +105,7 @@ void AddPlant::on_btnSave_clicked()
     QString status = ui->cmbStatus->currentText();
     QString price = ui->txtPrice->text();
     QString quantity = ui->txtPrice->text();
-
+    qDebug() << " Testing for Second Function";
 
     //check if the data can be passed/ if I can get this data
     qDebug()<<"scientific_name"
@@ -148,3 +162,4 @@ void AddPlant::on_btnSave_clicked()
 
 }
 
+///
