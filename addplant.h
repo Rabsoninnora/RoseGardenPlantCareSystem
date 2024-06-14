@@ -30,6 +30,10 @@ private slots:
 
 private:
     Ui::AddPlant *ui;
+    QSqlDatabase db_RoseGarden;
+    QByteArray FinalDataToSave;
+    QFileInfo FileInfo;
+    QString ImageName;
 };
 
 #endif // ADDPLANT_H

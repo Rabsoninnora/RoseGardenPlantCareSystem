@@ -85,6 +85,7 @@ void AddGardener::on_btnSave_clicked()
     query.exec();
     qDebug() <<" Last error : "<< query.lastError().text();
     database.close();
+     qDebug() << "Databse closed  successfuly, Happy coding !";
 }
 
 

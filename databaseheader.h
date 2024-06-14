@@ -9,6 +9,10 @@
 #include<QSqlResult>
 #include<QDebug>
 #include<QFile>
+#include<QBuffer>
+#include<QByteArray>
+#include<QFileInfo>
+
 
 
 #include <QtSql/QSqlError>
