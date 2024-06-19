@@ -15,20 +15,7 @@ AddPlant::AddPlant(QWidget *parent)
     , ui(new Ui::AddPlant)
 {
     ui->setupUi(this);
-    qDebug()<<QSqlDatabase::drivers(); //Check the List of Available SQL Drivers
-     QSqlDatabase db_RoseGarden = QSqlDatabase::addDatabase("QMYSQL");
-     db_RoseGarden.setHostName("127.0.0.1");
-     db_RoseGarden.setPort(3306);
-     db_RoseGarden.setUserName("rabson");
-     db_RoseGarden.setPassword("password");
-     db_RoseGarden.setDatabaseName("db_RoseGarden");
-//Check if the Database is connected
-     if(db_RoseGarden.open()){
-         qDebug() << " QMYSQL Database is connected successfuly!";
-     } else
-     {
-         qDebug() << "Database is not connected";
-     }
+
 }
 
 AddPlant::~AddPlant()
@@ -40,17 +27,6 @@ AddPlant::~AddPlant()
 void AddPlant::on_btnBrowse_clicked()
 {
     QString file_name = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::homePath(), tr("Images (*.png *.xpm *.jpg)"));
-    QPixmap Image(file_name);
-    QBuffer ImageBufferData;
-    if(ImageBufferData.open(QIODevice::ReadWrite)){
-        Image.save(&ImageBufferData, "jpg");
-        Image.save(&ImageBufferData, "png");
-        Image.save(&ImageBufferData, "xpm");
-    }
-
-    QByteArray FinalDataToSave = ImageBufferData.buffer().toBase64();
-    QFileInfo FileInfo(file_name);
-    QString ImageName = FileInfo.fileName();
 
        //check if file_name is not empty
     if(!file_name.isEmpty()){
@@ -65,38 +41,11 @@ void AddPlant::on_btnBrowse_clicked()
        //load image onto ui
         ui->load_image->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
 
-       //get image width/height, create empty binary matrix
-        unsigned int cols = img.width();
-        unsigned int rows =img.height();
-        unsigned int numBlackPixels = 0;
-        //created empty Vector/ which is a two dimension array
-        QVector <QVector<int>> imgArray(rows,QVector<int>(cols, 0));
 
-        //get pixel data, update matrix
-        for(unsigned int i = 0; i < rows; i++){
-            for(unsigned int j = 0; j < cols; j++){
-                //img.pixel(x,y) where x = cols, y=rows (coordinates)
-                QColor clrCurrent(img.pixel(j,i));
-                int r = clrCurrent.red();
-                int g = clrCurrent.green();
-                int b =clrCurrent.blue();
-                int a =clrCurrent.alpha();
-                //if black, assign 1 to array
-               //black: r = 0, g = 0, b = 0, a = 225
-                if(r+g+b < 20 && a > 240){
-                    imgArray[i][j] = 1;
-                    numBlackPixels+=1;
-                }
-            }
-        }
-
-        //update ui with information(lable text must be QString)
-        ui->dms->setText(QString::fromStdString("W: " +std::to_string(cols) + "H: " +std::to_string(rows)));
-        float pD = ((float)numBlackPixels/(float)(cols*rows))*100;
-        ui->pDark->setText(QString::fromStdString(std::to_string(pD)));
 
 
     }
+
 
 }
 
@@ -137,21 +86,7 @@ void AddPlant::on_btnSave_clicked()
             <<"quantity"
             <<quantity;
     //The data can be passed but now it must be posted inn the database
-    /// Working with QMYSQL DATABASE
-    QSqlDatabase::database().transaction();
-    db_RoseGarden.open();
-    QSqlQuery QuerySaveData(db_RoseGarden);
-    QuerySaveData.prepare("INSERT INTO addplant(Image_Name,Image_Data,scientific_name,Genus,common_name,species,description,status,price,quantity) VALUES(:Image_Name,:Image_Data,:scientific_name,:Genus,:common_name,:species,:description,:status,:price,:quantity)");
-    QuerySaveData.bindValue(":Image_Name",ImageName);
-    QuerySaveData.bindValue(":Image_Data",FinalDataToSave);
-    QuerySaveData.exec();
-    db_RoseGarden.close();
-    QSqlDatabase::database().commit();
-
-
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /// ///////////////////////////////////////////////////////////////////////////////////////////////////////////
     QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
     database.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
@@ -186,8 +121,7 @@ void AddPlant::on_btnSave_clicked()
     query.exec();
     qDebug() <<" Last error : "<< query.lastError().text();
     database.close();
-    qDebug() << "Databse closed  successfuly, Happy coding !";
-
+    qDebug() << "Database closed  successfuly, Happy coding !";
 }
 
 ///

@@ -6,13 +6,13 @@
 
 
 
-QT_BEGIN_NAMESPACE
+QT_BEGIN_NAMESPACE //Main namespace class decraration
 namespace Ui {
 class MainWindowPlantCare;
 }
 QT_END_NAMESPACE
 
-
+// Main/Basse class of the Rose Garden Plant Care System
 class MainWindowPlantCare : public QMainWindow
 {
     Q_OBJECT
