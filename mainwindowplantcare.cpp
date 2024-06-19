@@ -32,7 +32,8 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
 
     if(username== "innora" && password == "4321") //this is the default user
     {
-        QMessageBox::information(this, "Welcome","Login is successful!");
+     QMessageBox::information(this, "Welcome","Login is successful!");
+     QMessageBox::information(this, "Hi Rabson"," I think you are the best!" );
         //hide first window
         //  hide();
          //creating a constructor for second dialog object with this class
@@ -40,11 +41,13 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
         //calling secDialog object
         secDialog->show();
 
+
     }
        else
          {
          QMessageBox::warning(this, "Sorry","Username or password is not correct!");
     }
+
 
 
 

@@ -92,52 +92,6 @@ void AddGardener::on_btnSave_clicked()
 
 void AddGardener::on_btnBrowse_2_clicked()
 {
-    QString file_name = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::homePath(), tr("Images (*.png *.xpm *.jpg)"));
 
-    //check if file_name is not empty
-    if(!file_name.isEmpty()){
-        //open prompt and display image
-        QMessageBox::information(this, "......", file_name);
-        QImage img(file_name);
-        QPixmap pix = QPixmap::fromImage(img);
-
-        //get lable dimensions
-        int w = ui->load_image->width();
-        int h = ui->load_image->height();
-        //load image onto ui
-        ui->load_image->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-
-        //get image width/height, create empty binary matrix
-        unsigned int cols = img.width();
-        unsigned int rows =img.height();
-        unsigned int numBlackPixels = 0;
-        //created empty Vector/ which is a two dimension array
-        QVector <QVector<int>> imgArray(rows,QVector<int>(cols, 0));
-
-        //get pixel data, update matrix
-        for(unsigned int i = 0; i < rows; i++){
-            for(unsigned int j = 0; j < cols; j++){
-                //img.pixel(x,y) where x = cols, y=rows (coordinates)
-                QColor clrCurrent(img.pixel(j,i));
-                int r = clrCurrent.red();
-                int g = clrCurrent.green();
-                int b =clrCurrent.blue();
-                int a =clrCurrent.alpha();
-                //if black, assign 1 to array
-                //black: r = 0, g = 0, b = 0, a = 225
-                if(r+g+b < 20 && a > 240){
-                    imgArray[i][j] = 1;
-                    numBlackPixels+=1;
-                }
-            }
-        }
-
-        //update ui with information(lable text must be QString)
-        ui->dms->setText(QString::fromStdString("W: " +std::to_string(cols) + "H: " +std::to_string(rows)));
-        float pD = ((float)numBlackPixels/(float)(cols*rows))*100;
-        ui->pDark->setText(QString::fromStdString(std::to_string(pD)));
-
-
-    }
 }
 
