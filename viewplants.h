@@ -1,5 +1,6 @@
 #ifndef VIEWPLANTS_H
 #define VIEWPLANTS_H
+#include "databaseheader.h"
 
 #include <QDialog>
 
@@ -14,6 +15,9 @@ class ViewPlants : public QDialog
 public:
     explicit ViewPlants(QWidget *parent = nullptr);
     ~ViewPlants();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
     Ui::ViewPlants *ui;
