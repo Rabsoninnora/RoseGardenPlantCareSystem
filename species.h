@@ -1,5 +1,6 @@
 #ifndef SPECIES_H
 #define SPECIES_H
+#include"databaseheader.h"
 
 #include <QDialog>
 
@@ -15,8 +16,12 @@ public:
     explicit Species(QWidget *parent = nullptr);
     ~Species();
 
+private slots:
+    void on_btnSearch_clicked();
+
 private:
     Ui::Species *ui;
+    QSqlQueryModel *model;
 };
 
 #endif // SPECIES_H

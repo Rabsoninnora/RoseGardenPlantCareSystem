@@ -23,10 +23,25 @@ void ViewPlants::on_pushButton_clicked()
     database.open();
     QSqlQuery query(database);
     query.prepare("SELECT * FROM addplant");
-    query.exec();
+
     if (query.exec())
     {
+             int RowNumber = 0;
+
+              ui->tableWidget->setRowCount(query.size());
         while(query.next()){
+
+
+            ui->tableWidget->setItem(RowNumber,0, new QTableWidgetItem(QString::number(query.value("ID").toInt())));
+            ui->tableWidget->setItem(RowNumber,1, new QTableWidgetItem(QString(query.value("scientific_name").toString())));
+            ui->tableWidget->setItem(RowNumber,2, new QTableWidgetItem(QString(query.value("Genus").toString())));
+            ui->tableWidget->setItem(RowNumber,3, new QTableWidgetItem(QString(query.value("common_name").toString())));
+            ui->tableWidget->setItem(RowNumber,4, new QTableWidgetItem(QString(query.value("species").toString())));
+            ui->tableWidget->setItem(RowNumber,5, new QTableWidgetItem(QString(query.value("description").toString())));
+            ui->tableWidget->setItem(RowNumber,6, new QTableWidgetItem(QString(query.value("status").toString())));
+            ui->tableWidget->setItem(RowNumber,7, new QTableWidgetItem(QString(query.value("price").toString())));
+            ui->tableWidget->setItem(RowNumber,8, new QTableWidgetItem(QString::number(query.value("quantity").toInt())));
+            RowNumber = RowNumber + 1;
             qDebug() <<query.value("ID").toInt()
                      <<query.value("scientific_name").toString()
                      <<query.value("Genus").toString()

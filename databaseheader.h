@@ -12,6 +12,7 @@
 #include<QBuffer>
 #include<QByteArray>
 #include<QFileInfo>
+#include<QSqlQueryModel>
 
 
 
