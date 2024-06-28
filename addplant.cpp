@@ -128,3 +128,9 @@ void AddPlant::on_btnSave_clicked()
 }
 
 ///
+
+void AddPlant::on_pushButton_btn_home_clicked()
+{
+    QMessageBox::information(this, "Hi Rabson","Welcome back home");
+}
+

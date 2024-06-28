@@ -28,6 +28,8 @@ private slots:
 
     void on_btnSave_clicked();
 
+    void on_pushButton_btn_home_clicked();
+
 private:
     Ui::AddPlant *ui;
     QSqlDatabase db_RoseGarden;
