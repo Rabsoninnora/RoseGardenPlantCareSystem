@@ -53,11 +53,6 @@ void AddPlant::on_btnBrowse_clicked()
 }
 
 
-
-
-
-
-
 void AddPlant::on_btnSave_clicked()
 {
     //Data received from the AddPlant form, passed to be posted in the database

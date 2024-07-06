@@ -56,9 +56,12 @@ void Species::on_btnSearch_clicked()
 
 
     //posting data in the database in the addPlant Table/Relation
+
     QSqlQuery query(database);
-    query.prepare("SELECT * FROM addplant");
+    query.prepare("SELECT ID, species, description FROM addplant");
     query.exec();
+
+
     qDebug() <<" Last error : "<< query.lastError().text();
 
     if (model == NULL)

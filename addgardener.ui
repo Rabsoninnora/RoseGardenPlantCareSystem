@@ -261,6 +261,19 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_btn_greet">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Greetings!</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

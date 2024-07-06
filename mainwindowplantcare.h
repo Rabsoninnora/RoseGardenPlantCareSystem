@@ -28,6 +28,7 @@ private slots:
 private:
     Ui::MainWindowPlantCare *ui;
 
+
     //creating an object for SecDialog
 
     SecDialog *secDialog;

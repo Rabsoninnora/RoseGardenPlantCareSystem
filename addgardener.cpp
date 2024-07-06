@@ -95,3 +95,9 @@ void AddGardener::on_btnBrowse_2_clicked()
 
 }
 
+
+void AddGardener::on_pushButton_btn_greet_clicked()
+{
+    QMessageBox::information(this, "Hello world","T happy coding!");
+}
+

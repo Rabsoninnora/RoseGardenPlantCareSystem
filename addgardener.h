@@ -21,6 +21,8 @@ private slots:
 
     void on_btnBrowse_2_clicked();
 
+    void on_pushButton_btn_greet_clicked();
+
 private:
     Ui::AddGardener *ui;
 };
