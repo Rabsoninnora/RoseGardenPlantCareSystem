@@ -16,6 +16,29 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);</string>
   </property>
+  <widget class="QTableView" name="tableViewPlant">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>91</y>
+     <width>1401</width>
+     <height>661</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>10</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Plants</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

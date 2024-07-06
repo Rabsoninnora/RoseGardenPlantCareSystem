@@ -18,9 +18,7 @@ public:
 
 private slots:
 
-    void on_btn_ReadData_clicked();
 
-    void on_btn_home_clicked();
 
 private:
     Ui::ViewPlants *ui;
