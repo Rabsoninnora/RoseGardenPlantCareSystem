@@ -16,13 +16,7 @@
 
 
 
-#include <QtSql/QSqlError>
-#include <QtSql/QSqlDriver>
-#include <QtSql/QSqlDatabase>
-#include <QDebug>
-#include <QtSql/QSqlTableModel>
-#include <QtSql/QSqlQuery>
-#include <QtSql/QSqlRecord>
+
 
 
 

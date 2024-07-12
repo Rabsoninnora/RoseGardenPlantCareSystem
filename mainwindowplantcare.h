@@ -21,6 +21,8 @@ public:
     MainWindowPlantCare(QWidget *parent = nullptr);
     ~MainWindowPlantCare();
 
+
+
 private slots:
     void on_pushButton_login_clicked();
 

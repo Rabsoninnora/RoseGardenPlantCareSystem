@@ -1,5 +1,6 @@
 #ifndef GARDENERDETAILS_H
 #define GARDENERDETAILS_H
+#include"databaseheader.h"
 
 #include <QDialog>
 
@@ -14,6 +15,9 @@ class GardenerDetails : public QDialog
 public:
     explicit GardenerDetails(QWidget *parent = nullptr);
     ~GardenerDetails();
+
+private slots:
+    void on_ViewEmployeeRecord_clicked();
 
 private:
     Ui::GardenerDetails *ui;

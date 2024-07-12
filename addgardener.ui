@@ -261,7 +261,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_btn_greet">
+  <widget class="QPushButton" name="btn_home2">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -271,7 +271,7 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
     </rect>
    </property>
    <property name="text">
-    <string>Greetings!</string>
+    <string>Home</string>
    </property>
   </widget>
  </widget>

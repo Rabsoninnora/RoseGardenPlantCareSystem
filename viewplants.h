@@ -20,9 +20,15 @@ private slots:
 
 
 
+    void on_ViewPlantsRecord_clicked();
+
+    void on_DeletePlantsRecord_clicked();
+
 private:
     Ui::ViewPlants *ui;
-    //QSqlQueryModel *model;
+
+    QSqlDatabase DB_SQLITE3;
+
 };
 
 #endif // VIEWPLANTS_H

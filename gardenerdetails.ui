@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>730</width>
-    <height>464</height>
+    <width>868</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,6 +16,90 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);</string>
   </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>391</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 500 13pt &quot;Ubuntu&quot;;</string>
+   </property>
+   <property name="text">
+    <string> The Rose Garden System  |      Employee Record</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ViewEmployeeRecord">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>20</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 500 13pt &quot;Ubuntu&quot;;</string>
+   </property>
+   <property name="text">
+    <string>View Record</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>80</y>
+     <width>841</width>
+     <height>609</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+font: 500 12pt &quot;Ubuntu&quot;;</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Employee ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>National ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>First Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Middle Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Last Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Job Title</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Description</string>
+    </property>
+   </column>
+  </widget>
  </widget>
  <resources/>
  <connections/>
