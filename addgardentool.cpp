@@ -59,6 +59,22 @@ void AddGardenTool::on_btn_Insert_Record_clicked()
 
 void AddGardenTool::on_btn_Update_Record_clicked()
 {
+    DB_GardenTools.open();
+    QSqlDatabase::database().transaction();
+    QSqlQuery QueryUpdateData(DB_GardenTools);
+    QueryUpdateData.prepare("UPDATE TOOLS SET tool_ID=:tool_ID,Item_name=:Item_name,Quantity=:Quantity,Status=:Status,Description=:Description WHERE tool_ID=:tool_ID");
 
+    QueryUpdateData.bindValue(":tool_ID",ui->lineEdit_ID->text());
+    QueryUpdateData.bindValue(":Item_name",ui->lineEdit_Item_name->text());
+    QueryUpdateData.bindValue(":Quantity",ui->lineEdit_Quantity->text());
+    QueryUpdateData.bindValue(":Status",ui->lineEdit_Status->text());
+    QueryUpdateData.bindValue(":Description",ui->lineEdit_Description->text());
+
+
+    QueryUpdateData.exec();
+    QSqlDatabase::database().commit();
+    DB_GardenTools.close();
+
+    qDebug()<<"Update error:" <<QueryUpdateData.lastError();
 }
 
