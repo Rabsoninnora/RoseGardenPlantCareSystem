@@ -18,6 +18,7 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
 
 
 
+
 }
 
 MainWindowPlantCare::~MainWindowPlantCare()

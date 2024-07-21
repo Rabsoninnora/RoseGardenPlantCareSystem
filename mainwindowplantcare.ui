@@ -10,6 +10,12 @@
     <height>429</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
@@ -17,7 +23,7 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);</string>
+   <string notr="true">background-color: rgb(65, 105, 74);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="loginBox">
@@ -30,11 +36,13 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(251, 251, 232);
+     <string notr="true">background-color: rgb(65, 104, 74);
+font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);
  </string>
     </property>
     <property name="title">
-     <string>                                                                                   Login             </string>
+     <string>                                                                                Login             </string>
     </property>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
@@ -51,7 +59,8 @@
         <item>
          <widget class="QLabel" name="label">
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(251, 251, 232);</string>
           </property>
           <property name="text">
            <string>UserName</string>
@@ -67,6 +76,10 @@
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QLabel" name="label_2">
+          <property name="styleSheet">
+           <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
+          </property>
           <property name="text">
            <string>PassWord</string>
           </property>
@@ -88,6 +101,10 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>Submit</string>
      </property>
@@ -100,6 +117,10 @@
        <width>81</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
       <string>Cancel</string>

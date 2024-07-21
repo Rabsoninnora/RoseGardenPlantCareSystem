@@ -92,13 +92,17 @@ void AddGardener::on_btnSave_clicked()
 
 void AddGardener::on_btnBrowse_2_clicked()
 {
-
+    connect(ui->btnBrowse_2, SIGNAL(clicked()), this, SLOT(close()));
 }
 
 
 
 void AddGardener::on_btn_home2_clicked()
 {
-     QMessageBox::information(this, "Hello world","T happy coding!");
+    QMessageBox::warning(this, "Warning!", "Leaving to Home!");
+    connect(ui->btn_home2, SIGNAL(clicked()), this, SLOT(close()));
+
+
+
 }
 

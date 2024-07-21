@@ -19,7 +19,7 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
+   <string notr="true">background-color: rgb(65, 104, 74);
 background-image: url(:/images/home1.jpeg);</string>
   </property>
   <widget class="QPushButton" name="AddPlant">
@@ -198,7 +198,8 @@ color: rgb(251, 251, 232);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);</string>
+    <string notr="true">color: rgb(251, 251, 232);
+background-color: rgb(65, 104, 74);</string>
    </property>
    <property name="text">
     <string>Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
