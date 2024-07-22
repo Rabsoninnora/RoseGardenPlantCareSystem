@@ -23,7 +23,7 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(65, 105, 74);</string>
+   <string notr="true">  background-color: rgb(56, 144, 96);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="loginBox">
@@ -36,7 +36,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(65, 104, 74);
+     <string notr="true">background-color: rgb(38, 162, 105);
 font: 700 12pt &quot;Ubuntu&quot;;
 color: rgb(255, 255, 255);
  </string>
@@ -68,7 +68,12 @@ color: rgb(251, 251, 232);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_username"/>
+         <widget class="QLineEdit" name="lineEdit_username">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -86,7 +91,12 @@ color: rgb(255, 255, 255);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineEdit_password"/>
+         <widget class="QLineEdit" name="lineEdit_password">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>

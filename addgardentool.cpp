@@ -27,13 +27,55 @@ AddGardenTool::~AddGardenTool()
 
 void AddGardenTool::on_btn_View_Record_clicked()
 {
+    DB_GardenTools.open();
+    QSqlDatabase::database().transaction();
+
+    QSqlQuery QueryReadData(DB_GardenTools);
+    QueryReadData.prepare("SELECT * FROM TOOLS");
+
+
+
+    int NumberOFRowsToDisplay=100;
+
+    if(QueryReadData.exec())
+    {
+        ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
+        int RowNumber =0;
+        while (QueryReadData.next()) {
+
+
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("tool_ID").toString())));
+            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Item_name").toString())));
+            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Quantity").toString())));
+            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Status").toString())));
+            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Description").toString())));
+
+            RowNumber = RowNumber +1;
+
+        }
+
+    }
+
+    QSqlDatabase::database().commit();
+    DB_GardenTools.close();
 
 }
 
 
 void AddGardenTool::on_btn_Delete_Record_clicked()
 {
+    DB_GardenTools.open();
+    QSqlDatabase::database().transaction();
+    QSqlQuery QueryDeleteData(DB_GardenTools);
 
+    QueryDeleteData.prepare("DELETE FROM TOOLS WHERE tool_ID=:tool_ID");
+    QueryDeleteData.bindValue(":tool_ID",ui->lineEdit_ID->text());
+
+
+    QueryDeleteData.exec();
+
+    QSqlDatabase::database().commit();
+    DB_GardenTools.close();
 }
 
 
