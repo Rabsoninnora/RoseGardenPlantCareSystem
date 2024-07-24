@@ -122,7 +122,7 @@ void AddPlant::on_btnSave_clicked()
     qDebug() << "Database closed  successfuly, Happy coding !";
 }
 
-///
+
 
 void AddPlant::on_pushButton_btn_home_clicked()
 {

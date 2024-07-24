@@ -56,7 +56,7 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
     DB_SQLITE3.close();
 
 
-
+    qDebug() <<"Show me the last error"<< QueryLoadData.lastError();
 
 }
 
