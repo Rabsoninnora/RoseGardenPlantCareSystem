@@ -16,6 +16,38 @@ Species::~Species()
 
 void Species::on_btnSearch_clicked()
 {
+    QSqlDatabase DB_SQLITE3 = QSqlDatabase::addDatabase("QSQLITE");
+    DB_SQLITE3.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
+
+    DB_SQLITE3.open();
+    QSqlDatabase::database().transaction();
+
+    QSqlQuery QueryLoadData(DB_SQLITE3);
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE ID="+ ui->txtSpeciesName->text()+"");
+
+
+
+    int NumberOFRowsToDisplay=100;
+
+    if(QueryLoadData.exec())
+    {
+        ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
+        int RowNumber =0;
+        while (QueryLoadData.next()) {
+
+
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryLoadData.value("ID").toString())));
+            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryLoadData.value("species").toString())));
+            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryLoadData.value("description").toString())));
+
+            RowNumber = RowNumber +1;
+
+        }
+
+    }
+
+    QSqlDatabase::database().commit();
+    DB_SQLITE3.close();
 
 
 }

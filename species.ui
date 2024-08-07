@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>751</width>
-    <height>700</height>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,8 +25,12 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 500 12pt &quot;Ubuntu&quot;;</string>
+   </property>
    <property name="text">
-    <string>Read Data</string>
+    <string>Search</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="txtSpeciesName">
@@ -38,6 +42,11 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 255);
+font: 500 12pt &quot;Ubuntu&quot;;
+color: rgb(192, 191, 188);</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -48,8 +57,12 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 500 12pt &quot;Ubuntu&quot;;</string>
+   </property>
    <property name="text">
-    <string>Species Name</string>
+    <string>Search By ID</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">
@@ -58,9 +71,28 @@
      <x>40</x>
      <y>91</y>
      <width>681</width>
-     <height>341</height>
+     <height>361</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;Ubuntu&quot;;</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Species</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Description</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1411</width>
-    <height>734</height>
+    <height>845</height>
    </rect>
   </property>
   <property name="font">
@@ -188,23 +188,6 @@ color: rgb(251, 251, 232);</string>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="Copyright_line">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>680</y>
-     <width>771</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);
-background-color: rgb(65, 104, 74);</string>
-   </property>
-   <property name="text">
-    <string>Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -219,23 +202,6 @@ background-color: rgb(65, 104, 74);</string>
    </property>
    <property name="text">
     <string/>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="Copyright_line_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>10</y>
-     <width>391</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);
-font: 700 17pt &quot;Ubuntu&quot;;</string>
-   </property>
-   <property name="text">
-    <string>The Rose Garden Nursery  System |</string>
    </property>
   </widget>
   <widget class="QPushButton" name="AddPlant_2">
@@ -264,6 +230,37 @@ font: 700 17pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="flat">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CopyRight_line">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>680</y>
+     <width>1381</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string> Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>20</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(0, 0, 0);
+font: 700 14pt &quot;Ubuntu&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string> The Rose Garden Nursery  System |</string>
    </property>
   </widget>
  </widget>

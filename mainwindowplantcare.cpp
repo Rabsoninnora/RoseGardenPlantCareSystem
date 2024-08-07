@@ -27,7 +27,7 @@ MainWindowPlantCare::~MainWindowPlantCare()
 }
 
 
-//Method
+//
 void MainWindowPlantCare::on_pushButton_login_clicked() {
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
@@ -36,8 +36,8 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
     {
      QMessageBox::information(this, "Welcome","Login is successful!");
         //hide first window
-        //  hide();
-         //creating a constructor for second dialog object with this class
+        // hide();
+         //creating a constructor for System Dashboard
          secDialog =new SecDialog(this);
         //calling secDialog object
         secDialog->show();
@@ -48,7 +48,12 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
          {
          QMessageBox::warning(this, "Sorry","Username or password is not correct!");
     }
+    // Clear the login form after form submition
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){
 
+              widget->clear();
+
+    }
 
 
 

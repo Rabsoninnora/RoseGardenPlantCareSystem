@@ -1,5 +1,6 @@
 #include "addgardentool.h"
 #include "ui_addgardentool.h"
+#include "databaseheader.h"
 
 AddGardenTool::AddGardenTool(QWidget *parent)
     : QDialog(parent)
@@ -7,9 +8,14 @@ AddGardenTool::AddGardenTool(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QSqlDatabase DB_GardenTools = QSqlDatabase::addDatabase("QSQLITE");
-    DB_GardenTools.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
-    //checking if the database file exist
+
+    //checking if the database file exist and can be opened
+
+    if(!DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
+
+        qDebug()<< "Database File Does Not Exist or Unable To Open! ";
+    }
+
     if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
     {
         qDebug()<< "Database File Exists ! ";
@@ -18,7 +24,11 @@ AddGardenTool::AddGardenTool(QWidget *parent)
         qDebug() << "Database File Does Not Exists !";
         return;
     }
+
+
 }
+
+
 
 AddGardenTool::~AddGardenTool()
 {
@@ -28,6 +38,8 @@ AddGardenTool::~AddGardenTool()
 void AddGardenTool::on_btn_View_Record_clicked()
 {
     DB_GardenTools.open();
+
+
     QSqlDatabase::database().transaction();
 
     QSqlQuery QueryReadData(DB_GardenTools);
@@ -35,7 +47,7 @@ void AddGardenTool::on_btn_View_Record_clicked()
 
 
 
-    int NumberOFRowsToDisplay=100;
+    int NumberOFRowsToDisplay=1000;
 
     if(QueryReadData.exec())
     {
@@ -72,10 +84,18 @@ void AddGardenTool::on_btn_Delete_Record_clicked()
     QueryDeleteData.bindValue(":tool_ID",ui->lineEdit_ID->text());
 
 
+
     QueryDeleteData.exec();
 
     QSqlDatabase::database().commit();
     DB_GardenTools.close();
+    //clear the form after submission
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){
+            widget->clear();
+
+    }
+
+
 }
 
 
@@ -96,6 +116,12 @@ void AddGardenTool::on_btn_Insert_Record_clicked()
 
     QSqlDatabase::database().commit();
     DB_GardenTools.close();
+
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()) {
+        widget->clear();
+
+    }
+
 }
 
 
@@ -116,6 +142,11 @@ void AddGardenTool::on_btn_Update_Record_clicked()
     QueryUpdateData.exec();
     QSqlDatabase::database().commit();
     DB_GardenTools.close();
+
+    foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){
+        widget->clear();
+
+    }
 
     qDebug()<<"Update error:" <<QueryUpdateData.lastError();
 }

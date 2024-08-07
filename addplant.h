@@ -29,6 +29,9 @@ private slots:
 
 private:
     Ui::AddPlant *ui;
+    //creating an object for SecDialog
+
+
     QSqlDatabase db_RoseGarden;
     QByteArray FinalDataToSave;
     QFileInfo FileInfo;

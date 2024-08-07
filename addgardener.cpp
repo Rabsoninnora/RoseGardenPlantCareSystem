@@ -79,7 +79,7 @@ void AddGardener::on_btnSave_clicked()
     //
 
 
-/// Posting data in the database, the addgardener table/relation
+// Posting data in the database, the addgardener table/relation
     QSqlQuery query(database);
     query.prepare("insert into addgardener(Employee_id, National_id, Name, Middle_name, Last_name, Job_title, Description) values('"+ Employee_id +"', '"+ National_id +"', '"+ Name +"','"+ Middle_name +"','"+ Last_name +"','"+ Job_title +"', '"+ Description +"')");
     query.exec();

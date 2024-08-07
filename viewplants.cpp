@@ -1,11 +1,26 @@
 #include "viewplants.h"
 #include "ui_viewplants.h"
+#include "databaseheader.h"
 
 ViewPlants::ViewPlants(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::ViewPlants)
 {
     ui->setupUi(this);
+
+    if(!DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
+
+        qDebug()<< "Database File Does Not Exist or Unable To Open! ";
+    }
+
+    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
+    {
+        qDebug()<< "Database File Exists ! ";
+    }   else
+    {
+        qDebug() << "Database File Does Not Exists !";
+        return;
+    }
 
 }
 
@@ -17,8 +32,6 @@ ViewPlants::~ViewPlants()
 
 void ViewPlants::on_ViewPlantsRecord_clicked()
 {
-    QSqlDatabase DB_SQLITE3 = QSqlDatabase::addDatabase("QSQLITE");
-    DB_SQLITE3.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
     DB_SQLITE3.open();
     QSqlDatabase::database().transaction();
@@ -56,7 +69,7 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
     DB_SQLITE3.close();
 
 
-    qDebug() <<"Show me the last error"<< QueryLoadData.lastError();
+    qDebug() <<"Last Error "<< QueryLoadData.lastError().text();
 
 }
 

@@ -1,4 +1,5 @@
 #include "addplant.h"
+#include "secdialog.h"
 #include "ui_addplant.h"
 #include <QFileDialog> //For file opening
 #include <QMessageBox> //pop up messages alerts infos and warning
@@ -9,14 +10,32 @@
 #include <QPixmap>
 #include <QLabel>
 #include<QLineEdit>
+#include "databaseheader.h"
 
 AddPlant::AddPlant(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::AddPlant)
 {
     ui->setupUi(this);
+    //checking if the database file exist and can be opened
+
+    if(!DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
+
+        qDebug()<< "Database File Does Not Exist or Unable To Open! ";
+    }
+
+    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
+    {
+        qDebug()<< "Database File Exists ! ";
+    }   else
+    {
+        qDebug() << "Database File Does Not Exists !";
+        return;
+    }
+
 
 }
+
 
 AddPlant::~AddPlant()
 {
@@ -63,63 +82,25 @@ void AddPlant::on_btnSave_clicked()
     QString description = ui->txtDescription->toPlainText();
     QString status = ui->cmbStatus->currentText();
     QString price = ui->txtPrice->text();
-    QString quantity = ui->txtPrice->text();
-
-
-    //check if the data can be passed/ if I can get this data
-    qDebug()<<"scientific_name"
-            <<scientific_name
-            <<"Genus"
-            <<Genus
-            <<"common_name"
-            <<common_name
-            <<"species"
-            <<species
-            <<"description"
-            <<description
-            <<"status"
-            <<status
-            <<"price"
-            <<price
-            <<"quantity"
-            <<quantity;
-    //The data can be passed but now it must be posted inn the database
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
-
-
-    //checking if the database file exist
-    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
-    {
-        qDebug()<< "Database File Exists ! ";
-    }   else
-    {
-        qDebug() << "Database File Does Not Exists !";
-        return;
-    }
-
-
-
-    //checking if the database can be opened
-
-    if(!database.open())
-    {
-        qDebug() << "Error: Database Not Opened !";
-        return;
-    } else
-    {
-        qDebug() << "Database Succesfuly Opened !";
-    }
-
+    QString quantity = ui->txtQuantity->text();
 
     //posting data in the database in the addPlant Table/Relation
-    QSqlQuery query(database);
-    query.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +"')");
-    query.exec();
-    qDebug() <<" Last error : "<< query.lastError().text();
-    database.close();
+    db_RoseGarden.open();
+    QSqlDatabase::database().transaction();
+    QSqlQuery QueryInsertData(db_RoseGarden);
+    QueryInsertData.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +"')");
+    QueryInsertData.exec();
+    qDebug() <<" Last error : "<< QueryInsertData.lastError().text();
+    QSqlDatabase::database().commit();
+    db_RoseGarden.close();
+
     qDebug() << "Database closed  successfuly, Happy coding !";
+
+
+    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) {
+        widget->clear();
+
+    }
 }
 
 
@@ -127,5 +108,6 @@ void AddPlant::on_btnSave_clicked()
 void AddPlant::on_pushButton_btn_home_clicked()
 {
     QMessageBox::information(this, "Hi Rabson","Welcome back home");
+
 }
 
