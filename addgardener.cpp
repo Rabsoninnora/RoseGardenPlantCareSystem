@@ -16,6 +16,8 @@ AddGardener::AddGardener(QWidget *parent)
     , ui(new Ui::AddGardener)
 {
     ui->setupUi(this);
+
+
 }
 
 AddGardener::~AddGardener()
@@ -33,66 +35,42 @@ void AddGardener::on_btnSave_clicked()
     QString Last_name = ui->txtLastName->text();
     QString Job_title = ui->txtJobTitle->text();
     QString Description = ui->txtDescription->toPlainText();
-
-
-//Check if the information can be passed // if I can get the information
-    qDebug() << "EmployeeID :"
-             <<Employee_id
-             << "NationalID :"
-             <<National_id
-             << "Name :"
-             <<Name
-             << "MiddleName :"
-             <<Middle_name
-             <<"LastName :"
-             <<Last_name
-             <<"JobTile :"
-             <<Job_title
-             <<"Description :"
-             <<Description;
-
-    //I am able to get the information, but now it must be saved in the database
-    QSqlDatabase database = QSqlDatabase::addDatabase("QSQLITE");
-    database.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
-
-    //Check if database file exists
-    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
-    {
-        qDebug() <<" Databse File Exists ";
-
-    } else {
-        qDebug() <<" Database File Does not Exists";
-        return;
-    }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-   // See if the database can be opened
-    if(!database.open())
-    {
-        qDebug() << "Error: unable to open Database! ";
-        return;
-    } else
-    {
-        qDebug() << "Database opened successfuly ..!";
-    }
-    //
 
 
 // Posting data in the database, the addgardener table/relation
-    QSqlQuery query(database);
-    query.prepare("insert into addgardener(Employee_id, National_id, Name, Middle_name, Last_name, Job_title, Description) values('"+ Employee_id +"', '"+ National_id +"', '"+ Name +"','"+ Middle_name +"','"+ Last_name +"','"+ Job_title +"', '"+ Description +"')");
-    query.exec();
-    qDebug() <<" Last error : "<< query.lastError().text();
-    database.close();
-     qDebug() << "Databse closed  successfuly, Happy coding !";
+    db.open();
+    QSqlDatabase::database().transaction();
+    QSqlQuery postGardener(db);
+    postGardener.prepare("insert into addgardener(Employee_id, National_id, Name, Middle_name, Last_name, Job_title, Description) values('"+ Employee_id +"', '"+ National_id +"', '"+ Name +"','"+ Middle_name +"','"+ Last_name +"','"+ Job_title +"', '"+ Description +"')");
+    postGardener.exec();
+    qDebug() <<" Last error : "<< postGardener.lastError().text();
+
+    QSqlDatabase::database().commit();
+    db.close();
+    qDebug() << "Databse closed  successfuly, Happy coding !";
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Clear the form fields
+
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){
+        widget->clear();
+    }
+
+
+    foreach(QPlainTextEdit *widget, this->findChildren<QPlainTextEdit*>()){widget->clear();}
+
+
 }
 
 
 
 void AddGardener::on_btnBrowse_2_clicked()
 {
-    connect(ui->btnBrowse_2, SIGNAL(clicked()), this, SLOT(close()));
+
 }
 
 
@@ -100,9 +78,20 @@ void AddGardener::on_btnBrowse_2_clicked()
 void AddGardener::on_btn_home2_clicked()
 {
     QMessageBox::warning(this, "Warning!", "Leaving to Home!");
-    connect(ui->btn_home2, SIGNAL(clicked()), this, SLOT(close()));
 
 
 
+}
+
+
+void AddGardener::on_btnReset_clicked()
+{
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){
+             widget->clear();
+    }
+
+    foreach(QPlainTextEdit *widget, this->findChildren<QPlainTextEdit*>()){
+        widget->clear();
+    }
 }
 

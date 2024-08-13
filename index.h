@@ -1,5 +1,6 @@
 #ifndef INDEX_H
 #define INDEX_H
+#include "databaseheader.h"
 
 #include <QDialog>
 
@@ -17,6 +18,10 @@ public:
 
 private:
     Ui::index *ui;
+
+    //Creating QSqlDatabase object
+
+    QSqlDatabase db;
 };
 
 #endif // INDEX_H

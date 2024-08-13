@@ -23,8 +23,11 @@ private slots:
 
     void on_btn_home2_clicked();
 
+    void on_btnReset_clicked();
+
 private:
     Ui::AddGardener *ui;
+      QSqlDatabase db;
 };
 
 #endif // ADDGARDENER_H

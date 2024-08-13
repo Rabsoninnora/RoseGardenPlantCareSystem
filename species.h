@@ -22,6 +22,10 @@ private slots:
 private:
     Ui::Species *ui;
     QSqlQueryModel *model;
+
+    //Creating a QSqlDatabase for database connectings
+
+     QSqlDatabase db;
 };
 
 #endif // SPECIES_H

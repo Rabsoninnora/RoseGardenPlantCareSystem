@@ -9,21 +9,8 @@ AddGardenTool::AddGardenTool(QWidget *parent)
     ui->setupUi(this);
 
 
-    //checking if the database file exist and can be opened
 
-    if(!DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
 
-        qDebug()<< "Database File Does Not Exist or Unable To Open! ";
-    }
-
-    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
-    {
-        qDebug()<< "Database File Exists ! ";
-    }   else
-    {
-        qDebug() << "Database File Does Not Exists !";
-        return;
-    }
 
 
 }

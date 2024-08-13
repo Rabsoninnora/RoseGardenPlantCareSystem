@@ -22,6 +22,8 @@ private slots:
 
 private:
     Ui::GardenerDetails *ui;
+
+    QSqlDatabase db;
 };
 
 #endif // GARDENERDETAILS_H

@@ -51,6 +51,8 @@ public:
         }
 
         return true;
+
+        DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
     }
 
     void closeDatabase()
@@ -61,13 +63,20 @@ public:
     }
 
 private:
+
      DatabaseManager() {}  // Private constructor
     ~DatabaseManager() { closeDatabase(); }  // Destructor to close the database
+
 
     // Delete copy constructor and assignment operator
     DatabaseManager(const DatabaseManager&) = delete;
     DatabaseManager& operator=(const DatabaseManager&) = delete;
 
+ /*
+  Creating a db object for the QSqlDatabase class
+  I will use this object in any source file connecting to the database.
+
+*/
     QSqlDatabase db;
 };
 

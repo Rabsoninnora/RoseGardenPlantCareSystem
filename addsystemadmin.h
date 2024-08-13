@@ -1,6 +1,6 @@
 #ifndef ADDSYSTEMADMIN_H
 #define ADDSYSTEMADMIN_H
-
+#include "databaseheader.h"
 #include <QDialog>
 
 namespace Ui {
@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::AddSystemAdmin *ui;
+    //creating the QSqlDatabase object
+    QSqlDatabase db;
 };
 
 #endif // ADDSYSTEMADMIN_H

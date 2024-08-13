@@ -1,5 +1,6 @@
 #ifndef AVAILABLEPLANTS_H
 #define AVAILABLEPLANTS_H
+#include "databaseheader.h"
 
 #include <QDialog>
 
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::AvailablePlants *ui;
+
+    QSqlDatabase db;
 };
 
 #endif // AVAILABLEPLANTS_H

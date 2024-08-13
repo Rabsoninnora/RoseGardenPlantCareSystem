@@ -1,5 +1,6 @@
 #ifndef MAINWINDOWPLANTCARE_H
 #define MAINWINDOWPLANTCARE_H
+#include "databaseheader.h"
 #include <QMainWindow>
 #include "secdialog.h"
 
@@ -34,6 +35,10 @@ private:
     //creating an object for SecDialog
 
     SecDialog *secDialog;
+
+    //Creating an object for QSqlDatabase for database connecting
+
+    QSqlDatabase db;
 
 };
 
