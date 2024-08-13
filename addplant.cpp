@@ -111,3 +111,11 @@ void AddPlant::on_pushButton_btn_home_clicked()
 
 }
 
+
+void AddPlant::on_btnReset_clicked()
+{
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
+
+    foreach(QPlainTextEdit *widget,this->findChildren<QPlainTextEdit*>()){widget->clear();}
+}
+

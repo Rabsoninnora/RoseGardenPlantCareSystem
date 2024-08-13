@@ -27,6 +27,8 @@ private slots:
 
     void on_pushButton_btn_home_clicked();
 
+    void on_btnReset_clicked();
+
 private:
     Ui::AddPlant *ui;
     //creating an object for SecDialog
