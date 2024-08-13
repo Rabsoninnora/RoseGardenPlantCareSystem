@@ -100,7 +100,7 @@ font: 500 12pt &quot;Ubuntu&quot;;</string>
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="btn_Insert_Employee">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -117,7 +117,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string>Insert</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btn_Update_Employee">
    <property name="geometry">
     <rect>
      <x>690</x>
@@ -134,7 +134,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string>Update</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="btn_Delete_Employee">
    <property name="geometry">
     <rect>
      <x>800</x>
@@ -151,7 +151,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string>Delete</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_Employee_id">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -164,7 +164,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_National_id">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -177,7 +177,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineEdit_First_name">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -190,7 +190,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="lineEdit_Middle_name">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -203,7 +203,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lineEdit_Last_name">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -216,7 +216,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="lineEdit_job_title">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -229,7 +229,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
+  <widget class="QLineEdit" name="lineEdit_Description">
    <property name="geometry">
     <rect>
      <x>1050</x>
@@ -251,8 +251,11 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>National ID</string>
+    <string>National ID *</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
@@ -263,6 +266,9 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <width>101</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>First Name</string>
@@ -277,6 +283,9 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Middle Name</string>
    </property>
@@ -289,6 +298,9 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <width>111</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Last Name</string>
@@ -303,8 +315,11 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string>Employee ID</string>
+    <string>Employee ID *</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
@@ -315,6 +330,9 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <width>111</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Job Tile</string>
@@ -328,6 +346,9 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <width>111</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Description</string>

@@ -16,8 +16,7 @@ Species::~Species()
 
 void Species::on_btnSearch_clicked()
 {
-    QSqlDatabase DB_SQLITE3 = QSqlDatabase::addDatabase("QSQLITE");
-    DB_SQLITE3.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
+
 
     DB_SQLITE3.open();
     QSqlDatabase::database().transaction();
@@ -48,6 +47,8 @@ void Species::on_btnSearch_clicked()
 
     QSqlDatabase::database().commit();
     DB_SQLITE3.close();
+
+       foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 
 
 }

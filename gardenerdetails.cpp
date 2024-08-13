@@ -15,13 +15,12 @@ GardenerDetails::~GardenerDetails()
 
 void GardenerDetails::on_ViewEmployeeRecord_clicked()
 {
-    QSqlDatabase DB_SQLITE3 = QSqlDatabase::addDatabase("QSQLITE");
-    DB_SQLITE3.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
-    DB_SQLITE3.open();
+
+    db.open();
     QSqlDatabase::database().transaction();
 
-    QSqlQuery QueryLoadData(DB_SQLITE3);
+    QSqlQuery QueryLoadData(db);
     QueryLoadData.prepare("SELECT * FROM addgardener");
 
 
@@ -49,12 +48,46 @@ void GardenerDetails::on_ViewEmployeeRecord_clicked()
     }
 
     QSqlDatabase::database().commit();
-    DB_SQLITE3.close();
+    db.close();
 
 
 
 
 
+
+}
+
+
+void GardenerDetails::on_btn_Insert_Employee_clicked()
+{
+    db.open();
+    QSqlDatabase::database().transaction();
+    QSqlQuery InsertRecord(db);
+    InsertRecord.prepare( "INSERT INTO addgardener(Employee_id,National_id,Name,Middle_name,Last_name,job_title,Description) VALUES(:Employee_id,:National_id,:Name,:Middle_name,:Last_name,:job_title,:Description) ");
+    InsertRecord.bindValue(":Employee_id", ui->lineEdit_Employee_id->text());
+    InsertRecord.bindValue(":National_id",ui->lineEdit_National_id->text());
+    InsertRecord.bindValue(":Name",ui->lineEdit_First_name->text());
+    InsertRecord.bindValue(":Middle_name",ui->lineEdit_Middle_name->text());
+    InsertRecord.bindValue(":Last_name",ui->lineEdit_Last_name->text());
+    InsertRecord.bindValue(":job_title",ui->lineEdit_job_title->text());
+    InsertRecord.bindValue(":Description",ui->lineEdit_Description->text());
+    InsertRecord.exec();
+    QSqlDatabase::database().commit();
+    db.close();
+
+
+
+}
+
+
+void GardenerDetails::on_btn_Update_Employee_clicked()
+{
+
+}
+
+
+void GardenerDetails::on_btn_Delete_Employee_clicked()
+{
 
 }
 

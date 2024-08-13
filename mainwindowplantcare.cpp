@@ -49,9 +49,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
          QMessageBox::warning(this, "Sorry","Username or password is not correct!");
     }
     // Clear the login form after form submition
-    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){
-
-              widget->clear();
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();
 
     }
 

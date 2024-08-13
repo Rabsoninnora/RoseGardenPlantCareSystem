@@ -71,6 +71,9 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
 
     qDebug() <<"Last Error "<< QueryLoadData.lastError().text();
 
+
+
+
 }
 
 
@@ -85,6 +88,6 @@ void ViewPlants::on_DeletePlantsRecord_clicked()
     DB_SQLITE3.close();
 
 
-
+    foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 }
 

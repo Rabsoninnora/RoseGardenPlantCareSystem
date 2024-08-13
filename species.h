@@ -25,7 +25,7 @@ private:
 
     //Creating a QSqlDatabase for database connectings
 
-     QSqlDatabase db;
+     QSqlDatabase DB_SQLITE3;
 };
 
 #endif // SPECIES_H

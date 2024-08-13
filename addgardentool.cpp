@@ -25,8 +25,6 @@ AddGardenTool::~AddGardenTool()
 void AddGardenTool::on_btn_View_Record_clicked()
 {
     DB_GardenTools.open();
-
-
     QSqlDatabase::database().transaction();
 
     QSqlQuery QueryReadData(DB_GardenTools);

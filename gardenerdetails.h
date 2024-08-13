@@ -20,6 +20,12 @@ public:
 private slots:
     void on_ViewEmployeeRecord_clicked();
 
+    void on_btn_Insert_Employee_clicked();
+
+    void on_btn_Update_Employee_clicked();
+
+    void on_btn_Delete_Employee_clicked();
+
 private:
     Ui::GardenerDetails *ui;
 
