@@ -10,7 +10,7 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
 {
     ui->setupUi(this);
     //the cancel button on login ui
-    connect(ui->pushButton_login_3, SIGNAL(clicked()),this, SLOT(close()));
+    //connect(ui->pushButton_login_3, SIGNAL(clicked()),this, SLOT(close()));
 
 
 
@@ -56,5 +56,16 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
 
 
 
+}
+
+
+void MainWindowPlantCare::on_pushButton_login_3_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply=QMessageBox::question(this,"Warning!!", "Close the Application?",QMessageBox::Yes | QMessageBox::No);
+    if(reply==QMessageBox::Yes)
+    {
+        QApplication::quit();
+    }
 }
 

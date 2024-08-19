@@ -9,13 +9,7 @@ AddGardenTool::AddGardenTool(QWidget *parent)
     ui->setupUi(this);
 
 
-
-
-
-
 }
-
-
 
 AddGardenTool::~AddGardenTool()
 {
@@ -61,24 +55,17 @@ void AddGardenTool::on_btn_View_Record_clicked()
 
 void AddGardenTool::on_btn_Delete_Record_clicked()
 {
+
     DB_GardenTools.open();
     QSqlDatabase::database().transaction();
-    QSqlQuery QueryDeleteData(DB_GardenTools);
-
-    QueryDeleteData.prepare("DELETE FROM TOOLS WHERE tool_ID=:tool_ID");
-    QueryDeleteData.bindValue(":tool_ID",ui->lineEdit_ID->text());
-
-
-
-    QueryDeleteData.exec();
-
+    QSqlQuery Query_Delete_Data(DB_GardenTools);
+    Query_Delete_Data.prepare("DELETE FROM TOOLS WHERE tool_ID="+ ui->lineEdit_ID->text() +"");
+    Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
     DB_GardenTools.close();
-    //clear the form after submission
-    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){
-            widget->clear();
 
-    }
+
+    foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 
 
 }

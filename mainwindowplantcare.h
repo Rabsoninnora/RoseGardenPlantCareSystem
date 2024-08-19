@@ -1,5 +1,6 @@
 #ifndef MAINWINDOWPLANTCARE_H
 #define MAINWINDOWPLANTCARE_H
+#include <QMessageBox>
 #include "databaseheader.h"
 #include <QMainWindow>
 #include "secdialog.h"
@@ -27,6 +28,8 @@ public:
 private slots:
     void on_pushButton_login_clicked();
 
+
+    void on_pushButton_login_3_clicked();
 
 private:
     Ui::MainWindowPlantCare *ui;
