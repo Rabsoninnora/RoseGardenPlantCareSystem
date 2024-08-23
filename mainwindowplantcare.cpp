@@ -44,7 +44,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
         db.open();
         QSqlDatabase::database().transaction();
         QSqlQuery Query_login(db);
-        Query_login.prepare("SELECT * FROM Adminlogin WHERE UserName='" +username+ "' AND PassWord='"+ password +"'");
+        Query_login.prepare("SELECT * FROM Admin_login WHERE ID='" +username+ "' AND PassWord='"+ password +"'");
 
       int   FindCount=0;
         if(Query_login.exec()){
