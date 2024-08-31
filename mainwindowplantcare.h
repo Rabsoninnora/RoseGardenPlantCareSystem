@@ -1,5 +1,17 @@
 #ifndef MAINWINDOWPLANTCARE_H
 #define MAINWINDOWPLANTCARE_H
+#include<QSqlDatabase>
+#include<QSqlDriver>
+#include<QSqlError>
+#include<QSqlQuery>
+#include<QSqlTableModel>
+#include<QSqlResult>
+#include<QDebug>
+#include<QFile>
+#include<QBuffer>
+#include<QByteArray>
+#include<QFileInfo>
+#include<QSqlQueryModel>
 #include <QMessageBox>
 #include "databaseheader.h"
 #include <QMainWindow>
@@ -33,15 +45,14 @@ private slots:
 
 private:
     Ui::MainWindowPlantCare *ui;
-
+    //Creating an object for QSqlDatabase for database connecting
 
     //creating an object for SecDialog
 
     SecDialog *secDialog;
 
-    //Creating an object for QSqlDatabase for database connecting
+    QSqlDatabase DB_LOGIN_innora;
 
-    QSqlDatabase db;
 
 };
 

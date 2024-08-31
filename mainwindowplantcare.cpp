@@ -1,9 +1,9 @@
 #include "mainwindowplantcare.h"
-#include "databaseheader.h"
 #include "./ui_mainwindowplantcare.h"
 #include <QMessageBox>
 #include<QLineEdit>
 #include<QSqlQuery>
+#include "databaseheader.h"
 
 
 MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
@@ -11,8 +11,21 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
     , ui(new Ui::MainWindowPlantCare)
 {
     ui->setupUi(this);
+
+    DB_LOGIN_innora=QSqlDatabase::addDatabase("QSQLITE");
+    DB_LOGIN_innora.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
+    DB_LOGIN_innora.open();
+    QSqlDatabase::database().transaction();
+    if(DB_LOGIN_innora.open())
+    {
+        qDebug() <<"Hi Innora! Database is open on Login";
+    } else
+    {
+        qDebug() <<"Hi Innora!, Sorry Database is not open";
+    }
     //the cancel button on login ui
     //connect(ui->pushButton_login_3, SIGNAL(clicked()),this, SLOT(close()));
+    qDebug() << DB_LOGIN_innora.lastError().text();
 
 
 
@@ -25,11 +38,12 @@ MainWindowPlantCare::~MainWindowPlantCare()
 
 
 //
-void MainWindowPlantCare::on_pushButton_login_clicked() {
+void MainWindowPlantCare::on_pushButton_login_clicked()
+{
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
 
-    if(username== "innora" && password == "4321") //this is the default user
+    if(username== "innora" && password == "4321") //Default developer login
     {
      QMessageBox::information(this, "Welcome","Login is successful!");
         //hide first window
@@ -38,44 +52,41 @@ void MainWindowPlantCare::on_pushButton_login_clicked() {
          secDialog =new SecDialog(this);
         //calling secDialog object
         secDialog->show();
-
-
-    } else{
-        db.open();
-        QSqlDatabase::database().transaction();
-        QSqlQuery Query_login(db);
-        Query_login.prepare("SELECT * FROM Admin_login WHERE ID='" +username+ "' AND PassWord='"+ password +"'");
-
-      int   FindCount=0;
-        if(Query_login.exec()){
-            while (Query_login.next()) {
-
-                FindCount= FindCount +1;//if UserName and PassWord is correct
-            }
-            if(FindCount==1) //if UserName and PassWord is correct
+    }
+    else
+    {
+        QSqlQuery GetUser(DB_LOGIN_innora);
+        GetUser.prepare(" SELECT * FROM Admin_login WHERE username='" + username +"' AND password='" + password +"' ");
+        if(GetUser.exec())
+        {
+            int UserFindCount = 0;
+            while(GetUser.next())
             {
-            QMessageBox::information(this, "Welcome","Login is successful!");
-                //hide first window
-                // hide();
+                UserFindCount = UserFindCount + 1; // If username and password is correct
+            }
+            if(UserFindCount == 1)//If username and password is correct
+            {
+                QMessageBox::information(this,"Welcome","login successful");
+                this->hide();
                 //creating a constructor for System Dashboard
                 secDialog =new SecDialog(this);
                 //calling secDialog object
                 secDialog->show();
-
-            } else if(FindCount==0) //if UserName and PassWord is not correct
+            }
+            else if(UserFindCount == 0)//If username and password is not correct
             {
-             QMessageBox::warning(this, "Sorry","Username or password is not correct!");
+               QMessageBox::information(this,"Hi!"," Please enter valid UserName oR Password");
             }
         }
 
-        QSqlDatabase::database().commit();
-        db.close();
-      }
+        else
 
-    // Clear the login form after form submition
-    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();
-
+        {
+            QMessageBox::information(this, "Sorry!", "Please check your Username and Password");
+        }
     }
+
+
 
 
 
