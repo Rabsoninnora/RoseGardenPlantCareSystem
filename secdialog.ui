@@ -22,6 +22,9 @@
    <string notr="true">background-color: rgb(65, 104, 74);
 background-image: url(:/images/home1.jpeg);</string>
   </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>

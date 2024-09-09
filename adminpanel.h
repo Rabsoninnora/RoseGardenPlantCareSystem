@@ -5,6 +5,7 @@
 #include "viewsystemadmin.h"
 #include "addgardentool.h"
 #include "availableplants.h"
+#include "suppliers.h"
 
 #include <QDialog>
 
@@ -29,14 +30,20 @@ private slots:
 
     void on_btn_Available_Plants_clicked();
 
+    void on_btn_Add_Admin_clicked();
+
+
+    void on_btn_Add_Supplier_clicked();
+
 private:
+    //Pointer varables
     Ui::AdminPanel *ui;
     AddGardenTool *ptrAddgardentool;
     ViewGardenTools *ptrViewGardenTools;
     AddSystemAdmin *ptrAddSystemAdmin;
     ViewSystemAdmin *ptrViewSystemAdmin;
     AvailablePlants *ptrAvailablePlants;
-
+    Suppliers        *ptrSuppliers;
 };
 
 #endif // ADMINPANEL_H

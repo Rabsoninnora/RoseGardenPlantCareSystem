@@ -25,6 +25,9 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Nursery Plants</string>
    </property>
@@ -37,6 +40,9 @@
      <width>131</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Add Admin</string>
@@ -51,21 +57,27 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>System Admin</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="btn_Add_Supplier">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>320</y>
+     <y>220</y>
      <width>131</width>
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string> Sold out plants</string>
+    <string>Add Supplier</string>
    </property>
   </widget>
   <widget class="QPushButton" name="ViewGardenTools">
@@ -76,6 +88,9 @@
      <width>131</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>View Garden Tools</string>
@@ -90,6 +105,9 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Add To Nursery</string>
    </property>
@@ -98,10 +116,13 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>220</y>
+     <y>320</y>
      <width>131</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Available plants</string>
@@ -116,6 +137,9 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Add Garden Tool</string>
    </property>
@@ -129,11 +153,14 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Employees</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_Sold_Out_Plants">
+  <widget class="QPushButton" name="btn_View_Suppliers">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -142,8 +169,11 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
-    <string> Sold out plants</string>
+    <string>View Suppliers</string>
    </property>
   </widget>
  </widget>

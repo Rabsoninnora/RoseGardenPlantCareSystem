@@ -51,7 +51,12 @@ public:
         }
 
         return true;
+        /*
 
+         First instance to open the database file, this file is opened and close according to the
+         Application page you are on.
+
+       */
         DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
     }
 

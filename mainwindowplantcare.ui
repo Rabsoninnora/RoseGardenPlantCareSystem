@@ -42,7 +42,7 @@ color: rgb(255, 255, 255);
  </string>
     </property>
     <property name="title">
-     <string>                                                                                Login             </string>
+     <string>Login</string>
     </property>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">

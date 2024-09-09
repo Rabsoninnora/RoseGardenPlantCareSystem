@@ -93,14 +93,20 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
 
 }
 
-
+// Code ot close the application on login
 void MainWindowPlantCare::on_pushButton_login_3_clicked()
 {
+
     QMessageBox::StandardButton reply;
     reply=QMessageBox::warning(this,"Warning!!", "Close the Application?",QMessageBox::Yes | QMessageBox::No);
     if(reply==QMessageBox::Yes)
     {
         QApplication::quit();
     }
+
+
+
+
+
 }
 

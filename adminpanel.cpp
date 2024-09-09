@@ -11,6 +11,7 @@ AdminPanel::AdminPanel(QWidget *parent)
     ptrAddSystemAdmin  = new AddSystemAdmin();
     ptrViewSystemAdmin = new ViewSystemAdmin();
     ptrAvailablePlants = new AvailablePlants();
+    ptrSuppliers       = new Suppliers();
 
 }
 
@@ -22,6 +23,7 @@ AdminPanel::~AdminPanel()
     delete ptrAddSystemAdmin;
     delete ptrViewSystemAdmin;
     delete ptrAvailablePlants;
+    delete ptrSuppliers;
     delete ui;
 
 }
@@ -44,5 +46,19 @@ void AdminPanel::on_ViewGardenTools_clicked()
 void AdminPanel::on_btn_Available_Plants_clicked()
 {
    ptrAvailablePlants->show();
+}
+
+
+void AdminPanel::on_btn_Add_Admin_clicked()
+{
+  ptrAddSystemAdmin->show();
+}
+
+
+
+
+void AdminPanel::on_btn_Add_Supplier_clicked()
+{
+    ptrSuppliers->show();
 }
 

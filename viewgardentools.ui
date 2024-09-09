@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>736</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>The Rose Garden Nursery  System 1.0</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(56, 144, 96);</string>
   </property>
  </widget>
  <resources/>
