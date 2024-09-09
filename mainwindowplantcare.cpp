@@ -75,7 +75,9 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
             }
             else if(UserFindCount == 0)//If username and password is not correct
             {
-               QMessageBox::information(this,"Hi!"," Please enter valid UserName oR Password");
+
+
+                QMessageBox::warning(this,"Warning!", "Please Enter Valid Username Or Passwaord");
             }
         }
 

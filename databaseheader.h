@@ -22,6 +22,8 @@ And prevents issues related to multiple connections.
 #include<QByteArray>
 #include<QFileInfo>
 #include<QSqlQueryModel>
+#include <QTableWidget>
+#include <QObject>
 
 class DatabaseManager {
 public:
@@ -84,6 +86,7 @@ private:
 */
     QSqlDatabase db;
 };
+
 
 
 

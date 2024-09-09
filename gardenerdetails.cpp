@@ -1,6 +1,7 @@
 #include "gardenerdetails.h"
 #include "ui_gardenerdetails.h"
 
+
 GardenerDetails::GardenerDetails(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::GardenerDetails)
@@ -49,6 +50,15 @@ void GardenerDetails::on_ViewEmployeeRecord_clicked()
 
     QSqlDatabase::database().commit();
     db.close();
+
+
+        tableWidget->clearContents();
+        // Fetch data from the database and repopulate the table
+        for (int row = 0; row < data.size(); ++row) {
+            for (int column = 0; column < data[row].size(); ++column) {
+                tableWidget->setItem(row, column, new QTableWidgetItem(data[row][column]));
+            }
+        }
 
 
 
