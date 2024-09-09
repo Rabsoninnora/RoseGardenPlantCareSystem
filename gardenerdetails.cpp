@@ -52,13 +52,7 @@ void GardenerDetails::on_ViewEmployeeRecord_clicked()
     db.close();
 
 
-        tableWidget->clearContents();
-        // Fetch data from the database and repopulate the table
-        for (int row = 0; row < data.size(); ++row) {
-            for (int column = 0; column < data[row].size(); ++column) {
-                tableWidget->setItem(row, column, new QTableWidgetItem(data[row][column]));
-            }
-        }
+
 
 
 
