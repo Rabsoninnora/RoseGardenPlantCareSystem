@@ -258,7 +258,7 @@ color: rgb(251, 251, 232);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
+    <string notr="true">color: rgb(251, 251, 232);
 font: 700 14pt &quot;Ubuntu&quot;;
 </string>
    </property>

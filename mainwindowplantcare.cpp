@@ -43,7 +43,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
 
-    if(username== "innora" && password == "4321") //Default developer login
+    if(username== "innora" && password == "659489+") //Default developer login
     {
      QMessageBox::information(this, "Welcome","Login is successful!");
         //hide first window
