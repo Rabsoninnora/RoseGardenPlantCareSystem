@@ -1,5 +1,6 @@
 #ifndef SUPPLIERS_H
 #define SUPPLIERS_H
+#include"databaseheader.h"
 
 #include <QDialog>
 
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::Suppliers *ui;
+    //QSqlDatabase Object
+     QSqlDatabase db;
 };
 
 #endif // SUPPLIERS_H

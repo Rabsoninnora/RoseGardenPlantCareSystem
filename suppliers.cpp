@@ -1,7 +1,7 @@
 #include "suppliers.h"
 #include "ui_suppliers.h"
 #include "databaseheader.h"
-
+#include "databaseheader.h"
 Suppliers::Suppliers(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Suppliers)

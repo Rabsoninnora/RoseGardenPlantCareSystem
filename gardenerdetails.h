@@ -28,7 +28,7 @@ private slots:
 
 private:
     Ui::GardenerDetails *ui;
-
+    //QSqlDatabase object to be used in the gardenerdetails.cpp file
     QSqlDatabase db;
 };
 
