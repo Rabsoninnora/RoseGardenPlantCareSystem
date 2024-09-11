@@ -43,7 +43,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
+    <string notr="true">color: rgb(222, 221, 218);
 font: 500 13pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
@@ -66,7 +66,7 @@ font: 500 12pt &quot;Ubuntu&quot;;</string>
    </property>
    <column>
     <property name="text">
-     <string>Employee ID</string>
+     <string>ID</string>
     </property>
    </column>
    <column>
@@ -110,8 +110,8 @@ font: 500 12pt &quot;Ubuntu&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">color: rgb(19, 255, 0);
+font: 500 15pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
     <string>Insert</string>
@@ -127,7 +127,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
+    <string notr="true">color: rgb(26, 95, 180);
 font: 500 13pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
@@ -144,7 +144,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
+    <string notr="true">color: rgb(224, 27, 36);
 font: 500 13pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
