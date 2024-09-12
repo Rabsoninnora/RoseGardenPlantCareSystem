@@ -47,7 +47,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
     {
      QMessageBox::information(this, "Welcome","Login is successful!");
         //hide first window
-        // hide();
+         hide();
          //creating a constructor for System Dashboard
          secDialog =new SecDialog(this);
         //calling secDialog object

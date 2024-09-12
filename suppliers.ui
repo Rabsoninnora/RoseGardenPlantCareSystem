@@ -173,7 +173,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string>Delete</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id">
+  <widget class="QLineEdit" name="lineEdit_SupplierID">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -186,7 +186,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id_2">
+  <widget class="QLineEdit" name="lineEdit_Supplier_Legal_Name">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -199,7 +199,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id_3">
+  <widget class="QLineEdit" name="lineEdit_Supplier_Pacra_Reg">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -212,7 +212,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id_4">
+  <widget class="QLineEdit" name="lineEdit_Supplier_Tpin">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -225,7 +225,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id_5">
+  <widget class="QLineEdit" name="lineEdit_Supplier_Product_Service">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -238,7 +238,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id_6">
+  <widget class="QLineEdit" name="lineEdit_Supplier_Phone">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -251,7 +251,7 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_Employee_id_7">
+  <widget class="QLineEdit" name="lineEdit_Supplier_Business_Address">
    <property name="geometry">
     <rect>
      <x>1030</x>
@@ -518,6 +518,19 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
    </property>
    <property name="text">
     <string>*</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_Supplier_B_Acc">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>430</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
   </widget>
  </widget>
