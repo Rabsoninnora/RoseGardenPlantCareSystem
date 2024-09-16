@@ -16,31 +16,28 @@ Suppliers::~Suppliers()
 void Suppliers::on_btn_View_Supplier_clicked()
 {
 
-    db.open();
+    dbSupplier.open();
     QSqlDatabase::database().transaction();
 
-    QSqlQuery QueryLoadData(db);
-    QueryLoadData.prepare("SELECT * FROM Supplier");
+    QSqlQuery QueryReadData(dbSupplier);
+    QueryReadData.prepare("SELECT * FROM Supplier");
 
 
 
-    int NumberOFRowsToDisplay=100;
+    int NumberOFRowsToDisplay=1000;
 
-    if(QueryLoadData.exec())
+    if(QueryReadData.exec())
     {
         ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
         int RowNumber =0;
-        while (QueryLoadData.next()) {
+        while (QueryReadData.next()) {
 
 
-            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryLoadData.value("SupplierID").toString())));
-            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryLoadData.value("Legal_Name").toString())));
-            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryLoadData.value("Pacra_reg").toString())));
-            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryLoadData.value("Tpin").toString())));
-            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryLoadData.value("Product").toString())));
-            ui->tableWidget->setItem( RowNumber, 5, new QTableWidgetItem(QString(QueryLoadData.value("Phone").toString())));
-            ui->tableWidget->setItem( RowNumber, 6, new QTableWidgetItem(QString(QueryLoadData.value("Address").toString())));
-            ui->tableWidget->setItem( RowNumber, 7, new QTableWidgetItem(QString(QueryLoadData.value("B_Acc").toString())));
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("SupplierID").toString())));
+            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Legal_Name").toString())));
+            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Pacra_reg").toString())));
+            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Tpin").toString())));
+            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Description").toString())));
 
             RowNumber = RowNumber +1;
 
@@ -49,16 +46,16 @@ void Suppliers::on_btn_View_Supplier_clicked()
     }
 
     QSqlDatabase::database().commit();
-    db.close();
+    dbSupplier.close();
 }
 
 
 void Suppliers::on_btn_Insert_Supplier_clicked()
 {
 
-    db.open();
+    dbSupplier.open();
     QSqlDatabase::database().transaction();
-    QSqlQuery InsertRecord(db);
+    QSqlQuery InsertRecord(dbSupplier);
     InsertRecord.prepare( "INSERT INTO Supplier(SupplierID,Legal_Name,Pacra_reg,Tpin,Product,Phone,Address,B_Acc) VALUES(:SupplierID,:Legal_Name,:Pacra_reg,:Tpin,:Product,:Phone,:Address,:B_Acc) ");
     InsertRecord.bindValue(":SupplierID", ui->lineEdit_SupplierID->text());
     InsertRecord.bindValue(":Legal_Name",ui->lineEdit_Supplier_Legal_Name->text());
@@ -70,7 +67,7 @@ void Suppliers::on_btn_Insert_Supplier_clicked()
     InsertRecord.bindValue(":B_Acc",ui->lineEdit_Supplier_B_Acc->text());
     InsertRecord.exec();
     QSqlDatabase::database().commit();
-    db.close();
+    dbSupplier.close();
    // qDebug() <<"     "<<InsertRecord.lastError().text();
 
     qDebug() <<"Query Last Error on this --> "<<InsertRecord.lastError().text();

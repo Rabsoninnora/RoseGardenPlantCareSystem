@@ -46,8 +46,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
     if(username== "innora" && password == "659489+") //Default developer login
     {
      QMessageBox::information(this, "Welcome","Login is successful!");
-        //hide first window
-         hide();
+
          //creating a constructor for System Dashboard
          secDialog =new SecDialog(this);
         //calling secDialog object
@@ -67,7 +66,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
             if(UserFindCount == 1)//If username and password is correct
             {
                 QMessageBox::information(this,"Welcome","login successful");
-                this->hide();
+
                 //creating a constructor for System Dashboard
                 secDialog =new SecDialog(this);
                 //calling secDialog object

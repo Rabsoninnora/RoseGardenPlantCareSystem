@@ -28,7 +28,7 @@ private slots:
 private:
     Ui::Suppliers *ui;
     //QSqlDatabase Object
-     QSqlDatabase db;
+     QSqlDatabase dbSupplier;
 };
 
 #endif // SUPPLIERS_H
