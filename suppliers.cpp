@@ -1,11 +1,14 @@
 #include "suppliers.h"
 #include "ui_suppliers.h"
 
+
 Suppliers::Suppliers(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::Suppliers)
 {
     ui->setupUi(this);
+
+
 }
 
 Suppliers::~Suppliers()
@@ -13,14 +16,12 @@ Suppliers::~Suppliers()
     delete ui;
 }
 
-void Suppliers::on_btn_View_Supplier_clicked()
-{
-
-    dbSupplier.open();
+void Suppliers::on_btn_View_Supplier_clicked() {
+    db.open();
     QSqlDatabase::database().transaction();
 
-    QSqlQuery QueryReadData(dbSupplier);
-    QueryReadData.prepare("SELECT * FROM Supplier");
+    QSqlQuery QueryReadData(db);
+    QueryReadData.prepare("SELECT * FROM Contacts");
 
 
 
@@ -33,12 +34,13 @@ void Suppliers::on_btn_View_Supplier_clicked()
         while (QueryReadData.next()) {
 
 
-            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("SupplierID").toString())));
-            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Legal_Name").toString())));
-            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Pacra_reg").toString())));
-            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Tpin").toString())));
-            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Description").toString())));
 
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("Contact_ID").toString())));
+            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Business_Name").toString())));
+            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Phone").toString())));
+            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Product").toString())));
+            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Business_Addr").toString())));
+            ui->tableWidget->setItem( RowNumber, 5, new QTableWidgetItem(QString(QueryReadData.value("Email_addr").toString())));
             RowNumber = RowNumber +1;
 
         }
@@ -46,35 +48,28 @@ void Suppliers::on_btn_View_Supplier_clicked()
     }
 
     QSqlDatabase::database().commit();
-    dbSupplier.close();
+    db.close();
+
 }
 
 
 void Suppliers::on_btn_Insert_Supplier_clicked()
 {
-
-    dbSupplier.open();
+    db.open();
     QSqlDatabase::database().transaction();
-    QSqlQuery InsertRecord(dbSupplier);
-    InsertRecord.prepare( "INSERT INTO Supplier(SupplierID,Legal_Name,Pacra_reg,Tpin,Product,Phone,Address,B_Acc) VALUES(:SupplierID,:Legal_Name,:Pacra_reg,:Tpin,:Product,:Phone,:Address,:B_Acc) ");
-    InsertRecord.bindValue(":SupplierID", ui->lineEdit_SupplierID->text());
-    InsertRecord.bindValue(":Legal_Name",ui->lineEdit_Supplier_Legal_Name->text());
-    InsertRecord.bindValue(":Pacra_reg",ui->lineEdit_Supplier_Pacra_Reg->text());
-    InsertRecord.bindValue(":Tpin",ui->lineEdit_Supplier_Tpin->text());
-    InsertRecord.bindValue(":Product",ui->lineEdit_Supplier_Product_Service->text());
-    InsertRecord.bindValue(":Phone",ui->lineEdit_Supplier_Phone->text());
-    InsertRecord.bindValue(":Address",ui->lineEdit_Supplier_Business_Address->text());
-    InsertRecord.bindValue(":B_Acc",ui->lineEdit_Supplier_B_Acc->text());
+    QSqlQuery InsertRecord(db);
+    InsertRecord.prepare( "INSERT INTO Contacts(Contact_ID,Business_Name,Phone,Product,Business_Addr,Email_addr) VALUES(:Contact_ID,:Business_Name,:Phone,:Product,:Business_Addr,:Email_addr) ");
+    InsertRecord.bindValue(":Contact_ID", ui->lineEdit_SupplierID->text());
+    InsertRecord.bindValue(":Business_Name",ui->lineEdit_Supplier_Legal_Name->text());
+    InsertRecord.bindValue(":Phone",ui->lineEdit_Phone->text());
+    InsertRecord.bindValue(":Product",ui->lineEdit_Product->text());
+    InsertRecord.bindValue(":Business_Addr",ui->lineEdit_address->text());
+    InsertRecord.bindValue(":Email_addr",ui->lineEdit_email->text());
     InsertRecord.exec();
     QSqlDatabase::database().commit();
-    dbSupplier.close();
-   // qDebug() <<"     "<<InsertRecord.lastError().text();
-
-    qDebug() <<"Query Last Error on this --> "<<InsertRecord.lastError().text();
+    db.close();
 
     foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
-
-
 
 }
 
@@ -88,5 +83,43 @@ void Suppliers::on_btn_Update_Supplier_clicked()
 void Suppliers::on_btn_Delete_Supplier_clicked()
 {
 
+}
+
+
+void Suppliers::on_btn_contact_view_clicked()
+{
+
+    db.open();
+    QSqlDatabase::database().transaction();
+
+    QSqlQuery QueryReadData(db);
+    QueryReadData.prepare("SELECT * FROM Contacts");
+
+
+
+    int NumberOFRowsToDisplay=1000;
+
+    if(QueryReadData.exec())
+    {
+        ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
+        int RowNumber =0;
+        while (QueryReadData.next()) {
+
+
+
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("Contact_ID").toString())));
+            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Business_Name").toString())));
+            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Phone").toString())));
+            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Product").toString())));
+            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Business_Addr").toString())));
+            ui->tableWidget->setItem( RowNumber, 5, new QTableWidgetItem(QString(QueryReadData.value("Email_addr").toString())));
+            RowNumber = RowNumber +1;
+
+        }
+
+    }
+
+    QSqlDatabase::database().commit();
+    db.close();
 }
 
