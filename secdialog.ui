@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1411</width>
+    <width>1305</width>
     <height>845</height>
    </rect>
   </property>
@@ -19,8 +19,10 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(65, 104, 74);
-background-image: url(:/images/home1.jpeg);</string>
+   <string notr="true">background-color: #4CAF50;
+background-image: url(:/images/home1.jpeg);
+
+</string>
   </property>
   <property name="modal">
    <bool>false</bool>
@@ -28,7 +30,7 @@ background-image: url(:/images/home1.jpeg);</string>
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>
-     <x>510</x>
+     <x>420</x>
      <y>20</y>
      <width>111</width>
      <height>41</height>
@@ -56,7 +58,7 @@ background-image: url(:/images/home1.jpeg);</string>
   <widget class="QPushButton" name="ViewSpecies">
    <property name="geometry">
     <rect>
-     <x>890</x>
+     <x>670</x>
      <y>20</y>
      <width>121</width>
      <height>41</height>
@@ -84,56 +86,10 @@ background-image: url(:/images/home1.jpeg);</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="GardenerDetails">
-   <property name="geometry">
-    <rect>
-     <x>1020</x>
-     <y>20</y>
-     <width>111</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(251, 251, 232);</string>
-   </property>
-   <property name="text">
-    <string>GARDENERS</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="AddGardener">
-   <property name="geometry">
-    <rect>
-     <x>630</x>
-     <y>20</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(251, 251, 232);</string>
-   </property>
-   <property name="text">
-    <string>ADD GARDENER</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="AdminPanel">
    <property name="geometry">
     <rect>
-     <x>1140</x>
+     <x>980</x>
      <y>20</y>
      <width>121</width>
      <height>41</height>
@@ -156,7 +112,7 @@ color: rgb(251, 251, 232);</string>
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>770</x>
+     <x>530</x>
      <y>20</y>
      <width>121</width>
      <height>41</height>
@@ -207,34 +163,6 @@ color: rgb(251, 251, 232);</string>
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="AddPlant_2">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>20</y>
-     <width>81</width>
-     <height>40</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);</string>
-   </property>
-   <property name="text">
-    <string>ABOUT</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="CopyRight_line">
    <property name="geometry">
     <rect>
@@ -258,9 +186,12 @@ color: rgb(251, 251, 232);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);
-font: 700 14pt &quot;Ubuntu&quot;;
-</string>
+    <string notr="true">
+QLabel {
+
+   background-color: #4CAF50;
+	font: 700 11pt &quot;Tibetan Machine Uni&quot;;
+}</string>
    </property>
    <property name="text">
     <string> The Rose Garden Nursery  System |</string>

@@ -51,7 +51,7 @@ private:
 
     SecDialog *secDialog;
 
-    QSqlDatabase DB_LOGIN_innora;
+    QSqlDatabase db;
 
 
 };

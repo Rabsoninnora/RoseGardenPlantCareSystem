@@ -9,6 +9,7 @@
 #include "index.h"
 #include "viewplants.h"
 #include "gardenerdetails.h"
+#include "admin.h"
 
 #include <QDialog>
 
@@ -48,7 +49,11 @@ private:
     Species     *ptrSpecies;
     AdminPanel  *ptrAdminPanel;
     ViewPlants  *ptrViewPlants;
+
     GardenerDetails  *ptrGardenerDetails;
+    Admin      *ptrAdmin;
+
+
 };
 
 #endif // SECDIALOG_H

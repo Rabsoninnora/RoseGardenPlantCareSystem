@@ -12,6 +12,7 @@ SecDialog::SecDialog(QWidget *parent)
     ptrGardenerDetails = new GardenerDetails();
     ptrSpecies = new Species();
     ptrViewPlants = new ViewPlants();
+    ptrAdmin = new Admin();
 }
 
 SecDialog::~SecDialog()
@@ -47,7 +48,7 @@ void SecDialog::on_AddPlant_clicked()
 //method on_AdminPanel_clicked
 void SecDialog::on_AdminPanel_clicked()
 {
-    ptrAdminPanel->show();
+     ptrAdmin->show();
 }
 
 //method on_AddGardener_clicked

@@ -12,22 +12,6 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
 {
     ui->setupUi(this);
 
-    DB_LOGIN_innora=QSqlDatabase::addDatabase("QSQLITE");
-    DB_LOGIN_innora.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
-    DB_LOGIN_innora.open();
-    QSqlDatabase::database().transaction();
-    if(DB_LOGIN_innora.open())
-    {
-        qDebug() <<"Hi Innora! Database is open on Login";
-    } else
-    {
-        qDebug() <<"Hi Innora!, Sorry Database is not open";
-    }
-    //the cancel button on login ui
-    //connect(ui->pushButton_login_3, SIGNAL(clicked()),this, SLOT(close()));
-    qDebug() << DB_LOGIN_innora.lastError().text();
-
-
 
 }
 
@@ -37,7 +21,7 @@ MainWindowPlantCare::~MainWindowPlantCare()
 }
 
 
-//
+
 void MainWindowPlantCare::on_pushButton_login_clicked()
 {
     QString username = ui->lineEdit_username->text();
@@ -54,7 +38,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
     }
     else
     {
-        QSqlQuery GetUser(DB_LOGIN_innora);
+        QSqlQuery GetUser(db);
         GetUser.prepare(" SELECT * FROM Admin_login WHERE username='" + username +"' AND password='" + password +"' ");
         if(GetUser.exec())
         {

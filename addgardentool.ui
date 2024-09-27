@@ -14,7 +14,9 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"> background-color: rgb(56, 144, 96);</string>
+   <string notr="true"> background-color:#4CAF50;
+
+ </string>
   </property>
   <widget class="QPushButton" name="btn_View_Record">
    <property name="geometry">

@@ -1,36 +1,37 @@
-#include "index.h"
-#include "ui_index.h"
+#include "admin.h"
+#include "ui_admin.h"
 
-index::index(QWidget *parent)
+Admin::Admin(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::index)
+    , ui(new Ui::Admin)
 {
     ui->setupUi(this);
 }
 
-index::~index()
+Admin::~Admin()
 {
     delete ui;
 }
 
-void index::on_btn_login_Admin_clicked()
+void Admin::on_pushButton_login_clicked()
 {
-    QString username = ui->lineEdit_usernameAdmin->text();
-    QString password = ui->lineEdit_passwordAdmin->text();
+
+    QString username = ui->lineEdit_username->text();
+    QString password = ui->lineEdit_password->text();
 
     if(username== "innora" && password == "659489+") //Default developer login
     {
         QMessageBox::information(this, "Welcome","Login is successful!");
 
         //creating a constructor for System Dashboard
-        AdminDashboard =new AdminPanel(this);
+        adminPanel =new AdminPanel(this);
         //calling secDialog object
-        AdminDashboard->show();
+        adminPanel->show();
+         this->hide();
+
     }
     else
     {
-        db.open();
-        QSqlDatabase::database().transaction();
         QSqlQuery GetAdmin(db);
         GetAdmin.prepare(" SELECT * FROM Admin_login WHERE username='" + username +"' AND password='" + password +"' ");
         if(GetAdmin.exec())
@@ -45,37 +46,35 @@ void index::on_btn_login_Admin_clicked()
                 QMessageBox::information(this,"Welcome","login successful");
 
                 //creating a constructor for System Dashboard
-                AdminDashboard =new AdminPanel(this);
+                adminPanel =new AdminPanel(this);
                 //calling secDialog object
-                AdminDashboard->show();
+                adminPanel->show();
+                this->hide();
             }
             else if(UserFindCount == 0)//If username and password is not correct
             {
 
 
-                QMessageBox::warning(this,"Warning!", "Please Enter Valid Username Or Passwaord");
+                QMessageBox::warning(this,"Warning!", " Enter Valid Username Or Passwaord");
             }
         }
 
         else
 
         {
-            QMessageBox::information(this, "Sorry!", "Please check your Username and Password");
+            QMessageBox::information(this, "Sorry!", "Check your Username and Password");
         }
-        QSqlDatabase::database().commit();
-        db.close();
     }
-
-
-
-
-
-
 }
 
 
-void index::on_btn_Cancel_login_Admin_clicked()
+void Admin::on_btn_Cancel_admin_login_clicked()
 {
-
+    QMessageBox::StandardButton reply;
+    reply=QMessageBox::warning(this,"Warning!", "You're about to Close the Application?",QMessageBox::Yes | QMessageBox::No);
+    if(reply==QMessageBox::Yes)
+    {
+        QApplication::quit();
+    }
 }
 

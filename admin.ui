@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Admin</class>
+ <widget class="QDialog" name="Admin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>301</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Admin access</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+
+background-color: #4CAF50;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="loginBox">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>241</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+ 
+QGroupBox {
+
+background-color: rgb(38, 162, 105);
+font: 700 12pt;
+color: rgb(255, 255, 255);
+
+border-radius: 100px;
+background-image: url(:/images/beauty.png);
+ 
+
+}
+
+ QLineEdit {
+  border:3px solid gray;
+  
+  
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="btn_Cancel_admin_login">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>230</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 8px;
+  background: green;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_login">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>230</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> 
+
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 8px;
+  background: green;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_password">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>170</y>
+      <width>181</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 9px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your password</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_username">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>181</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Enter your username</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

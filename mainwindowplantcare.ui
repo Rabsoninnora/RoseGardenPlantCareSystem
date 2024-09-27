@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>721</width>
-    <height>429</height>
+    <width>541</width>
+    <height>499</height>
    </rect>
   </property>
   <property name="font">
@@ -23,32 +23,53 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(171, 195, 226);</string>
+   <string notr="true">QMainWindow {
+
+background-color: #4CAF50;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="loginBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>60</x>
       <y>20</y>
-      <width>611</width>
-      <height>351</height>
+      <width>421</width>
+      <height>441</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(38, 162, 105);
-font: 700 12pt &quot;Ubuntu&quot;;
+     <string notr="true">
+ 
+QGroupBox {
+
+background-color: rgb(38, 162, 105);
+font: 700 12pt;
 color: rgb(255, 255, 255);
- </string>
+
+border-radius: 100px;
+background-image: url(:/images/beauty.png);
+ 
+
+}
+
+ QLineEdit {
+  border:3px solid gray;
+  
+  
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
     </property>
     <property name="title">
-     <string>Login</string>
+     <string/>
     </property>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>40</y>
+       <x>20</x>
+       <y>80</y>
        <width>381</width>
        <height>231</height>
       </rect>
@@ -57,24 +78,22 @@ color: rgb(255, 255, 255);
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
-         <widget class="QLabel" name="label">
-          <property name="styleSheet">
-           <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(251, 251, 232);</string>
-          </property>
-          <property name="text">
-           <string>UserName</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLineEdit" name="lineEdit_username">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+           <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
           </property>
           <property name="echoMode">
            <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your username</string>
           </property>
          </widget>
         </item>
@@ -83,24 +102,23 @@ color: rgb(0, 0, 0);</string>
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QLabel" name="label_2">
-          <property name="styleSheet">
-           <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>PassWord</string>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLineEdit" name="lineEdit_password">
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+           <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
           </property>
           <property name="echoMode">
            <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="placeholderText">
+           <string>Enter your password</string>
           </property>
          </widget>
         </item>
@@ -111,15 +129,28 @@ color: rgb(0, 0, 0);</string>
     <widget class="QPushButton" name="pushButton_login">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>230</y>
-       <width>81</width>
-       <height>31</height>
+       <x>80</x>
+       <y>290</y>
+       <width>101</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(255, 255, 255);</string>
+      <string notr="true"> QPushButton[class=primary]:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 8px;
+  background: green;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+   
+}</string>
      </property>
      <property name="text">
       <string>Submit</string>
@@ -128,15 +159,22 @@ color: rgb(255, 255, 255);</string>
     <widget class="QPushButton" name="pushButton_login_3">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>230</y>
-       <width>81</width>
-       <height>31</height>
+       <x>220</x>
+       <y>290</y>
+       <width>101</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(255, 255, 255);</string>
+      <string notr="true"> QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 8px;
+  background: green;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
      </property>
      <property name="text">
       <string>Cancel</string>
@@ -149,7 +187,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>721</width>
+     <width>541</width>
      <height>22</height>
     </rect>
    </property>
