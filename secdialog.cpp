@@ -6,10 +6,7 @@ SecDialog::SecDialog(QWidget *parent)
     , ui(new Ui::SecDialog)
 {
     ui->setupUi(this);
-    ptrAddGardener = new AddGardener();
     ptrAddPlant = new AddPlant();
-    ptrAdminPanel = new AdminPanel();
-    ptrGardenerDetails = new GardenerDetails();
     ptrSpecies = new Species();
     ptrViewPlants = new ViewPlants();
     ptrAdmin = new Admin();
@@ -17,10 +14,10 @@ SecDialog::SecDialog(QWidget *parent)
 
 SecDialog::~SecDialog()
 {
-    delete ptrAddGardener;
+
     delete ptrAddPlant;
-    delete ptrAdminPanel;
-    delete ptrGardenerDetails;
+
+    delete ptrAdmin;
     delete ptrSpecies;
     delete ptrViewPlants;
     delete ui;
@@ -51,15 +48,4 @@ void SecDialog::on_AdminPanel_clicked()
      ptrAdmin->show();
 }
 
-//method on_AddGardener_clicked
-void SecDialog::on_AddGardener_clicked()
-{
-    ptrAddGardener->show();
-}
-
-//method on_GardenerDetails_clicked
-void SecDialog::on_GardenerDetails_clicked()
-{
-    ptrGardenerDetails->show();
-}
 

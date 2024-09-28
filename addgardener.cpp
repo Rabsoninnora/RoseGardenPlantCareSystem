@@ -68,19 +68,9 @@ void AddGardener::on_btnSave_clicked()
 
 
 
-void AddGardener::on_btnBrowse_2_clicked()
-{
-
-}
 
 
 
-void AddGardener::on_btn_home2_clicked()
-{
-
-    QMessageBox::information(this, " Welcome TO The ROSE GARDEN PLANT CARE SYSTEM!", " Developed by Rabson Innocent Phiri");
-
-}
 
 
 void AddGardener::on_btnReset_clicked()

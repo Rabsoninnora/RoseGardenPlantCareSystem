@@ -26,7 +26,7 @@ void Species::on_btnSearch_clicked()
 
 
 
-    int NumberOFRowsToDisplay=100;
+    int NumberOFRowsToDisplay=1;
 
     if(QueryLoadData.exec())
     {

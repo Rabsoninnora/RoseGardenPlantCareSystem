@@ -172,6 +172,13 @@ color: rgb(251, 251, 232);</string>
      <height>31</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel
+{
+	color: rgb(255, 255, 255);
+
+}</string>
+   </property>
    <property name="text">
     <string> Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
    </property>
@@ -186,11 +193,10 @@ color: rgb(251, 251, 232);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-QLabel {
+    <string notr="true">QLabel{
 
-   background-color: #4CAF50;
-	font: 700 11pt &quot;Tibetan Machine Uni&quot;;
+	color: rgb(255, 255, 255);
+	font: 15pt &quot;Ubuntu&quot;;
 }</string>
    </property>
    <property name="text">

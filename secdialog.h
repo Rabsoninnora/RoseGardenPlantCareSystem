@@ -37,17 +37,15 @@ private slots:
 
     void on_AdminPanel_clicked();
 
-    void on_AddGardener_clicked();
 
-    void on_GardenerDetails_clicked();
+
+
 
 private:
     Ui::SecDialog *ui;
     //creating objects
-    AddGardener *ptrAddGardener;
     AddPlant    *ptrAddPlant;
     Species     *ptrSpecies;
-    AdminPanel  *ptrAdminPanel;
     ViewPlants  *ptrViewPlants;
 
     GardenerDetails  *ptrGardenerDetails;

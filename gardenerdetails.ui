@@ -155,26 +155,48 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
    <property name="geometry">
     <rect>
      <x>1050</x>
-     <y>50</y>
-     <width>101</width>
-     <height>31</height>
+     <y>30</y>
+     <width>171</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">
+
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Employee ID *</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_National_id">
    <property name="geometry">
     <rect>
      <x>1050</x>
-     <y>100</y>
-     <width>101</width>
-     <height>31</height>
+     <y>90</y>
+     <width>191</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>National ID *</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_First_name">
@@ -183,174 +205,112 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <x>1050</x>
      <y>150</y>
      <width>261</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>First Name</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Middle_name">
    <property name="geometry">
     <rect>
      <x>1050</x>
-     <y>200</y>
+     <y>210</y>
      <width>261</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Middle Name</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Last_name">
    <property name="geometry">
     <rect>
      <x>1050</x>
-     <y>250</y>
+     <y>270</y>
      <width>261</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Last Name</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_job_title">
    <property name="geometry">
     <rect>
      <x>1050</x>
-     <y>300</y>
+     <y>330</y>
      <width>261</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Job Tile</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Description">
    <property name="geometry">
     <rect>
      <x>1050</x>
-     <y>350</y>
+     <y>400</y>
      <width>261</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
    </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>80</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>National ID *</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>130</y>
-     <width>101</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>First Name</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>180</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Middle Name</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>230</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Last Name</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_7">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>30</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Employee ID *</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_8">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>280</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Job Tile</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_9">
-   <property name="geometry">
-    <rect>
-     <x>1050</x>
-     <y>330</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
+   <property name="placeholderText">
     <string>Description</string>
    </property>
   </widget>

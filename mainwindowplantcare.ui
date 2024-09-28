@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindowPlantCare</class>
  <widget class="QMainWindow" name="MainWindowPlantCare">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,6 +17,7 @@
    <font>
     <pointsize>12</pointsize>
     <bold>true</bold>
+    <kerning>true</kerning>
    </font>
   </property>
   <property name="windowTitle">
@@ -28,13 +32,16 @@
 background-color: #4CAF50;
 }</string>
   </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhNone</set>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="loginBox">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>30</x>
       <y>20</y>
-      <width>421</width>
+      <width>481</width>
       <height>441</height>
      </rect>
     </property>
@@ -92,6 +99,9 @@ background-image: url(:/images/beauty.png);
           <property name="echoMode">
            <enum>QLineEdit::Password</enum>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
           <property name="placeholderText">
            <string>Enter your username</string>
           </property>
@@ -116,6 +126,9 @@ background-image: url(:/images/beauty.png);
           </property>
           <property name="echoMode">
            <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
           <property name="placeholderText">
            <string>Enter your password</string>

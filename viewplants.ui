@@ -14,19 +14,36 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);</string>
+   <string notr="true">QDialog{
+
+	
+	background-image: url(:/images/beauty.png);
+
+}
+
+
+ </string>
   </property>
   <widget class="QPushButton" name="ViewPlantsRecord">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>400</x>
      <y>30</y>
-     <width>101</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}
+</string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -35,62 +52,74 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>40</x>
      <y>30</y>
-     <width>311</width>
+     <width>341</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">
+
+
+QLabel {
+color: rgb(255, 255, 255);
+font: 500 12pt &quot;Ubuntu&quot;;
+  border:1px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
    </property>
    <property name="text">
-    <string> The Rose Garden System  | Plants Record</string>
+    <string> The Rose Garden System  | Plant Record</string>
    </property>
   </widget>
   <widget class="QPushButton" name="DeletePlantsRecord">
    <property name="geometry">
     <rect>
-     <x>430</x>
+     <x>810</x>
      <y>30</y>
      <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: red;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string>Delete</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>60</y>
-     <width>31</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string> ID</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineEdit_Delete">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>60</y>
-     <width>81</width>
-     <height>21</height>
+     <x>610</x>
+     <y>30</y>
+     <width>181</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">gridline-color: rgb(255, 255, 255);</string>
+    <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 5px 5px;
+  background-color: rgb(0, 0, 0);
+  font: 500 10pt ;
+  color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter plant ID to delete</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">
@@ -103,8 +132,18 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+
+ QTableWidget 
+{
+
+  border:3px solid gray;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+ 
+  color: rgb(0, 0, 0);;
+
+}</string>
    </property>
    <column>
     <property name="text">
@@ -155,7 +194,6 @@ border-color: rgb(255, 255, 255);</string>
   <zorder>label</zorder>
   <zorder>ViewPlantsRecord</zorder>
   <zorder>DeletePlantsRecord</zorder>
-  <zorder>label_2</zorder>
   <zorder>lineEdit_Delete</zorder>
   <zorder>tableWidget</zorder>
  </widget>

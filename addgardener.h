@@ -28,6 +28,7 @@ private slots:
 private:
     Ui::AddGardener *ui;
       QSqlDatabase db;
+
 };
 
 #endif // ADDGARDENER_H

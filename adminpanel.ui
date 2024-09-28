@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>70</y>
+     <y>220</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -36,7 +36,7 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>120</y>
+     <y>70</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -51,8 +51,8 @@
   <widget class="QPushButton" name="btn_SystemAdmin">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>70</y>
+     <x>360</x>
+     <y>170</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -68,7 +68,7 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>220</y>
+     <y>120</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -84,7 +84,7 @@
    <property name="geometry">
     <rect>
      <x>360</x>
-     <y>230</y>
+     <y>120</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -99,8 +99,8 @@
   <widget class="QPushButton" name="pushButton_6">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>130</y>
+     <x>570</x>
+     <y>270</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -115,8 +115,8 @@
   <widget class="QPushButton" name="btn_Available_Plants">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>320</y>
+     <x>360</x>
+     <y>270</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -131,8 +131,8 @@
   <widget class="QPushButton" name="AddGardenTool">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>180</y>
+     <x>570</x>
+     <y>220</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -148,7 +148,7 @@
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>270</y>
+     <y>170</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -157,14 +157,14 @@
     <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
-    <string>Employees</string>
+    <string>Add Employees</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_View_Suppliers">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>170</y>
+     <x>360</x>
+     <y>70</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -193,6 +193,19 @@
    </property>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_employee_view">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>320</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Employees</string>
    </property>
   </widget>
  </widget>
