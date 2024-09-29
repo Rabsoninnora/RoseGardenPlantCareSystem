@@ -14,22 +14,36 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);</string>
+   <string notr="true">
+QDialog{
+background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);
+
+}</string>
   </property>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>100</y>
+     <y>70</y>
      <width>541</width>
-     <height>345</height>
+     <height>380</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="1">
      <widget class="QLineEdit" name="txtEmployeeID">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}
+</string>
       </property>
       <property name="placeholderText">
        <string>Enter Employee'S ID</string>
@@ -39,7 +53,15 @@
     <item row="1" column="1">
      <widget class="QLineEdit" name="txtNationalID">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
       <property name="placeholderText">
        <string>Enter Employee's NRC</string>
@@ -49,7 +71,15 @@
     <item row="2" column="1">
      <widget class="QLineEdit" name="txtName">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
       <property name="placeholderText">
        <string>Enter employee's name</string>
@@ -59,7 +89,15 @@
     <item row="3" column="1">
      <widget class="QLineEdit" name="txtMiddleName">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
       <property name="placeholderText">
        <string>Enter employee's other name</string>
@@ -69,7 +107,15 @@
     <item row="4" column="1">
      <widget class="QLineEdit" name="txtLastName">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
       <property name="placeholderText">
        <string>Enter employee's last name</string>
@@ -79,7 +125,15 @@
     <item row="5" column="1">
      <widget class="QLineEdit" name="txtJobTitle">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
       <property name="placeholderText">
        <string>Job title</string>
@@ -89,7 +143,15 @@
     <item row="6" column="1">
      <widget class="QPlainTextEdit" name="txtDescription">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QPlainTextEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
       <property name="placeholderText">
        <string>Job description</string>
@@ -108,8 +170,16 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 700 12pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string> Reset</string>
@@ -118,15 +188,23 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>160</x>
+     <x>140</x>
      <y>460</y>
      <width>121</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 700 12pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string> Save</string>

@@ -19,9 +19,7 @@ public:
 private slots:
     void on_btnSave_clicked();
 
-    void on_btnBrowse_2_clicked();
 
-    void on_btn_home2_clicked();
 
     void on_btnReset_clicked();
 
