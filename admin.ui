@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>240</width>
-    <height>301</height>
+    <width>541</width>
+    <height>449</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Admin access</string>
+   <string> The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog {
@@ -22,21 +22,21 @@ background-color: #4CAF50;
   <widget class="QGroupBox" name="loginBox">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>10</y>
-     <width>241</width>
-     <height>291</height>
+     <x>10</x>
+     <y>70</y>
+     <width>511</width>
+     <height>351</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
+    <string notr="true"> 
  
 QGroupBox {
 
 background-color: rgb(38, 162, 105);
 font: 700 12pt;
 color: rgb(255, 255, 255);
-
+border:12px solid gray;
 border-radius: 100px;
 background-image: url(:/images/beauty.png);
  
@@ -58,8 +58,8 @@ background-image: url(:/images/beauty.png);
    <widget class="QPushButton" name="btn_Cancel_admin_login">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>230</y>
+      <x>250</x>
+      <y>240</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -82,8 +82,8 @@ background-image: url(:/images/beauty.png);
    <widget class="QPushButton" name="pushButton_login">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>230</y>
+      <x>140</x>
+      <y>240</y>
       <width>81</width>
       <height>31</height>
      </rect>
@@ -108,8 +108,8 @@ background-image: url(:/images/beauty.png);
    <widget class="QLineEdit" name="lineEdit_password">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>170</y>
+      <x>140</x>
+      <y>180</y>
       <width>181</width>
       <height>38</height>
      </rect>
@@ -135,8 +135,8 @@ background-image: url(:/images/beauty.png);
    <widget class="QLineEdit" name="lineEdit_username">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>100</y>
+      <x>140</x>
+      <y>110</y>
       <width>181</width>
       <height>38</height>
      </rect>
@@ -158,6 +158,30 @@ background-image: url(:/images/beauty.png);
      <string>Enter your username</string>
     </property>
    </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>30</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+ QLabel {
+  color: rgb(255, 255, 255);
+  font: 500 12pt &quot;Ubuntu&quot;;
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string>Welcome to  admin section</string>
+   </property>
   </widget>
  </widget>
  <resources/>

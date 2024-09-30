@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1456</width>
+    <width>1295</width>
     <height>860</height>
    </rect>
   </property>
@@ -14,12 +14,9 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog{
+   <string notr="true">background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);
 
-	
-	background-image: url(:/images/beauty.png);
-
-}
 
 
  </string>
@@ -35,7 +32,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-  border:3px solid gray;
+  border:3px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
   background: green;
@@ -63,9 +60,9 @@
 
 
 QLabel {
-color: rgb(255, 255, 255);
-font: 500 12pt &quot;Ubuntu&quot;;
-  border:1px solid gray;
+  color: rgb(255, 255, 255);
+  font: 500 12pt &quot;Ubuntu&quot;;
+  border:1px solid  rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
   
@@ -86,7 +83,7 @@ font: 500 12pt &quot;Ubuntu&quot;;
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-  border:3px solid gray;
+  border:3px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
   background: red;
@@ -110,7 +107,7 @@ font: 500 12pt &quot;Ubuntu&quot;;
    </property>
    <property name="styleSheet">
     <string notr="true">  QLineEdit {
-  border:3px solid gray;
+  border:3px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 5px 5px;
   background-color: rgb(0, 0, 0);
@@ -127,8 +124,8 @@ font: 500 12pt &quot;Ubuntu&quot;;
     <rect>
      <x>35</x>
      <y>110</y>
-     <width>1361</width>
-     <height>701</height>
+     <width>1131</width>
+     <height>661</height>
     </rect>
    </property>
    <property name="styleSheet">

@@ -19,10 +19,22 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #4CAF50;
-background-image: url(:/images/home1.jpeg);
+   <string notr="true">
 
-</string>
+QDialog{
+background-color: #4CAF50;
+background-image: url(:/images/home1.jpeg);
+}
+
+ QMessageBox{
+        
+    border:6px solid gray;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: green;
+    font: 500 12pt ;
+    text-color: rgb(255, 255, 255);
+    };</string>
   </property>
   <property name="modal">
    <bool>false</bool>
@@ -30,23 +42,35 @@ background-image: url(:/images/home1.jpeg);
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>20</y>
-     <width>111</width>
-     <height>41</height>
+     <x>290</x>
+     <y>30</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <bold>true</bold>
+     <family>Ubuntu</family>
+     <pointsize>11</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);</string>
+    <string notr="true">  
+QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}
+</string>
    </property>
    <property name="text">
-    <string>ADD PLANTS</string>
+    <string>Add Plant</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -58,23 +82,33 @@ background-image: url(:/images/home1.jpeg);
   <widget class="QPushButton" name="ViewSpecies">
    <property name="geometry">
     <rect>
-     <x>670</x>
-     <y>20</y>
-     <width>121</width>
-     <height>41</height>
+     <x>560</x>
+     <y>30</y>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <bold>true</bold>
+     <family>Ubuntu</family>
+     <pointsize>11</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);</string>
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}</string>
    </property>
    <property name="text">
-    <string>VIEW SPECIES</string>
+    <string>Search Species</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -89,18 +123,25 @@ background-image: url(:/images/home1.jpeg);
   <widget class="QPushButton" name="AdminPanel">
    <property name="geometry">
     <rect>
-     <x>980</x>
-     <y>20</y>
-     <width>121</width>
-     <height>41</height>
+     <x>930</x>
+     <y>30</y>
+     <width>151</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 700 12pt &quot;Ubuntu&quot;;
-color: rgb(251, 251, 232);</string>
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}</string>
    </property>
    <property name="text">
-    <string>ADMIN PANEL</string>
+    <string>Admin Dashboard</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -112,23 +153,33 @@ color: rgb(251, 251, 232);</string>
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>20</y>
+     <x>430</x>
+     <y>30</y>
      <width>121</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
-     <bold>true</bold>
+     <family>Ubuntu</family>
+     <pointsize>11</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);</string>
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}</string>
    </property>
    <property name="text">
-    <string>VIEW PLANTS</string>
+    <string>View Plants</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -186,23 +237,65 @@ color: rgb(251, 251, 232);</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>20</y>
-     <width>331</width>
-     <height>41</height>
+     <x>0</x>
+     <y>0</y>
+     <width>1361</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel{
-
-	color: rgb(255, 255, 255);
-	font: 15pt &quot;Ubuntu&quot;;
+    <string notr="true">  QLabel {
+  color: rgb(255, 255, 255);
+  font: 500 12pt &quot;Ubuntu&quot;;
+  border:6px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
 }</string>
    </property>
    <property name="text">
     <string> The Rose Garden Nursery  System |</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_logout">
+   <property name="geometry">
+    <rect>
+     <x>1150</x>
+     <y>30</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
+  <zorder>AddPlant</zorder>
+  <zorder>ViewSpecies</zorder>
+  <zorder>AdminPanel</zorder>
+  <zorder>ViewPlants</zorder>
+  <zorder>calendarWidget</zorder>
+  <zorder>label</zorder>
+  <zorder>CopyRight_line</zorder>
+  <zorder>btn_logout</zorder>
  </widget>
  <resources/>
  <connections/>

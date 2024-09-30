@@ -1,6 +1,6 @@
 #ifndef SECDIALOG_H
 #define SECDIALOG_H
-
+#include <QMessageBox>
 
 #include "addgardener.h"
 #include "addplant.h"
@@ -40,6 +40,8 @@ private slots:
 
 
 
+
+    void on_btn_logout_clicked();
 
 private:
     Ui::SecDialog *ui;

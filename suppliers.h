@@ -25,7 +25,7 @@ private slots:
 
     void on_btn_Delete_Supplier_clicked();
 
-    void on_btn_contact_view_clicked();
+
 
 private:
     Ui::Suppliers *ui;

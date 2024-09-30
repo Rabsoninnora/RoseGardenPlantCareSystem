@@ -49,3 +49,15 @@ void SecDialog::on_AdminPanel_clicked()
 }
 
 
+
+void SecDialog::on_btn_logout_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply=QMessageBox::warning(this,"Warning!", "You're about to Close the Application?",QMessageBox::Yes | QMessageBox::No);
+    if(reply==QMessageBox::Yes)
+    {
+        QApplication::quit();
+    }
+
+}
+

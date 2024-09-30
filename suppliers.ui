@@ -14,56 +14,53 @@
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);</string>
+   <string notr="true">background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);</string>
   </property>
   <widget class="QLabel" name="The_Rose_Garden_Nursery_System">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>30</x>
      <y>20</y>
-     <width>331</width>
+     <width>501</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);
-font: 700 14pt &quot;Ubuntu&quot;;
-</string>
+    <string notr="true"> QLabel {
+  color: rgb(255, 255, 255);
+  font: 500 12pt &quot;Ubuntu&quot;;
+  border:1px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
    </property>
    <property name="text">
-    <string> The Rose Garden Nursery  System |</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Add_Supplier_Detail_Section">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>20</y>
-     <width>201</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);
-font: 700 11pt &quot;Ubuntu&quot;;
-</string>
-   </property>
-   <property name="text">
-    <string>Add Supplier Detail Section</string>
+    <string> The Rose Garden Nursery  System |    Supplier Detail Section</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_View_Supplier">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>30</x>
      <y>70</y>
-     <width>121</width>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(222, 221, 218);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> 
+QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 13pt  &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}
+</string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -72,15 +69,24 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btn_Insert_Supplier">
    <property name="geometry">
     <rect>
-     <x>150</x>
+     <x>180</x>
      <y>70</y>
      <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(19, 255, 0);
-font: 500 15pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> 
+QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 15pt  &quot;Ubuntu&quot;;
+ color: rgb(19, 255, 0);
+
+}
+</string>
    </property>
    <property name="text">
     <string>Insert</string>
@@ -89,15 +95,24 @@ font: 500 15pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btn_Update_Supplier">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>310</x>
      <y>70</y>
      <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(26, 95, 180);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 13pt  &quot;Ubuntu&quot;;
+ color: blue;
+
+}
+</string>
    </property>
    <property name="text">
     <string>Update</string>
@@ -106,15 +121,24 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btn_Delete_Supplier">
    <property name="geometry">
     <rect>
-     <x>370</x>
+     <x>430</x>
      <y>70</y>
      <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> 
+QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 13pt  &quot;Ubuntu&quot;;
+ color: red;
+
+}
+</string>
    </property>
    <property name="text">
     <string>Delete</string>
@@ -123,271 +147,147 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_SupplierID">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>70</y>
-     <width>161</width>
-     <height>31</height>
+     <x>840</x>
+     <y>130</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter ID*</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Supplier_Legal_Name">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>120</y>
+     <x>840</x>
+     <y>180</y>
      <width>261</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter business name*</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Phone">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>170</y>
+     <x>840</x>
+     <y>230</y>
      <width>261</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter phone number*</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Product">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>220</y>
+     <x>840</x>
+     <y>280</y>
      <width>261</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter product or service*</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_address">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>270</y>
+     <x>840</x>
+     <y>330</y>
      <width>261</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Physical business address*</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_email">
    <property name="geometry">
     <rect>
-     <x>850</x>
-     <y>320</y>
+     <x>840</x>
+     <y>380</y>
      <width>261</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
+    <string notr="true">
+
+
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 18px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
    </property>
-  </widget>
-  <widget class="QLabel" name="Supplier_ID">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>50</y>
-     <width>81</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Supplier ID </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Asteric_ID">
-   <property name="geometry">
-    <rect>
-     <x>930</x>
-     <y>50</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);</string>
-   </property>
-   <property name="text">
-    <string>*</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Supplier_Legal_Name">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>100</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Business Name</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Supplier_Pacra_Registration_Number">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>150</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Phone number</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Supplier_TPIN">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>200</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Product| Service</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Asteric_NAME">
-   <property name="geometry">
-    <rect>
-     <x>960</x>
-     <y>100</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);</string>
-   </property>
-   <property name="text">
-    <string>*</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Asteric_PACRA">
-   <property name="geometry">
-    <rect>
-     <x>960</x>
-     <y>150</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);</string>
-   </property>
-   <property name="text">
-    <string>*</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Asteric_TPIN">
-   <property name="geometry">
-    <rect>
-     <x>970</x>
-     <y>200</y>
-     <width>16</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);</string>
-   </property>
-   <property name="text">
-    <string>*</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Asteric_Product_Service">
-   <property name="geometry">
-    <rect>
-     <x>970</x>
-     <y>250</y>
-     <width>20</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);</string>
-   </property>
-   <property name="text">
-    <string>*</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Supplier_Phone">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>300</y>
-     <width>111</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Email Address</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Asteric_Phone">
-   <property name="geometry">
-    <rect>
-     <x>950</x>
-     <y>300</y>
-     <width>20</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);</string>
-   </property>
-   <property name="text">
-    <string>*</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Supplier_Business_Address">
-   <property name="geometry">
-    <rect>
-     <x>850</x>
-     <y>250</y>
-     <width>121</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Business Address</string>
+   <property name="placeholderText">
+    <string>Enter email address*</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">
@@ -400,7 +300,16 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true">  QTableWidget 
+{
+
+  border:3px solid gray;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+ 
+  color: rgb(0, 0, 0);;
+
+}</string>
    </property>
    <column>
     <property name="text">
@@ -432,19 +341,6 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <string>Email address</string>
     </property>
    </column>
-  </widget>
-  <widget class="QPushButton" name="btn_contact_view">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>70</y>
-     <width>91</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>View</string>
-   </property>
   </widget>
  </widget>
  <resources/>

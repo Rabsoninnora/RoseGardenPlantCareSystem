@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1040</width>
-    <height>539</height>
+    <height>570</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,17 +21,24 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>40</y>
-     <width>101</width>
-     <height>41</height>
+     <y>90</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
 QPushButton{
-color: rgb(255, 255, 255);
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
 
-}</string>
+}
+
+ </string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -40,14 +47,25 @@ color: rgb(255, 255, 255);
   <widget class="QPushButton" name="btn_Insert_Record">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>40</y>
-     <width>91</width>
-     <height>41</height>
+     <x>190</x>
+     <y>90</y>
+     <width>121</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string>Insert Data</string>
@@ -56,14 +74,25 @@ color: rgb(255, 255, 255);
   <widget class="QPushButton" name="btn_Delete_Record">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>40</y>
-     <width>111</width>
-     <height>41</height>
+     <x>490</x>
+     <y>90</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string>Delete Record</string>
@@ -72,14 +101,25 @@ color: rgb(255, 255, 255);
   <widget class="QPushButton" name="btn_Update_Record">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>40</y>
-     <width>111</width>
-     <height>41</height>
+     <x>330</x>
+     <y>90</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
+    <string notr="true"> 
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string> Update Record</string>
@@ -89,9 +129,9 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>101</y>
+     <y>140</y>
      <width>731</width>
-     <height>431</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -136,7 +176,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>90</y>
+     <y>200</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -160,7 +200,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>140</y>
+     <y>250</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -184,7 +224,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>190</y>
+     <y>300</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -208,7 +248,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>240</y>
+     <y>350</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -232,7 +272,7 @@ color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>290</y>
+     <y>400</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -250,6 +290,29 @@ color: rgb(255, 255, 255);
    </property>
    <property name="placeholderText">
     <string>Description</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="The_Rose_Garden_Nursery_System">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>621</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QLabel {
+  color: rgb(255, 255, 255);
+  font: 500 12pt &quot;Ubuntu&quot;;
+  border:1px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string> The Rose Garden Nursery  System |    Garden Tool Section</string>
    </property>
   </widget>
  </widget>
