@@ -6,5 +6,8 @@
         <file>rose2.jpg</file>
         <file>rose1.jpg</file>
         <file>beauty.png</file>
+        <file>user.png</file>
+        <file>search.png</file>
     </qresource>
+    <qresource prefix="/"/>
 </RCC>

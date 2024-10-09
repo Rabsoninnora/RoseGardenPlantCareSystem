@@ -6,28 +6,39 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1321</width>
-    <height>609</height>
+    <width>1265</width>
+    <height>729</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);</string>
+   <string notr="true">background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>391</width>
+     <width>411</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+QLabel{
+                    color: rgb(255, 255, 255);
+                    border:3px solid grey;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string> The Rose Garden System  |      Employee Record</string>
@@ -36,15 +47,26 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="ViewEmployeeRecord">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>460</x>
      <y>20</y>
      <width>121</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(222, 221, 218);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> 
+
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -54,15 +76,22 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>80</y>
+     <y>110</y>
      <width>991</width>
-     <height>609</height>
+     <height>541</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-font: 500 12pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">  QTableWidget 
+{
+
+  border:3px solid gray;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+ 
+  color: rgb(0, 0, 0);;
+
+}</string>
    </property>
    <column>
     <property name="text">
@@ -103,15 +132,25 @@ font: 500 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btn_Insert_Employee">
    <property name="geometry">
     <rect>
-     <x>580</x>
+     <x>590</x>
      <y>20</y>
      <width>91</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(19, 255, 0);
-font: 500 15pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+QPushButton {
+                    color: rgb(19, 255, 0);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string>Insert</string>
@@ -123,12 +162,22 @@ font: 500 15pt &quot;Ubuntu&quot;;</string>
      <x>690</x>
      <y>20</y>
      <width>91</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(26, 95, 180);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+QPushButton {
+                    color: rgb(26, 95, 180);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string>Update</string>
@@ -137,15 +186,25 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btn_Delete_Employee">
    <property name="geometry">
     <rect>
-     <x>800</x>
+     <x>790</x>
      <y>20</y>
      <width>91</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+QPushButton {
+                    color: rgb(224, 27, 36);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 12pt ;
+
+}
+
+ </string>
    </property>
    <property name="text">
     <string>Delete</string>
@@ -154,10 +213,10 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_Employee_id">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>30</y>
+     <x>1020</x>
+     <y>160</y>
      <width>171</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -165,8 +224,8 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
 
  QLineEdit {
   border:3px solid gray;
-  border-radius: 10px;
-  padding: 12px 12px;
+  border-radius: 9px;
+  padding: 08px 9px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
@@ -179,17 +238,17 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_National_id">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>90</y>
+     <x>1020</x>
+     <y>220</y>
      <width>191</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 08px 08px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
@@ -202,17 +261,17 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_First_name">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>150</y>
-     <width>261</width>
-     <height>51</height>
+     <x>1020</x>
+     <y>280</y>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 08px 08px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
@@ -225,17 +284,17 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_Middle_name">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>210</y>
-     <width>261</width>
-     <height>51</height>
+     <x>1020</x>
+     <y>340</y>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 8px 8px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
@@ -248,17 +307,17 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_Last_name">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>270</y>
-     <width>261</width>
-     <height>51</height>
+     <x>1020</x>
+     <y>400</y>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 8px 8px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
@@ -271,17 +330,17 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_job_title">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>330</y>
-     <width>261</width>
-     <height>51</height>
+     <x>1020</x>
+     <y>450</y>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 8px 8px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
@@ -294,17 +353,17 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_Description">
    <property name="geometry">
     <rect>
-     <x>1050</x>
-     <y>400</y>
-     <width>261</width>
-     <height>51</height>
+     <x>1020</x>
+     <y>510</y>
+     <width>211</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 12px 12px;
+  padding: 08px 08px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;

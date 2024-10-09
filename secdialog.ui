@@ -33,7 +33,7 @@ background-image: url(:/images/home1.jpeg);
     padding: 0 10px;
     background: green;
     font: 500 12pt ;
-    text-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     };</string>
   </property>
   <property name="modal">

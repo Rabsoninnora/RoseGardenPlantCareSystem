@@ -28,34 +28,7 @@ AddPlant::~AddPlant()
     delete ui;
 }
 
-//Read and process Image
-void AddPlant::on_btnBrowse_clicked()
-{
-    QString file_name = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::homePath(), tr("Images (*.png *.xpm *.jpg)"));
 
-       //check if file_name is not empty
-    if(!file_name.isEmpty()){
-      //open prompt and display image
-        QMessageBox::information(this, "......", file_name);
-        QImage img(file_name);
-        QPixmap pix = QPixmap::fromImage(img);
-
-        //get lable dimensions
-        int w = ui->load_image->width();
-        int h = ui->load_image->height();
-       //load image onto ui
-        ui->load_image->setPixmap(pix.scaled(w,h,Qt::KeepAspectRatio));
-
-
-
-
-
-
-
-    }
-
-
-}
 
 
 void AddPlant::on_btnSave_clicked()
@@ -86,6 +59,8 @@ void AddPlant::on_btnSave_clicked()
     foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) {
         widget->clear();
 
+        //foreach(QPlainTextEdit *widget, this->findChildren<QPlainTextEdit*>())
+
     }
 }
 
@@ -104,4 +79,7 @@ void AddPlant::on_btnReset_clicked()
 
     foreach(QPlainTextEdit *widget,this->findChildren<QPlainTextEdit*>()){widget->clear();}
 }
+
+
+
 

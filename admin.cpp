@@ -65,6 +65,9 @@ void Admin::on_pushButton_login_clicked()
             QMessageBox::information(this, "Sorry!", "Check your Username and Password");
         }
     }
+
+    qDebug();
+
 }
 
 

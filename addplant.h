@@ -20,7 +20,6 @@ public:
 
 //the fuctionality is private but the ui is public
 private slots:
-    void on_btnBrowse_clicked();
 
 
     void on_btnSave_clicked();
@@ -28,6 +27,8 @@ private slots:
     void on_pushButton_btn_home_clicked();
 
     void on_btnReset_clicked();
+
+
 
 private:
     Ui::AddPlant *ui;

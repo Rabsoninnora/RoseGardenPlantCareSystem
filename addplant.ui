@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>797</width>
-    <height>709</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,177 +17,146 @@
    <double>1.000000000000000</double>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);
-</string>
+   <string notr="true"> 
+QDialog{
+background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);
+
+}</string>
   </property>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>260</y>
+     <y>100</y>
      <width>541</width>
-     <height>331</height>
+     <height>428</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="0">
-     <widget class="QLabel" name="ScientificName">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Scientific name</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="1">
      <widget class="QLineEdit" name="txtScientificName">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="Genus">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Genus</string>
+      <property name="placeholderText">
+       <string>Scientific name</string>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
      <widget class="QLineEdit" name="txtGenus">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QLabel" name="CommonName">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Common name</string>
+      <property name="placeholderText">
+       <string>Genus</string>
       </property>
      </widget>
     </item>
     <item row="2" column="1">
      <widget class="QLineEdit" name="txtCommonName">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="Species">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Species</string>
+      <property name="placeholderText">
+       <string>Local name</string>
       </property>
      </widget>
     </item>
     <item row="3" column="1">
      <widget class="QLineEdit" name="txtSpecies">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
       </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QLabel" name="Description">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Description</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <widget class="QLabel" name="Status">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Status          </string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0">
-     <widget class="QLabel" name="PriceZMW">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Price ZMW</string>
+      <property name="placeholderText">
+       <string>Species</string>
       </property>
      </widget>
     </item>
     <item row="6" column="1">
      <widget class="QLineEdit" name="txtPrice">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Price ZMW</string>
       </property>
      </widget>
     </item>
     <item row="4" column="1">
      <widget class="QPlainTextEdit" name="txtDescription">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"> 
+ QPlainTextEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Description</string>
       </property>
      </widget>
     </item>
     <item row="5" column="1">
      <widget class="QComboBox" name="cmbStatus">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true"> 
+ QComboBox {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Status</string>
       </property>
       <item>
        <property name="text">
@@ -206,26 +175,21 @@
       </item>
      </widget>
     </item>
-    <item row="7" column="0">
-     <widget class="QLabel" name="Quantity">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Quantity</string>
-      </property>
-     </widget>
-    </item>
     <item row="7" column="1">
      <widget class="QLineEdit" name="txtQuantity">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Quantity</string>
       </property>
      </widget>
     </item>
@@ -234,15 +198,23 @@
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>600</y>
-     <width>121</width>
+     <x>200</x>
+     <y>540</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 700 12pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string> Save</string>
@@ -251,56 +223,26 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>600</y>
-     <width>121</width>
+     <x>450</x>
+     <y>540</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 700 12pt &quot;Ubuntu&quot;;</string>
+    <string notr="true">
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string> Reset</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btnBrowse">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>10</y>
-     <width>121</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>11</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string>Browse.......</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="load_image">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>50</y>
-     <width>271</width>
-     <height>191</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-   <property name="text">
-    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_btn_home">
@@ -311,6 +253,18 @@ font: 700 12pt &quot;Ubuntu&quot;;</string>
      <width>81</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string>Home</string>
