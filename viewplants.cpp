@@ -8,12 +8,12 @@ ViewPlants::ViewPlants(QWidget *parent)
 {
     ui->setupUi(this);
 
-    if(!DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
+    if(!DatabaseManager::instance().openDatabase("C:/Project@rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
 
         qDebug()<< "Database File Does Not Exist or Unable To Open! ";
     }
 
-    if(QFile::exists("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
+    if(QFile::exists("C:/Project@rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db"))
     {
         qDebug()<< "Database File Exists ! ";
     }   else

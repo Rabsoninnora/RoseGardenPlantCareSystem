@@ -24,6 +24,7 @@ And prevents issues related to multiple connections.
 #include<QSqlQueryModel>
 #include <QTableWidget>
 #include <QObject>
+#include <QFileDialog>
 
 class DatabaseManager {
 public:
@@ -45,7 +46,7 @@ public:
         }
 
         db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
+        db.setDatabaseName("C:/Project@rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
 
         if (!db.open()) {
             qDebug() << "Error: Unable to open database:" << db.lastError().text();
@@ -59,7 +60,7 @@ public:
          Application page you are on.
 
        */
-        DatabaseManager::instance().openDatabase("/home/rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
+        DatabaseManager::instance().openDatabase("C:/Project@rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db");
     }
 
     void closeDatabase()

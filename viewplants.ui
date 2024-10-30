@@ -129,18 +129,17 @@ QLabel {
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-
+    <string notr="true">
  QTableWidget 
 {
 
-  border:3px solid gray;
+  border:6px solid gray;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
- 
+  background: rgb(58, 169, 200);
   color: rgb(0, 0, 0);;
 
-}</string>
+}
+</string>
    </property>
    <column>
     <property name="text">

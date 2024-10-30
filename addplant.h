@@ -23,12 +23,9 @@ private slots:
 
 
     void on_btnSave_clicked();
-
     void on_pushButton_btn_home_clicked();
-
     void on_btnReset_clicked();
-
-
+    void on_btn_browse_image_clicked();
 
 private:
     Ui::AddPlant *ui;
@@ -38,6 +35,8 @@ private:
     QByteArray FinalDataToSave;
     QFileInfo FileInfo;
     QString ImageName;
+
+     QByteArray imageData; // Adding this member variable to store image data
 };
 
 #endif // ADDPLANT_H

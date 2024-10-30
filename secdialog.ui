@@ -2,21 +2,36 @@
 <ui version="4.0">
  <class>SecDialog</class>
  <widget class="QDialog" name="SecDialog">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1305</width>
-    <height>845</height>
+    <width>1411</width>
+    <height>711</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
   </property>
   <property name="font">
    <font>
     <pointsize>14</pointsize>
    </font>
   </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
    <string>The Rose Garden Nursery  System 1.0</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">
@@ -42,10 +57,10 @@ background-image: url(:/images/home1.jpeg);
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>30</y>
+     <x>340</x>
+     <y>20</y>
      <width>131</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -82,10 +97,10 @@ QPushButton {
   <widget class="QPushButton" name="ViewSpecies">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>30</y>
+     <x>620</x>
+     <y>20</y>
      <width>161</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -123,10 +138,10 @@ QPushButton {
   <widget class="QPushButton" name="AdminPanel">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>30</y>
-     <width>151</width>
-     <height>31</height>
+     <x>890</x>
+     <y>20</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -153,10 +168,10 @@ QPushButton {
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>30</y>
+     <x>480</x>
+     <y>20</y>
      <width>121</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -235,18 +250,22 @@ QPushButton {
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1361</width>
+     <width>1299</width>
      <height>81</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">  QLabel {
   color: rgb(255, 255, 255);
-  font: 500 12pt &quot;Ubuntu&quot;;
+  font: 400 12pt;
+
   border:6px solid green;
   border-radius: 10px;
   padding: 0 10px;
@@ -260,10 +279,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_logout">
    <property name="geometry">
     <rect>
-     <x>1150</x>
-     <y>30</y>
+     <x>1130</x>
+     <y>20</y>
      <width>91</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">

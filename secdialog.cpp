@@ -4,12 +4,15 @@
 SecDialog::SecDialog(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::SecDialog)
+
 {
     ui->setupUi(this);
+
     ptrAddPlant = new AddPlant();
     ptrSpecies = new Species();
     ptrViewPlants = new ViewPlants();
     ptrAdmin = new Admin();
+
 }
 
 SecDialog::~SecDialog()

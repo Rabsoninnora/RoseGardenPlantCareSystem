@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>797</width>
-    <height>600</height>
+    <width>1154</width>
+    <height>778</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
   </property>
   <property name="windowTitle">
    <string>The Rose Garden Nursery  System 1.0</string>
@@ -24,13 +36,16 @@ background-image: url(:/images/beauty.png);
 
 }</string>
   </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>490</x>
      <y>100</y>
      <width>541</width>
-     <height>428</height>
+     <height>513</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -198,8 +213,8 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>540</y>
+     <x>580</x>
+     <y>630</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -223,8 +238,8 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>540</y>
+     <x>840</x>
+     <y>630</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -248,8 +263,8 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="pushButton_btn_home">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>24</y>
+     <x>1000</x>
+     <y>20</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -268,6 +283,47 @@ background-image: url(:/images/beauty.png);
    </property>
    <property name="text">
     <string>Home</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_browse_image">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>90</y>
+     <width>181</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+ QPushButton {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Browse image</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image_field">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>451</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(200, 166, 155);</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
    </property>
   </widget>
  </widget>

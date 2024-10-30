@@ -10,6 +10,7 @@
 #include <QPixmap>
 #include <QLabel>
 #include<QLineEdit>
+#include <QVBoxLayout>
 #include "databaseheader.h"
 
 AddPlant::AddPlant(QWidget *parent)
@@ -28,7 +29,22 @@ AddPlant::~AddPlant()
     delete ui;
 }
 
+void AddPlant::on_btn_browse_image_clicked()
+{
 
+    QString ImagePath=QFileDialog::getOpenFileName(this, tr("Select Image"), QCoreApplication::applicationDirPath(), tr("JPG Files(*.jpg)"));
+    //constructor
+    QPixmap Image(ImagePath);
+    QBuffer ImageBufferData;
+
+    if(ImageBufferData.open(QIODevice::ReadWrite))
+    {
+        Image.save(&ImageBufferData, "JPG");
+
+    }
+    QByteArray FinalDataToSave = ImageBufferData.buffer().toBase64();
+    ui->image_field->setPixmap(Image);
+}
 
 
 void AddPlant::on_btnSave_clicked()
@@ -44,6 +60,15 @@ void AddPlant::on_btnSave_clicked()
     QString quantity = ui->txtQuantity->text();
 
     //posting data in the database in the addPlant Table/Relation
+    QString ImagePath = QFileDialog::getOpenFileName(this, tr("Select Image"), QCoreApplication::applicationDirPath(), tr("JPG Files(*.jpg)"));
+    if (!ImagePath.isEmpty()) {
+        QPixmap Image(ImagePath);
+        QBuffer ImageBufferData(&imageData); // Use the member variable directly
+        if (ImageBufferData.open(QIODevice::WriteOnly)) {
+            Image.save(&ImageBufferData, "JPG");
+        }
+        imageData = ImageBufferData.buffer().toBase64(); // Convert to Base64
+    }
     db_RoseGarden.open();
     QSqlDatabase::database().transaction();
     QSqlQuery QueryInsertData(db_RoseGarden);
@@ -59,9 +84,9 @@ void AddPlant::on_btnSave_clicked()
     foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) {
         widget->clear();
 
-        //foreach(QPlainTextEdit *widget, this->findChildren<QPlainTextEdit*>())
-
     }
+
+    foreach(QPlainTextEdit *widget, this->findChildren<QPlainTextEdit*>()){widget->clear();}
 }
 
 
@@ -79,6 +104,11 @@ void AddPlant::on_btnReset_clicked()
 
     foreach(QPlainTextEdit *widget,this->findChildren<QPlainTextEdit*>()){widget->clear();}
 }
+
+
+
+
+
 
 
 

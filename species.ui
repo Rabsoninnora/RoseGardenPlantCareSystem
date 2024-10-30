@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>644</width>
+    <width>789</width>
     <height>468</height>
    </rect>
   </property>
@@ -20,9 +20,9 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QPushButton" name="btnSearch">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>570</x>
      <y>10</y>
-     <width>91</width>
+     <width>101</width>
      <height>51</height>
     </rect>
    </property>
@@ -46,7 +46,7 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QLineEdit" name="txtSpeciesName">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>250</x>
      <y>10</y>
      <width>271</width>
      <height>51</height>
@@ -74,7 +74,7 @@ background-image: url(:/images/beauty.png);</string>
     <rect>
      <x>40</x>
      <y>10</y>
-     <width>121</width>
+     <width>161</width>
      <height>51</height>
     </rect>
    </property>
@@ -98,19 +98,21 @@ background-image: url(:/images/beauty.png);</string>
     <rect>
      <x>40</x>
      <y>91</y>
-     <width>531</width>
-     <height>251</height>
+     <width>671</width>
+     <height>301</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"> QTableWidget 
 {
 
-  border:3px solid gray;
+  border:6px solid gray;
   border-radius: 10px;
   background: rgb(255, 255, 255);
+  
+	font: 12pt &quot;Segoe UI&quot;;
  
-  color: rgb(0, 0, 0);;
+ 
 
 }</string>
    </property>
@@ -118,15 +120,51 @@ background-image: url(:/images/beauty.png);</string>
     <property name="text">
      <string>ID</string>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="background">
+     <color>
+      <red>0</red>
+      <green>88</green>
+      <blue>0</blue>
+     </color>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Species</string>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="background">
+     <color>
+      <red>0</red>
+      <green>85</green>
+      <blue>0</blue>
+     </color>
+    </property>
    </column>
    <column>
     <property name="text">
      <string>Description</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="background">
+     <color>
+      <red>0</red>
+      <green>85</green>
+      <blue>0</blue>
+     </color>
     </property>
    </column>
   </widget>
