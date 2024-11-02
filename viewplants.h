@@ -1,6 +1,7 @@
 #ifndef VIEWPLANTS_H
 #define VIEWPLANTS_H
 #include "databaseheader.h"
+#include <QTableWidgetItem>
 
 #include <QDialog>
 
@@ -24,10 +25,14 @@ private slots:
 
     void on_DeletePlantsRecord_clicked();
 
+    void on_btn_print_PDF_clicked();
+
 private:
     Ui::ViewPlants *ui;
 
     QSqlDatabase DB_SQLITE3;
+    ViewPlants *tableWidget;
+    ViewPlants *NumberOFRowsToDisplay;
 
 };
 

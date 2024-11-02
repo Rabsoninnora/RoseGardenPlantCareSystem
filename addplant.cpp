@@ -11,6 +11,7 @@
 #include <QLabel>
 #include<QLineEdit>
 #include <QVBoxLayout>
+#include <QByteArray>
 #include "databaseheader.h"
 
 AddPlant::AddPlant(QWidget *parent)
@@ -37,13 +38,16 @@ void AddPlant::on_btn_browse_image_clicked()
     QPixmap Image(ImagePath);
     QBuffer ImageBufferData;
 
-    if(ImageBufferData.open(QIODevice::ReadWrite))
+    if(ImageBufferData.open(QIODevice::ReadOnly))
     {
         Image.save(&ImageBufferData, "JPG");
 
     }
-    QByteArray FinalDataToSave = ImageBufferData.buffer().toBase64();
-    ui->image_field->setPixmap(Image);
+
+
+     ui->image_field->setPixmap(Image);
+    // QFileInfo FileInfo(ImagePath);
+   //  QString ImageName =FileInfo.fileName();
 }
 
 
@@ -59,7 +63,25 @@ void AddPlant::on_btnSave_clicked()
     QString price = ui->txtPrice->text();
     QString quantity = ui->txtQuantity->text();
 
-    //posting data in the database in the addPlant Table/Relation
+
+
+    /*
+
+    db_RoseGarden.open();
+    QSqlDatabase::database().transaction();
+    QSqlQuery QueryInsertData(db_RoseGarden);
+    QueryInsertData.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity, Image ) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +"')");
+    QueryInsertData.exec();
+    qDebug() <<" Last error : "<< QueryInsertData.lastError().text();
+    QSqlDatabase::database().commit();
+    db_RoseGarden.close();
+
+
+    qDebug() << "Database closed  successfuly, Happy coding !";
+
+
+   */
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     QString ImagePath = QFileDialog::getOpenFileName(this, tr("Select Image"), QCoreApplication::applicationDirPath(), tr("JPG Files(*.jpg)"));
     if (!ImagePath.isEmpty()) {
         QPixmap Image(ImagePath);
@@ -69,24 +91,41 @@ void AddPlant::on_btnSave_clicked()
         }
         imageData = ImageBufferData.buffer().toBase64(); // Convert to Base64
     }
+
+    QFileInfo FileInfo(ImagePath);
+
+    QString ImageName =FileInfo.fileName();
     db_RoseGarden.open();
     QSqlDatabase::database().transaction();
     QSqlQuery QueryInsertData(db_RoseGarden);
-    QueryInsertData.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +"')");
+    QueryInsertData.prepare("INSERT INTO addplant(scientific_name, Genus, common_name, species, description, status, price, quantity, Image_Data, Image_Name) VALUES(:scientific_name,:Genus,:common_name,:species,:description,:status,:price,:quantity,:Image_Data,:Image_Name)");
+    QueryInsertData.addBindValue(scientific_name);
+    QueryInsertData.addBindValue(Genus);
+    QueryInsertData.addBindValue(common_name);
+    QueryInsertData.addBindValue(species);
+    QueryInsertData.addBindValue(description);
+    QueryInsertData.addBindValue(status);
+    QueryInsertData.addBindValue(price);
+    QueryInsertData.addBindValue(quantity);
+    QueryInsertData.bindValue(":Image_Name", ImageName);
+    QueryInsertData.addBindValue(imageData); // Use the stored image data
+
     QueryInsertData.exec();
-    qDebug() <<" Last error : "<< QueryInsertData.lastError().text();
+    qDebug() << "Last error:" << QueryInsertData.lastError().text();
     QSqlDatabase::database().commit();
     db_RoseGarden.close();
-
-    qDebug() << "Database closed  successfuly, Happy coding !";
-
-
-    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) {
-        widget->clear();
-
-    }
+    qDebug() << "Database closed successfully, Happy coding!";
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear();}
 
     foreach(QPlainTextEdit *widget, this->findChildren<QPlainTextEdit*>()){widget->clear();}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 }
 
 

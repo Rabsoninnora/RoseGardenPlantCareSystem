@@ -38,7 +38,6 @@ void AddGardenTool::on_btn_View_Record_clicked()
             ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("tool_ID").toString())));
             ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Item_name").toString())));
             ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Quantity").toString())));
-            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Status").toString())));
             ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Description").toString())));
 
             RowNumber = RowNumber +1;
@@ -77,11 +76,10 @@ void AddGardenTool::on_btn_Insert_Record_clicked()
     QSqlDatabase::database().transaction();
     QSqlQuery QueryInsertData(DB_GardenTools);
 
-    QueryInsertData.prepare("INSERT INTO TOOLS(tool_ID,Item_name,Quantity,Status,Description) VALUES(:tool_ID,:Item_name,:Quantity,:Status,:Description)");
+    QueryInsertData.prepare("INSERT INTO TOOLS(tool_ID,Item_name,Quantity,Description) VALUES(:tool_ID,:Item_name,:Quantity,:Description)");
     QueryInsertData.bindValue(":tool_ID",ui->lineEdit_ID->text());
     QueryInsertData.bindValue(":Item_name",ui->lineEdit_Item_name->text());
     QueryInsertData.bindValue(":Quantity",ui->lineEdit_Quantity->text());
-    QueryInsertData.bindValue(":Status",ui->lineEdit_Status->text());
     QueryInsertData.bindValue(":Description",ui->lineEdit_Description->text());
 
     QueryInsertData.exec();
@@ -102,12 +100,11 @@ void AddGardenTool::on_btn_Update_Record_clicked()
     DB_GardenTools.open();
     QSqlDatabase::database().transaction();
     QSqlQuery QueryUpdateData(DB_GardenTools);
-    QueryUpdateData.prepare("UPDATE TOOLS SET tool_ID=:tool_ID,Item_name=:Item_name,Quantity=:Quantity,Status=:Status,Description=:Description WHERE tool_ID=:tool_ID");
+    QueryUpdateData.prepare("UPDATE TOOLS SET tool_ID=:tool_ID,Item_name=:Item_name,Quantity=:Quantity,Description=:Description WHERE tool_ID=:tool_ID");
 
     QueryUpdateData.bindValue(":tool_ID",ui->lineEdit_ID->text());
     QueryUpdateData.bindValue(":Item_name",ui->lineEdit_Item_name->text());
     QueryUpdateData.bindValue(":Quantity",ui->lineEdit_Quantity->text());
-    QueryUpdateData.bindValue(":Status",ui->lineEdit_Status->text());
     QueryUpdateData.bindValue(":Description",ui->lineEdit_Description->text());
 
 

@@ -175,7 +175,7 @@ background-image: url(:/images/beauty.png);
 }</string>
      </property>
      <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
+      <enum>QLineEdit::Normal</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

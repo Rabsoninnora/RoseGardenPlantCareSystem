@@ -8,6 +8,7 @@ SecDialog::SecDialog(QWidget *parent)
 {
     ui->setupUi(this);
 
+
     ptrAddPlant = new AddPlant();
     ptrSpecies = new Species();
     ptrViewPlants = new ViewPlants();

@@ -21,8 +21,8 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>20</y>
-     <width>411</width>
+     <y>30</y>
+     <width>521</width>
      <height>51</height>
     </rect>
    </property>
@@ -47,10 +47,10 @@ QLabel{
   <widget class="QPushButton" name="ViewEmployeeRecord">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>20</y>
-     <width>121</width>
-     <height>31</height>
+     <x>560</x>
+     <y>40</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -82,16 +82,17 @@ QPushButton{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">  QTableWidget 
+    <string notr="true">
+ QTableWidget 
 {
 
-  border:3px solid gray;
+  border:6px solid gray;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
- 
+  background: rgb(58, 169, 200);
   color: rgb(0, 0, 0);;
 
-}</string>
+}
+</string>
    </property>
    <column>
     <property name="text">
@@ -100,7 +101,7 @@ QPushButton{
    </column>
    <column>
     <property name="text">
-     <string>National ID</string>
+     <string>NRC</string>
     </property>
    </column>
    <column>
@@ -132,10 +133,10 @@ QPushButton{
   <widget class="QPushButton" name="btn_Insert_Employee">
    <property name="geometry">
     <rect>
-     <x>590</x>
-     <y>20</y>
-     <width>91</width>
-     <height>31</height>
+     <x>750</x>
+     <y>40</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -159,10 +160,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Update_Employee">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>20</y>
-     <width>91</width>
-     <height>31</height>
+     <x>890</x>
+     <y>40</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -186,10 +187,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Delete_Employee">
    <property name="geometry">
     <rect>
-     <x>790</x>
-     <y>20</y>
-     <width>91</width>
-     <height>31</height>
+     <x>1040</x>
+     <y>40</y>
+     <width>131</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -215,8 +216,8 @@ QPushButton {
     <rect>
      <x>1020</x>
      <y>160</y>
-     <width>171</width>
-     <height>41</height>
+     <width>191</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -240,8 +241,8 @@ QPushButton {
     <rect>
      <x>1020</x>
      <y>220</y>
-     <width>191</width>
-     <height>41</height>
+     <width>241</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -255,7 +256,7 @@ QPushButton {
 }</string>
    </property>
    <property name="placeholderText">
-    <string>National ID *</string>
+    <string>NRC *</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_First_name">
@@ -263,8 +264,8 @@ QPushButton {
     <rect>
      <x>1020</x>
      <y>280</y>
-     <width>211</width>
-     <height>41</height>
+     <width>241</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -285,9 +286,9 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>340</y>
-     <width>211</width>
-     <height>41</height>
+     <y>360</y>
+     <width>241</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -308,9 +309,9 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>400</y>
-     <width>211</width>
-     <height>41</height>
+     <y>430</y>
+     <width>241</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -331,9 +332,9 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>450</y>
-     <width>211</width>
-     <height>41</height>
+     <y>500</y>
+     <width>241</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -354,9 +355,9 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>510</y>
-     <width>211</width>
-     <height>41</height>
+     <y>570</y>
+     <width>241</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1132</width>
-    <height>602</height>
+    <width>1227</width>
+    <height>693</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -243,10 +243,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_address">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>330</y>
-     <width>261</width>
-     <height>41</height>
+     <x>860</x>
+     <y>380</y>
+     <width>321</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -267,10 +267,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_email">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>380</y>
-     <width>261</width>
-     <height>41</height>
+     <x>870</x>
+     <y>470</y>
+     <width>311</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -294,26 +294,27 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>25</x>
-     <y>131</y>
+     <y>250</y>
      <width>801</width>
      <height>291</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">  QTableWidget 
+    <string notr="true">
+ QTableWidget 
 {
 
-  border:3px solid gray;
+  border:6px solid gray;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
- 
+  background: rgb(58, 169, 200);
   color: rgb(0, 0, 0);;
 
-}</string>
+}
+</string>
    </property>
    <column>
     <property name="text">
-     <string>ID</string>
+     <string>Supplier_ID</string>
     </property>
    </column>
    <column>

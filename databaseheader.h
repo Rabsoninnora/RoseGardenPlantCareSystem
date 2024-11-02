@@ -25,6 +25,9 @@ And prevents issues related to multiple connections.
 #include <QTableWidget>
 #include <QObject>
 #include <QFileDialog>
+#include <QtPrintSupport/QPrinter>
+#include <QtPrintSupport/QPrintEngine>
+
 
 class DatabaseManager {
 public:

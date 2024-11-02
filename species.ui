@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>789</width>
-    <height>468</height>
+    <width>1111</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,9 +21,9 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>10</y>
-     <width>101</width>
-     <height>51</height>
+     <y>50</y>
+     <width>191</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -47,9 +47,9 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>10</y>
+     <y>50</y>
      <width>271</width>
-     <height>51</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -73,7 +73,7 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>10</y>
+     <y>50</y>
      <width>161</width>
      <height>51</height>
     </rect>
@@ -96,25 +96,24 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>91</y>
-     <width>671</width>
-     <height>301</height>
+     <x>60</x>
+     <y>170</y>
+     <width>841</width>
+     <height>411</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> QTableWidget 
+    <string notr="true">
+ QTableWidget 
 {
 
   border:6px solid gray;
   border-radius: 10px;
-  background: rgb(255, 255, 255);
-  
-	font: 12pt &quot;Segoe UI&quot;;
- 
- 
+  background: rgb(58, 169, 200);
+  color: rgb(0, 0, 0);;
 
-}</string>
+}
+</string>
    </property>
    <column>
     <property name="text">
