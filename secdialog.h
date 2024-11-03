@@ -10,6 +10,7 @@
 #include "viewplants.h"
 #include "gardenerdetails.h"
 #include "admin.h"
+#include "plantdetail.h"
 
 #include <QDialog>
 
@@ -43,12 +44,15 @@ private slots:
 
     void on_btn_logout_clicked();
 
+    void on_btn_Plant_Detail_clicked();
+
 private:
     Ui::SecDialog *ui;
     //creating objects
     AddPlant    *ptrAddPlant;
     Species     *ptrSpecies;
     ViewPlants  *ptrViewPlants;
+    PlantDetail * ptrPlantDetail;
 
     GardenerDetails  *ptrGardenerDetails;
     Admin      *ptrAdmin;

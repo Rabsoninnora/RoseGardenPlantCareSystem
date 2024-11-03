@@ -320,10 +320,17 @@ background-image: url(:/images/beauty.png);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(200, 166, 155);</string>
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string/>
    </property>
   </widget>
  </widget>

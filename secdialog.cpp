@@ -13,6 +13,8 @@ SecDialog::SecDialog(QWidget *parent)
     ptrSpecies = new Species();
     ptrViewPlants = new ViewPlants();
     ptrAdmin = new Admin();
+    ptrPlantDetail = new PlantDetail();
+
 
 }
 
@@ -24,6 +26,7 @@ SecDialog::~SecDialog()
     delete ptrAdmin;
     delete ptrSpecies;
     delete ptrViewPlants;
+    delete ptrPlantDetail;
     delete ui;
 }
 
@@ -63,5 +66,11 @@ void SecDialog::on_btn_logout_clicked()
         QApplication::quit();
     }
 
+}
+
+
+void SecDialog::on_btn_Plant_Detail_clicked()
+{
+    ptrPlantDetail->show();
 }
 

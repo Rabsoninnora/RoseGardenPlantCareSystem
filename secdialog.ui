@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1411</width>
-    <height>711</height>
+    <width>1407</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -57,8 +57,8 @@ background-image: url(:/images/home1.jpeg);
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>20</y>
+     <x>480</x>
+     <y>90</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -257,7 +257,7 @@ QPushButton {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1299</width>
+     <width>1411</width>
      <height>81</height>
     </rect>
    </property>
@@ -306,6 +306,46 @@ QPushButton {
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_Plant_Detail">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>20</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>11</pointsize>
+     <italic>false</italic>
+     <fontweight>Medium</fontweight>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  
+QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Plant Details</string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>AddPlant</zorder>
   <zorder>ViewSpecies</zorder>
@@ -315,6 +355,7 @@ QPushButton {
   <zorder>label</zorder>
   <zorder>CopyRight_line</zorder>
   <zorder>btn_logout</zorder>
+  <zorder>btn_Plant_Detail</zorder>
  </widget>
  <resources/>
  <connections/>
