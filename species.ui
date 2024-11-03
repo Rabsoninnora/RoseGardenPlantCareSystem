@@ -20,10 +20,10 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QPushButton" name="btnSearch">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>50</y>
+     <x>680</x>
+     <y>60</y>
      <width>191</width>
-     <height>61</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -46,7 +46,7 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QLineEdit" name="txtSpeciesName">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>330</x>
      <y>50</y>
      <width>271</width>
      <height>61</height>
@@ -74,7 +74,7 @@ background-image: url(:/images/beauty.png);</string>
     <rect>
      <x>40</x>
      <y>50</y>
-     <width>161</width>
+     <width>221</width>
      <height>51</height>
     </rect>
    </property>
@@ -90,7 +90,7 @@ background-image: url(:/images/beauty.png);</string>
 }</string>
    </property>
    <property name="text">
-    <string>Search By ID</string>
+    <string>Search By Plant_ID</string>
    </property>
   </widget>
   <widget class="QTableWidget" name="tableWidget">
@@ -117,7 +117,27 @@ background-image: url(:/images/beauty.png);</string>
    </property>
    <column>
     <property name="text">
-     <string>ID</string>
+     <string>File_name</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Image</string>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Plant_ID</string>
     </property>
     <property name="font">
      <font>

@@ -16,13 +16,15 @@ Species::~Species()
 
 void Species::on_btnSearch_clicked()
 {
-
+    QByteArray ImageDataFromDataBase;
+    QPixmap Image;
+    QString ImageName;
 
     DB_SQLITE3.open();
     QSqlDatabase::database().transaction();
 
     QSqlQuery QueryLoadData(DB_SQLITE3);
-    QueryLoadData.prepare("SELECT * FROM addplant WHERE ID="+ ui->txtSpeciesName->text()+"");
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtSpeciesName->text()+"");
 
 
 
@@ -33,11 +35,22 @@ void Species::on_btnSearch_clicked()
         ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
         int RowNumber =0;
         while (QueryLoadData.next()) {
+            ImageName = QueryLoadData.value("Image_Name").toString();
+            ImageDataFromDataBase = QByteArray::fromBase64(QueryLoadData.value("Image_Data").toByteArray());
+            Image.loadFromData(ImageDataFromDataBase, "JPG");
 
 
-            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryLoadData.value("ID").toString())));
-            ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryLoadData.value("species").toString())));
-            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryLoadData.value("description").toString())));
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(ImageName));
+            QTableWidgetItem *Image_Item = new  QTableWidgetItem();
+            Image_Item->setIcon(QIcon(Image));
+            Image_Item->setData(Qt::DecorationRole, Image.scaled(200,200));
+            ui->tableWidget->setItem( RowNumber, 1, Image_Item);
+            ui->tableWidget->verticalHeader()->setDefaultSectionSize(30);
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryLoadData.value("Plant_ID").toString())));
+            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryLoadData.value("species").toString())));
+            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryLoadData.value("description").toString())));
 
             RowNumber = RowNumber +1;
 

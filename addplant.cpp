@@ -32,22 +32,22 @@ AddPlant::~AddPlant()
 
 void AddPlant::on_btn_browse_image_clicked()
 {
+    QString file_name = QFileDialog::getOpenFileName(this, tr("Open File"), QDir::homePath(), tr("Images(*.png *.xpm *.jpg)"));
+    if(!file_name.isEmpty()){
+        //open prompt and display image
+        QMessageBox::information(this, "......." ,file_name );
+        QImage img(file_name);
+        QPixmap pix = QPixmap::fromImage(img);
 
-    QString ImagePath=QFileDialog::getOpenFileName(this, tr("Select Image"), QCoreApplication::applicationDirPath(), tr("JPG Files(*.jpg)"));
-    //constructor
-    QPixmap Image(ImagePath);
-    QBuffer ImageBufferData;
+        //get image_field dimentions
+        int w=ui->image_field->width();
+        int h=ui->image_field->height();
 
-    if(ImageBufferData.open(QIODevice::ReadOnly))
-    {
-        Image.save(&ImageBufferData, "JPG");
+        //load image onto the UI
+        ui->image_field->setPixmap(pix.scaled(w, h,Qt::KeepAspectRatio));
 
     }
 
-
-     ui->image_field->setPixmap(Image);
-    // QFileInfo FileInfo(ImagePath);
-   //  QString ImageName =FileInfo.fileName();
 }
 
 

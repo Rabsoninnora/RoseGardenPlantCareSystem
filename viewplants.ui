@@ -148,7 +148,12 @@ QLabel {
    </property>
    <column>
     <property name="text">
-     <string>Picture</string>
+     <string>File_Nane</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Image</string>
     </property>
    </column>
    <column>

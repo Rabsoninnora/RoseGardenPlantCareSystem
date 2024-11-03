@@ -64,8 +64,9 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
             ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(ImageName));
             QTableWidgetItem *Image_Item = new  QTableWidgetItem();
             Image_Item->setIcon(QIcon(Image));
-            Image_Item->setData(Qt::DecorationRole, Image);
+            Image_Item->setData(Qt::DecorationRole, Image.scaled(200,200));
             ui->tableWidget->setItem( RowNumber, 1, Image_Item);
+            ui->tableWidget->verticalHeader()->setDefaultSectionSize(30);
             //////////////////////////////////////////////////////////////////////////////////////////////////////////
             ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryLoadData.value("Plant_ID").toString())));
             ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryLoadData.value("scientific_name").toString())));
@@ -86,6 +87,7 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
     DB_SQLITE3.close();
     /////////////////////////////////////////////////////////////////////////////////////////////
 
+    ui->tableWidget->resizeRowsToContents();
     Image.save(QCoreApplication::applicationDirPath() + "/Image_From_Database.jpg");
 
 

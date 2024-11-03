@@ -38,7 +38,7 @@ void AddGardenTool::on_btn_View_Record_clicked()
             ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryReadData.value("tool_ID").toString())));
             ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryReadData.value("Item_name").toString())));
             ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryReadData.value("Quantity").toString())));
-            ui->tableWidget->setItem( RowNumber, 4, new QTableWidgetItem(QString(QueryReadData.value("Description").toString())));
+            ui->tableWidget->setItem( RowNumber, 3, new QTableWidgetItem(QString(QueryReadData.value("Description").toString())));
 
             RowNumber = RowNumber +1;
 
