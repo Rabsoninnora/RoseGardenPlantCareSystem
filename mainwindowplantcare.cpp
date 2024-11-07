@@ -12,6 +12,8 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //Add admin login and user login separately
+
 
 }
 
@@ -35,6 +37,8 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
          secDialog =new SecDialog(this);
         //calling secDialog object
         secDialog->show();
+
+
     }
     else
     {

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1227</width>
-    <height>693</height>
+    <width>1291</width>
+    <height>764</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -44,9 +44,9 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>70</y>
-     <width>131</width>
-     <height>41</height>
+     <y>130</y>
+     <width>191</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -69,10 +69,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Insert_Supplier">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>70</y>
-     <width>101</width>
-     <height>41</height>
+     <x>280</x>
+     <y>130</y>
+     <width>171</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -95,10 +95,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Update_Supplier">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>70</y>
-     <width>101</width>
-     <height>41</height>
+     <x>480</x>
+     <y>130</y>
+     <width>151</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -121,10 +121,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Delete_Supplier">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>70</y>
-     <width>101</width>
-     <height>41</height>
+     <x>680</x>
+     <y>130</y>
+     <width>141</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -147,10 +147,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_SupplierID">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>130</y>
-     <width>171</width>
-     <height>41</height>
+     <x>930</x>
+     <y>240</y>
+     <width>311</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -171,10 +171,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Supplier_Legal_Name">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>180</y>
-     <width>261</width>
-     <height>41</height>
+     <x>930</x>
+     <y>320</y>
+     <width>311</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -195,10 +195,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Phone">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>230</y>
-     <width>261</width>
-     <height>41</height>
+     <x>930</x>
+     <y>400</y>
+     <width>311</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -219,33 +219,9 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Product">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>280</y>
-     <width>261</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-   </property>
-   <property name="placeholderText">
-    <string>Enter product or service*</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_address">
-   <property name="geometry">
-    <rect>
-     <x>860</x>
-     <y>380</y>
-     <width>321</width>
+     <x>930</x>
+     <y>560</y>
+     <width>311</width>
      <height>61</height>
     </rect>
    </property>
@@ -256,7 +232,31 @@ QPushButton {
   border-radius: 10px;
   padding: 8px 8px;
   background: rgb(255, 255, 255);
-  font: 700 12pt ;
+  font: 500 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Enter product or service*</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_address">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>640</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+  font: 500 12pt ;
   color: rgb(0, 0, 0);;
 }</string>
    </property>
@@ -267,22 +267,20 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_email">
    <property name="geometry">
     <rect>
-     <x>870</x>
-     <y>470</y>
+     <x>930</x>
+     <y>480</y>
      <width>311</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
-
-
  QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
-  padding: 8px 18px;
+  padding: 8px 8px;
   background: rgb(255, 255, 255);
-  font: 700 12pt ;
+  font: 500 12pt ;
   color: rgb(0, 0, 0);;
 }</string>
    </property>
@@ -295,8 +293,8 @@ QPushButton {
     <rect>
      <x>25</x>
      <y>250</y>
-     <width>801</width>
-     <height>291</height>
+     <width>871</width>
+     <height>451</height>
     </rect>
    </property>
    <property name="styleSheet">

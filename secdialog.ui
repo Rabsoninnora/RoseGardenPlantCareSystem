@@ -37,8 +37,10 @@
    <string notr="true">
 
 QDialog{
-background-color: #4CAF50;
-background-image: url(:/images/home1.jpeg);
+ 
+	background-color: rgb(0, 85, 0);
+
+  
 }
 
  QMessageBox{
@@ -57,8 +59,8 @@ background-image: url(:/images/home1.jpeg);
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>90</y>
+     <x>640</x>
+     <y>110</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -97,8 +99,8 @@ QPushButton {
   <widget class="QPushButton" name="ViewSpecies">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>20</y>
+     <x>460</x>
+     <y>110</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -138,8 +140,8 @@ QPushButton {
   <widget class="QPushButton" name="AdminPanel">
    <property name="geometry">
     <rect>
-     <x>890</x>
-     <y>20</y>
+     <x>800</x>
+     <y>110</y>
      <width>171</width>
      <height>41</height>
     </rect>
@@ -168,9 +170,9 @@ QPushButton {
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>20</y>
-     <width>121</width>
+     <x>310</x>
+     <y>110</y>
+     <width>131</width>
      <height>41</height>
     </rect>
    </property>
@@ -203,23 +205,13 @@ QPushButton {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QCalendarWidget" name="calendarWidget">
-   <property name="geometry">
-    <rect>
-     <x>760</x>
-     <y>80</y>
-     <width>483</width>
-     <height>303</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>380</y>
-     <width>481</width>
-     <height>221</height>
+     <x>-30</x>
+     <y>-10</y>
+     <width>1851</width>
+     <height>821</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -232,21 +224,22 @@ QPushButton {
   <widget class="QLabel" name="CopyRight_line">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>680</y>
-     <width>1381</width>
-     <height>31</height>
+     <x>0</x>
+     <y>760</y>
+     <width>1411</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QLabel
 {
+	background-color: rgb(0, 85, 0);
 	color: rgb(255, 255, 255);
 
 }</string>
    </property>
    <property name="text">
-    <string> Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
+    <string>      Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -258,30 +251,28 @@ QPushButton {
      <x>0</x>
      <y>0</y>
      <width>1411</width>
-     <height>81</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">  QLabel {
-  color: rgb(255, 255, 255);
-  font: 400 12pt;
-
-  border:6px solid green;
+  background-color: rgb(0, 85, 0);
+  border:3px solid green;
   border-radius: 10px;
   padding: 0 10px;
   
 }</string>
    </property>
    <property name="text">
-    <string> The Rose Garden Nursery  System |</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_logout">
    <property name="geometry">
     <rect>
-     <x>1130</x>
-     <y>20</y>
-     <width>91</width>
+     <x>1110</x>
+     <y>110</y>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -309,9 +300,9 @@ QPushButton {
   <widget class="QPushButton" name="btn_Plant_Detail">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>20</y>
-     <width>131</width>
+     <x>140</x>
+     <y>110</y>
+     <width>141</width>
      <height>41</height>
     </rect>
    </property>
@@ -346,16 +337,68 @@ QPushButton {
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>1408</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid grey;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>The Rose Garden Nursery</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1260</x>
+     <y>110</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: green;
+  font: 500 11pt &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Close App</string>
+   </property>
+  </widget>
+  <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>AddPlant</zorder>
   <zorder>ViewSpecies</zorder>
   <zorder>AdminPanel</zorder>
   <zorder>ViewPlants</zorder>
-  <zorder>calendarWidget</zorder>
-  <zorder>label</zorder>
   <zorder>CopyRight_line</zorder>
   <zorder>btn_logout</zorder>
   <zorder>btn_Plant_Detail</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
  </widget>
  <resources/>
  <connections/>

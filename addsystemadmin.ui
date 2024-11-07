@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1127</width>
-    <height>686</height>
+    <width>1296</width>
+    <height>773</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -30,8 +30,8 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>40</y>
+     <x>40</x>
+     <y>30</y>
      <width>571</width>
      <height>51</height>
     </rect>

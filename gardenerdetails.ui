@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1265</width>
+    <width>1387</width>
     <height>729</height>
    </rect>
   </property>
@@ -96,7 +96,7 @@ QPushButton{
    </property>
    <column>
     <property name="text">
-     <string>ID</string>
+     <string>Employee_ID</string>
     </property>
    </column>
    <column>

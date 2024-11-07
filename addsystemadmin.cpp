@@ -45,6 +45,8 @@ void AddSystemAdmin::on_ViewAccessDetail_clicked()
     QSqlDatabase::database().commit();
     db.close();
 
+
+
 }
 
 

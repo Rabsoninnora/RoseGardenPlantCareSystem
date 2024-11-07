@@ -129,8 +129,8 @@ QPushButton{
   <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>210</y>
+     <x>20</x>
+     <y>200</y>
      <width>851</width>
      <height>421</height>
     </rect>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>686</width>
-    <height>536</height>
+    <width>867</width>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,7 +27,7 @@ background-image: url(:/images/beauty.png);
      <x>70</x>
      <y>70</y>
      <width>541</width>
-     <height>380</height>
+     <height>455</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -164,9 +164,9 @@ background-image: url(:/images/beauty.png);
    <property name="geometry">
     <rect>
      <x>380</x>
-     <y>460</y>
-     <width>121</width>
-     <height>31</height>
+     <y>550</y>
+     <width>151</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -188,10 +188,10 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>460</y>
-     <width>121</width>
-     <height>31</height>
+     <x>130</x>
+     <y>550</y>
+     <width>131</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>740</width>
-    <height>447</height>
+    <width>1265</width>
+    <height>661</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,10 +19,10 @@
   <widget class="QPushButton" name="btn_Nursery_Plants">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>150</y>
-     <width>121</width>
-     <height>31</height>
+     <x>450</x>
+     <y>180</y>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -44,10 +44,10 @@
   <widget class="QPushButton" name="btn_Add_Admin">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>30</y>
-     <width>121</width>
-     <height>21</height>
+     <x>990</x>
+     <y>270</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -63,41 +63,16 @@
 </string>
    </property>
    <property name="text">
-    <string>Add Admin</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_SystemAdmin">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>110</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 500 9pt  &quot;Ubuntu&quot;;
- color: rgb(255, 255, 255)
-
-}
-</string>
-   </property>
-   <property name="text">
-    <string>System Admin</string>
+    <string>Add User</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_Add_Supplier">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>60</y>
-     <width>121</width>
-     <height>21</height>
+     <x>990</x>
+     <y>210</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -119,10 +94,10 @@
   <widget class="QPushButton" name="ViewGardenTools">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>70</y>
-     <width>121</width>
-     <height>31</height>
+     <x>450</x>
+     <y>110</y>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -144,10 +119,10 @@
   <widget class="QPushButton" name="pushButton_6">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>120</y>
-     <width>121</width>
-     <height>21</height>
+     <x>990</x>
+     <y>90</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -169,10 +144,10 @@
   <widget class="QPushButton" name="btn_Available_Plants">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>190</y>
-     <width>121</width>
-     <height>31</height>
+     <x>450</x>
+     <y>240</y>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -194,10 +169,10 @@
   <widget class="QPushButton" name="AddGardenTool">
    <property name="geometry">
     <rect>
-     <x>600</x>
+     <x>990</x>
      <y>150</y>
-     <width>121</width>
-     <height>21</height>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -219,10 +194,10 @@
   <widget class="QPushButton" name="btn_Employees">
    <property name="geometry">
     <rect>
-     <x>600</x>
-     <y>90</y>
-     <width>121</width>
-     <height>21</height>
+     <x>990</x>
+     <y>30</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -244,10 +219,10 @@
   <widget class="QPushButton" name="btn_View_Suppliers">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>30</y>
-     <width>121</width>
-     <height>31</height>
+     <x>990</x>
+     <y>340</y>
+     <width>181</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -269,10 +244,10 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>-20</x>
+     <x>0</x>
      <y>-10</y>
-     <width>341</width>
-     <height>471</height>
+     <width>451</width>
+     <height>681</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -288,10 +263,10 @@
   <widget class="QPushButton" name="btn_employee_view">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>230</y>
-     <width>121</width>
-     <height>31</height>
+     <x>450</x>
+     <y>300</y>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -310,10 +285,34 @@
     <string>View Employees</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_SystemAdmin">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>50</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 9pt  &quot;Ubuntu&quot;;
+ color: rgb(255, 255, 255)
+
+}
+</string>
+   </property>
+   <property name="text">
+    <string>System Admin</string>
+   </property>
+  </widget>
   <zorder>frame</zorder>
   <zorder>btn_Nursery_Plants</zorder>
   <zorder>btn_Add_Admin</zorder>
-  <zorder>btn_SystemAdmin</zorder>
   <zorder>btn_Add_Supplier</zorder>
   <zorder>ViewGardenTools</zorder>
   <zorder>pushButton_6</zorder>
@@ -322,6 +321,7 @@
   <zorder>btn_Employees</zorder>
   <zorder>btn_View_Suppliers</zorder>
   <zorder>btn_employee_view</zorder>
+  <zorder>btn_SystemAdmin</zorder>
  </widget>
  <resources/>
  <connections/>

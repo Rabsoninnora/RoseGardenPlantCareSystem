@@ -6,6 +6,15 @@ index::index(QWidget *parent)
     , ui(new Ui::index)
 {
     ui->setupUi(this);
+
+
+    /*
+     Use this for the Welcome page
+     it must show Admin login and user login options
+
+   */
+
+
 }
 
 index::~index()

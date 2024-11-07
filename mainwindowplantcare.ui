@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>645</width>
-    <height>578</height>
+    <width>1219</width>
+    <height>709</height>
    </rect>
   </property>
   <property name="font">
@@ -27,32 +27,47 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-background-color: #4CAF50;
+   <string notr="true"> background-color: rgb(0, 85, 0);
 </string>
   </property>
   <property name="inputMethodHints">
    <set>Qt::ImhNone</set>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="loginBox">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>631</width>
-      <height>531</height>
+      <x>220</x>
+      <y>270</y>
+      <width>751</width>
+      <height>381</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Click here for User Login</string>
+     </attribute>
+     <widget class="QGroupBox" name="loginBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>751</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
  
 QGroupBox {
 
 background-color: rgb(38, 162, 105);
 font: 700 12pt;
 color: rgb(255, 255, 255);
-border:8px solid gray;
+border:0px solid green;
 border-radius: 100px;
 background-image: url(:/images/beauty.png);
  
@@ -67,28 +82,25 @@ background-image: url(:/images/beauty.png);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
 }</string>
-    </property>
-    <property name="title">
-     <string/>
-    </property>
-    <widget class="QPushButton" name="pushButton_login">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>310</y>
-       <width>131</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"> QPushButton[class=primary]:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="pushButton_login">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>220</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
 
 
  QPushButton {
-  border:3px solid gray;
+  border:3px solid solid gray;
   border-radius: 10px;
   padding: 0 8px;
   background: green;
@@ -96,94 +108,388 @@ background-image: url(:/images/beauty.png);
  color: rgb(255, 255, 255);
    
 }</string>
-     </property>
-     <property name="text">
-      <string>Submit</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_login_3">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>310</y>
-       <width>131</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"> QPushButton {
-  border:3px solid gray;
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_login_3">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>220</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> 
+
+
+ QPushButton {
+  border:3px solid solid gray;
   border-radius: 10px;
   padding: 0 8px;
   background: green;
  font: 700 12pt ;
  color: rgb(255, 255, 255);
-
+   
 }</string>
-     </property>
-     <property name="text">
-      <string>Cancel</string>
-     </property>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>140</y>
+         <width>321</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+ QLineEdit {
+  border:3px solid solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your password</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_username">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>60</y>
+         <width>321</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QLineEdit {
+  border:3px solid solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your username</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:0px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 600 11pt ;
+
+}
+
+ </string>
+       </property>
+       <property name="text">
+        <string> User Login</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_password">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>210</y>
-       <width>321</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Click Here For Admin Login</string>
+     </attribute>
+     <widget class="QGroupBox" name="loginBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>751</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+ 
+QGroupBox {
+
+background-color: rgb(38, 162, 105);
+
+font: 700 12pt;
+color: rgb(255, 255, 255);
+border:0px solid green;
+border-radius: 100px;
+background-image: url(:/images/beauty.png);
+ 
+
+}
+
  QLineEdit {
   border:3px solid gray;
+  
+  
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QPushButton" name="pushButton_login_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>220</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> 
+
+
+ QPushButton {
+  border:3px solid solid gray;
+  border-radius: 10px;
+  padding: 0 8px;
+  background: green;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+   
+}</string>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_login_4">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>220</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> 
+
+
+ QPushButton {
+  border:3px solid solid gray;
+  border-radius: 10px;
+  padding: 0 8px;
+  background: green;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+   
+}</string>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_password_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>140</y>
+         <width>321</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+ QLineEdit {
+  border:3px solid rgb(58, 169, 200);
   border-radius: 10px;
   padding: 12px 12px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
 }</string>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::Password</enum>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="placeholderText">
-      <string>Enter your password</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_username">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>130</y>
-       <width>321</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true"> QLineEdit {
-  border:3px solid gray;
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your password</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_username_2">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>60</y>
+         <width>321</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"> QLineEdit {
+  border:3px solid  rgb(58, 169, 200);
   border-radius: 10px;
   padding: 12px 12px;
   background: rgb(255, 255, 255);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
-}</string>
-     </property>
-     <property name="echoMode">
-      <enum>QLineEdit::Normal</enum>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="placeholderText">
-      <string>Enter your username</string>
-     </property>
+} </string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Enter your username</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>10</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:0px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 600 11pt ;
+
+}
+
+ </string>
+       </property>
+       <property name="text">
+        <string> Admin Login</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1219</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>731</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+
+}
+
+ </string>
+    </property>
+    <property name="text">
+     <string>Welcome To The Rose Garden Nursery</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>170</y>
+      <width>481</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 600 11pt ;
+
+}
+
+ </string>
+    </property>
+    <property name="text">
+     <string>Please login to perfom your operations</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -191,7 +497,7 @@ background-image: url(:/images/beauty.png);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>645</width>
+     <width>1219</width>
      <height>25</height>
     </rect>
    </property>

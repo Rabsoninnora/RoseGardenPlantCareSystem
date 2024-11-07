@@ -23,7 +23,7 @@ void PlantDetail::on_btnSearchPlant_clicked()
     QSqlDatabase::database().transaction();
 
     QSqlQuery QueryLoadData(DB_SQLITE3);
-    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtPlantID->text()+"");
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtPlantID->text() +"");
 
 
 
@@ -37,15 +37,8 @@ void PlantDetail::on_btnSearchPlant_clicked()
             ImageName = QueryLoadData.value("Image_Name").toString();
             ImageDataFromDataBase = QByteArray::fromBase64(QueryLoadData.value("Image_Data").toByteArray());
 
-            ui->txtScientificName->setText(QueryLoadData.value(0).toString());
-            ui->txtGenus->setText(QueryLoadData.value(1).toString());
-            ui->txtCommonName->setText(QueryLoadData.value(2).toString());
-            ui->txtSpecies->setText(QueryLoadData.value(3).toString());
-            ui->cmbStatus->setText(QueryLoadData.value(4).toString());
-            ui->txtPrice->setText(QueryLoadData.value(5).toString());
-            ui->txtDescription->setText(QueryLoadData.value(6).toString());
-            ui->txtScientificName->setText(QueryLoadData.value(7).toString());
-            ui->txtScientificName->setText(QueryLoadData.value(8).toString());
+           // ui->txtScientificName->setText(QueryLoadData.value(0).toString());
+
 
 
 

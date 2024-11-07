@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1310</width>
-    <height>817</height>
+    <width>1406</width>
+    <height>986</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,184 +21,13 @@ background-image: url(:/images/beauty.png);
 
 }</string>
   </property>
-  <widget class="QWidget" name="formLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>100</y>
-     <width>651</width>
-     <height>651</height>
-    </rect>
-   </property>
-   <layout class="QFormLayout" name="formLayout">
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="txtScientificName">
-      <property name="styleSheet">
-       <string notr="true"> 
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Scientific name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="txtGenus">
-      <property name="styleSheet">
-       <string notr="true"> 
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Genus</string>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="txtCommonName">
-      <property name="styleSheet">
-       <string notr="true"> 
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Local name</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="1">
-     <widget class="QLineEdit" name="txtSpecies">
-      <property name="styleSheet">
-       <string notr="true">
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Species</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QComboBox" name="cmbStatus">
-      <property name="styleSheet">
-       <string notr="true"> 
- QComboBox {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Status</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Available</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>On Nursery</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Out of Stock</string>
-       </property>
-      </item>
-     </widget>
-    </item>
-    <item row="5" column="1">
-     <widget class="QLineEdit" name="txtPrice">
-      <property name="styleSheet">
-       <string notr="true"> 
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Price ZMW</string>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="1">
-     <widget class="QPlainTextEdit" name="txtDescription">
-      <property name="styleSheet">
-       <string notr="true"> 
- QPlainTextEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Description</string>
-      </property>
-     </widget>
-    </item>
-    <item row="7" column="1">
-     <widget class="QLineEdit" name="txtQuantity">
-      <property name="styleSheet">
-       <string notr="true">
- QLineEdit {
-  border:3px solid gray;
-  border-radius: 10px;
-  padding: 8px 8px;
-  background: rgb(255, 255, 255);
-  font: 500 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <property name="placeholderText">
-       <string>Quantity</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QLabel" name="image_field">
    <property name="geometry">
     <rect>
      <x>70</x>
      <y>200</y>
-     <width>451</width>
-     <height>421</height>
+     <width>521</width>
+     <height>521</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -295,6 +124,190 @@ background-image: url(:/images/beauty.png);
    </property>
    <property name="flat">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txt_Scientific_name">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>100</y>
+     <width>642</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Scientific Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txtGenus">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>160</y>
+     <width>642</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Genus</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txt_Local_name">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>230</y>
+     <width>642</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Local Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="species">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>300</y>
+     <width>642</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>txt_Species</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txt_Description">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>370</y>
+     <width>642</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Description</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txt_tatus">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>660</y>
+     <width>642</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Status</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txt_price">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>730</y>
+     <width>642</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Price ZMW</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="txt_Quantity">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>800</y>
+     <width>642</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Quantity</string>
    </property>
   </widget>
  </widget>
