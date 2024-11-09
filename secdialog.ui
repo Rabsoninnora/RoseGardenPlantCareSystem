@@ -56,50 +56,10 @@ QDialog{
   <property name="modal">
    <bool>false</bool>
   </property>
-  <widget class="QPushButton" name="AddPlant">
-   <property name="geometry">
-    <rect>
-     <x>640</x>
-     <y>110</y>
-     <width>131</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Ubuntu</family>
-     <pointsize>11</pointsize>
-     <italic>false</italic>
-     <fontweight>Medium</fontweight>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">  
-QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
-  background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
- color: rgb(255, 255, 255)
-
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Add Plant</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="ViewSpecies">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>380</x>
      <y>110</y>
      <width>161</width>
      <height>41</height>
@@ -137,40 +97,10 @@ QPushButton {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="AdminPanel">
-   <property name="geometry">
-    <rect>
-     <x>800</x>
-     <y>110</y>
-     <width>171</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
-  background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
- color: rgb(255, 255, 255)
-
-}</string>
-   </property>
-   <property name="text">
-    <string>Admin Dashboard</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>240</x>
      <y>110</y>
      <width>131</width>
      <height>41</height>
@@ -300,9 +230,9 @@ QPushButton {
   <widget class="QPushButton" name="btn_Plant_Detail">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>10</x>
      <y>110</y>
-     <width>141</width>
+     <width>221</width>
      <height>41</height>
     </rect>
    </property>
@@ -328,7 +258,7 @@ QPushButton {
 </string>
    </property>
    <property name="text">
-    <string>Plant Details</string>
+    <string> View Plant Detail By ID</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>
@@ -364,7 +294,7 @@ QPushButton{
     <string>The Rose Garden Nursery</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="btn_user_admin_close_app">
    <property name="geometry">
     <rect>
      <x>1260</x>
@@ -390,15 +320,13 @@ QPushButton{
   </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>AddPlant</zorder>
   <zorder>ViewSpecies</zorder>
-  <zorder>AdminPanel</zorder>
   <zorder>ViewPlants</zorder>
   <zorder>CopyRight_line</zorder>
   <zorder>btn_logout</zorder>
   <zorder>btn_Plant_Detail</zorder>
   <zorder>pushButton</zorder>
-  <zorder>pushButton_2</zorder>
+  <zorder>btn_user_admin_close_app</zorder>
  </widget>
  <resources/>
  <connections/>

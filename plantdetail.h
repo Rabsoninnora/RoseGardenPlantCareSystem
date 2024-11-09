@@ -1,6 +1,7 @@
 #ifndef PLANTDETAIL_H
 #define PLANTDETAIL_H
 #include "databaseheader.h"
+
 #include <QDialog>
 
 namespace Ui {
@@ -24,6 +25,11 @@ private:
    //Creating a QSqlDatabase for database connectings
 
     QSqlDatabase DB_SQLITE3;
+
+
+
+
+
 };
 
 #endif // PLANTDETAIL_H

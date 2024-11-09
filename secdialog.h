@@ -2,14 +2,9 @@
 #define SECDIALOG_H
 #include <QMessageBox>
 
-#include "addgardener.h"
 #include "addplant.h"
-#include "adminpanel.h"
 #include "species.h"
-#include "index.h"
 #include "viewplants.h"
-#include "gardenerdetails.h"
-#include "admin.h"
 #include "plantdetail.h"
 
 #include <QDialog>
@@ -34,9 +29,9 @@ private slots:
 
     void on_ViewPlants_clicked();
 
-    void on_AddPlant_clicked();
 
-    void on_AdminPanel_clicked();
+
+
 
 
 
@@ -49,13 +44,13 @@ private slots:
 private:
     Ui::SecDialog *ui;
     //creating objects
-    AddPlant    *ptrAddPlant;
+
     Species     *ptrSpecies;
     ViewPlants  *ptrViewPlants;
     PlantDetail * ptrPlantDetail;
 
-    GardenerDetails  *ptrGardenerDetails;
-    Admin      *ptrAdmin;
+
+
 
 
 };

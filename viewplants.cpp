@@ -64,7 +64,9 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
             ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(ImageName));
             QTableWidgetItem *Image_Item = new  QTableWidgetItem();
             Image_Item->setIcon(QIcon(Image));
-            Image_Item->setData(Qt::DecorationRole, Image.scaled(200,200));
+            Image_Item->setData(Qt::DecorationRole,Image.scaled(200,200));
+
+
             ui->tableWidget->setItem( RowNumber, 1, Image_Item);
             ui->tableWidget->verticalHeader()->setDefaultSectionSize(30);
             //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -89,6 +91,7 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
 
     ui->tableWidget->resizeRowsToContents();
     Image.save(QCoreApplication::applicationDirPath() + "/Image_From_Database.jpg");
+
 
 
     qDebug() <<"Last Error "<< QueryLoadData.lastError().text();

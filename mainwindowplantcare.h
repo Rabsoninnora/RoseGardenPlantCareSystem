@@ -16,6 +16,7 @@
 #include "databaseheader.h"
 #include <QMainWindow>
 #include "secdialog.h"
+#include  "adminpanel.h"
 
 
 
@@ -43,13 +44,20 @@ private slots:
 
     void on_pushButton_login_3_clicked();
 
+    void on_btn_Admin_login_clicked();
+
 private:
     Ui::MainWindowPlantCare *ui;
     //Creating an object for QSqlDatabase for database connecting
 
-    //creating an object for SecDialog
+     /*
+     creating an object for SecDialog
+     and Admin_Dashboard
+     */
 
     SecDialog *secDialog;
+
+    AdminPanel *Admin_Dashboard;
 
     QSqlDatabase db;
 

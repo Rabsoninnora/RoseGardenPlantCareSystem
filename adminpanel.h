@@ -1,5 +1,6 @@
 #ifndef ADMINPANEL_H
 #define ADMINPANEL_H
+#include <QMessageBox>
 #include "addsystemadmin.h"
 #include "viewgardentools.h"
 #include "viewsystemadmin.h"
@@ -7,7 +8,7 @@
 #include "availableplants.h"
 #include "suppliers.h"
 #include "addgardener.h"
-#include "addgardener.h"
+#include "addplant.h"
 #include "gardenerdetails.h"
 
 #include <QDialog>
@@ -42,6 +43,10 @@ private slots:
 
     void on_btn_employee_view_clicked();
 
+    void on_Admin_panel_close_app_clicked();
+
+    void on_AddPlant_clicked();
+
 private:
     //Pointer varables
     Ui::AdminPanel *ui;
@@ -53,6 +58,7 @@ private:
     Suppliers        *ptrSuppliers;
     AddGardener *ptrAddGardener;
     GardenerDetails *ptrGardenerDetails;
+    AddPlant    *ptrAddPlant;
 };
 
 #endif // ADMINPANEL_H

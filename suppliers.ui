@@ -20,10 +20,10 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QLabel" name="The_Rose_Garden_Nursery_System">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>501</width>
-     <height>41</height>
+     <x>0</x>
+     <y>50</y>
+     <width>1291</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -37,16 +37,16 @@ background-image: url(:/images/beauty.png);</string>
 }</string>
    </property>
    <property name="text">
-    <string> The Rose Garden Nursery  System |    Supplier Detail Section</string>
+    <string> The Rose Garden Nursery   |    Supplier Detail Section</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_View_Supplier">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>130</y>
-     <width>191</width>
-     <height>61</height>
+     <y>180</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -69,10 +69,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Insert_Supplier">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>130</y>
-     <width>171</width>
-     <height>61</height>
+     <x>200</x>
+     <y>180</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -95,10 +95,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Update_Supplier">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>130</y>
-     <width>151</width>
-     <height>61</height>
+     <x>310</x>
+     <y>180</y>
+     <width>111</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -121,10 +121,10 @@ QPushButton {
   <widget class="QPushButton" name="btn_Delete_Supplier">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>130</y>
-     <width>141</width>
-     <height>61</height>
+     <x>430</x>
+     <y>180</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -155,12 +155,13 @@ QPushButton {
    </property>
    <property name="styleSheet">
     <string notr="true"> 
+
  QLineEdit {
   border:3px solid gray;
   border-radius: 10px;
   padding: 8px 8px;
   background: rgb(255, 255, 255);
-  font: 500 12pt ;
+  font: 700  12pt &quot;Segoe UI&quot;;
   color: rgb(0, 0, 0);;
 }</string>
    </property>

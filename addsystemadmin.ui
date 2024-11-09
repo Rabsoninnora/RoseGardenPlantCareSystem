@@ -44,48 +44,11 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
     <string> The Rose Garden System  |      User Access Control</string>
    </property>
   </widget>
-  <widget class="QTableWidget" name="tableWidget">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>200</y>
-     <width>761</width>
-     <height>391</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">   QTableWidget 
-{
-
-  border:3px solid gray;
-  border-radius: 10px;
-  background: rgb(255, 255, 255);
- 
-  color: rgb(0, 0, 0);;
-
-}</string>
-   </property>
-   <column>
-    <property name="text">
-     <string>User ID</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>User Name</string>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Password</string>
-    </property>
-   </column>
-  </widget>
   <widget class="QLineEdit" name="lineEdit_ID">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>240</y>
+     <x>820</x>
+     <y>390</y>
      <width>141</width>
      <height>51</height>
     </rect>
@@ -107,8 +70,8 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_UserName">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>330</y>
+     <x>820</x>
+     <y>460</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -130,8 +93,8 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QLineEdit" name="lineEdit_Password">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>400</y>
+     <x>820</x>
+     <y>530</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -153,15 +116,23 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="ViewAccessDetail">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>50</y>
+     <x>60</x>
+     <y>140</y>
      <width>141</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(251, 251, 232);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}
+</string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -170,15 +141,23 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="InsertAccessDetail">
    <property name="geometry">
     <rect>
-     <x>770</x>
-     <y>50</y>
+     <x>240</x>
+     <y>140</y>
      <width>111</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(26, 95, 180);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}
+</string>
    </property>
    <property name="text">
     <string>Insert</string>
@@ -187,19 +166,65 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
   <widget class="QPushButton" name="DeleteAccessDetail">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>50</y>
+     <x>540</x>
+     <y>140</y>
      <width>141</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(224, 27, 36);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
+    <string notr="true"> QPushButton {
+  border:3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 0 10px;
+  background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}
+</string>
    </property>
    <property name="text">
     <string>Delete</string>
    </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>280</y>
+     <width>741</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+ QTableWidget 
+{
+
+  border:6px solid gray;
+  border-radius: 10px;
+  background: rgb(58, 169, 200);
+  color: rgb(0, 0, 0);;
+
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>User_ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>User name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </column>
   </widget>
  </widget>
  <resources/>

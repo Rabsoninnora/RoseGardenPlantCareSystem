@@ -18,9 +18,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS  Sql)
 set(PROJECT_SOURCES
         main.cpp
         mainwindowplantcare.cpp
-        index.cpp
-        index.h
-        index.ui
+
         mainwindowplantcare.h
         mainwindowplantcare.ui
 )
@@ -29,7 +27,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(RoseGardenPlantCareSystem
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        index.h index.cpp index.ui
+
         secdialog.h secdialog.cpp secdialog.ui
         resource.qrc
         addplant.h addplant.cpp addplant.ui
@@ -45,8 +43,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         viewsystemadmin.h viewsystemadmin.cpp viewsystemadmin.ui
         availableplants.h availableplants.cpp availableplants.ui
         suppliers.h suppliers.cpp suppliers.ui
-        admin.h admin.cpp admin.ui
+
         plantdetail.h plantdetail.cpp plantdetail.ui
+        mydb.h mydb.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET RoseGardenPlantCareSystem APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
