@@ -1,5 +1,6 @@
 #ifndef VIEWSYSTEMADMIN_H
 #define VIEWSYSTEMADMIN_H
+#include "mydb.h"
 
 #include <QDialog>
 

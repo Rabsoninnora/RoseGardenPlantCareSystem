@@ -1,6 +1,6 @@
 #ifndef AVAILABLEPLANTS_H
 #define AVAILABLEPLANTS_H
-#include "databaseheader.h"
+#include "mydb.h"
 
 #include <QDialog>
 

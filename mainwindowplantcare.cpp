@@ -3,7 +3,6 @@
 #include <QMessageBox>
 #include<QLineEdit>
 #include<QSqlQuery>
-#include "databaseheader.h"
 #include "mydb.h"
 
 
@@ -32,10 +31,10 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
 
     if(username== "innora" && password == "659489+") //Default developer login
     {
-     QMessageBox::information(this, "Welcome","Login is successful!");
+        QMessageBox::information(this, "Welcome","Login is successful!");
 
-         //creating a constructor for System Dashboard
-         secDialog =new SecDialog(this);
+        //creating a constructor for System Dashboard
+        secDialog =new SecDialog(this);
         //calling secDialog object
         secDialog->show();
 
@@ -45,7 +44,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
     {
 
         QSqlQuery GetUser( MyDB::getInstance()->getDBInstance());
-        GetUser.prepare(" SELECT * FROM Admin_login WHERE username='" + username +"' AND password='" + password +"' ");
+        GetUser.prepare(" SELECT * FROM User_login WHERE username='" + username +"' AND password='" + password +"' ");
         if(GetUser.exec())
         {
             int UserFindCount = 0;
@@ -79,7 +78,11 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
 
 
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear();}
 
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
 
 
 }
@@ -106,26 +109,27 @@ void MainWindowPlantCare::on_btn_Admin_login_clicked()
 {
 
 
+    QString username = ui->lineEdit_username_2->text();
 
-    QString admin_username = ui->lineEdit_username_2->text();
+    QString password = ui->lineEdit_password_2->text();
 
-    QString admin_password = ui->lineEdit_password_2->text();
-
-    if(admin_username== "innora" && admin_password == "659489+") //Default developer login
+    if(username== "innora" && password == "659489+") //Default developer login
     {
+        QMessageBox::information(this, "Welcome","Login is successful!");
 
+        //creating a constructor for admin Dashboard
+        adminPanel =new AdminPanel(this);
 
-        //creating a constructor for System Dashboard
-        Admin_Dashboard = new AdminPanel(this);
-        Admin_Dashboard->show();
+        //calling admindashboard
+        secDialog->show();
 
-       QMessageBox::information(this, "Welcome","Login is successful!");
 
     }
     else
     {
-        QSqlQuery GetUser(db);
-        GetUser.prepare(" SELECT * FROM Admin_login WHERE username='" + admin_username +"' AND password='" + admin_password +"' ");
+
+        QSqlQuery GetUser( MyDB::getInstance()->getDBInstance());
+        GetUser.prepare(" SELECT * FROM User_login WHERE username='" + username +"' AND password='" + password +"' ");
         if(GetUser.exec())
         {
             int UserFindCount = 0;
@@ -135,16 +139,16 @@ void MainWindowPlantCare::on_btn_Admin_login_clicked()
             }
             if(UserFindCount == 1)//If username and password is correct
             {
+                QMessageBox::information(this,"Welcome","login successful");
 
+                //creating a constructor for Admin Dashboard
+                adminPanel =new AdminPanel(this);
 
-                //Creating a constructor for System Dashboard
-                Admin_Dashboard = new AdminPanel(this);
-                Admin_Dashboard->show();
-
-
+                //calling Admin object
+                adminPanel->show();
 
             }
-            else if(UserFindCount == 0)//If admin_username and admin_password is not correct
+            else if(UserFindCount == 0)//If username and password is not correct
             {
 
 
@@ -161,9 +165,11 @@ void MainWindowPlantCare::on_btn_Admin_login_clicked()
 
 
 
-
-
-
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear();}
 
 }
+
+
+
 

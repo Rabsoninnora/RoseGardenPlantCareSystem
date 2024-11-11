@@ -42,15 +42,15 @@ void AddGardener::on_btnSave_clicked()
 
 
 // Posting data in the database, the addgardener table/relation
-    db.open();
+    QSqlQuery postGardener( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery postGardener(db);
+
     postGardener.prepare("insert into addgardener(Employee_id, National_id, Name, Middle_name, Last_name, Job_title, Description) values('"+ Employee_id +"', '"+ National_id +"', '"+ Name +"','"+ Middle_name +"','"+ Last_name +"','"+ Job_title +"', '"+ Description +"')");
     postGardener.exec();
     qDebug() <<" Last error : "<< postGardener.lastError().text();
 
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
     qDebug() << "Databse closed  successfuly, Happy coding !";
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

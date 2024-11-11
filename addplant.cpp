@@ -12,7 +12,6 @@
 #include<QLineEdit>
 #include <QVBoxLayout>
 #include <QByteArray>
-#include "databaseheader.h"
 
 AddPlant::AddPlant(QWidget *parent)
     : QDialog(parent)
@@ -65,22 +64,7 @@ void AddPlant::on_btnSave_clicked()
 
 
 
-    /*
 
-    db_RoseGarden.open();
-    QSqlDatabase::database().transaction();
-    QSqlQuery QueryInsertData(db_RoseGarden);
-    QueryInsertData.prepare("insert into addplant(scientific_name, Genus, common_name, species, description, status, price, quantity, Image ) values('"+ scientific_name +"', '"+ Genus +"', '"+ common_name +"','"+ species +"','"+ description +"','"+ status +"', '"+ price +"', '"+ quantity +"')");
-    QueryInsertData.exec();
-    qDebug() <<" Last error : "<< QueryInsertData.lastError().text();
-    QSqlDatabase::database().commit();
-    db_RoseGarden.close();
-
-
-    qDebug() << "Database closed  successfuly, Happy coding !";
-
-
-   */
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     QString ImagePath = QFileDialog::getOpenFileName(this, tr("Select Image"), QCoreApplication::applicationDirPath(), tr("JPG Files(*.jpg)"));
     if (!ImagePath.isEmpty()) {
@@ -88,6 +72,7 @@ void AddPlant::on_btnSave_clicked()
         QBuffer ImageBufferData(&imageData); // Use the member variable directly
         if (ImageBufferData.open(QIODevice::WriteOnly)) {
             Image.save(&ImageBufferData, "JPG");
+
         }
         imageData = ImageBufferData.buffer().toBase64(); // Convert to Base64
     }
@@ -95,9 +80,8 @@ void AddPlant::on_btnSave_clicked()
     QFileInfo FileInfo(ImagePath);
 
     QString ImageName =FileInfo.fileName();
-    db_RoseGarden.open();
+    QSqlQuery QueryInsertData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery QueryInsertData(db_RoseGarden);
     QueryInsertData.prepare("INSERT INTO addplant(scientific_name, Genus, common_name, species, description, status, price, quantity, Image_Data, Image_Name) VALUES(:scientific_name,:Genus,:common_name,:species,:description,:status,:price,:quantity,:Image_Data,:Image_Name)");
     QueryInsertData.addBindValue(scientific_name);
     QueryInsertData.addBindValue(Genus);
@@ -111,9 +95,8 @@ void AddPlant::on_btnSave_clicked()
     QueryInsertData.addBindValue(imageData); // Use the stored image data
 
     QueryInsertData.exec();
-    qDebug() << "Last error:" << QueryInsertData.lastError().text();
-    QSqlDatabase::database().commit();
-    db_RoseGarden.close();
+
+
     qDebug() << "Database closed successfully, Happy coding!";
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear();}

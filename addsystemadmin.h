@@ -1,6 +1,6 @@
 #ifndef ADDSYSTEMADMIN_H
 #define ADDSYSTEMADMIN_H
-#include "databaseheader.h"
+#include "mydb.h"
 #include <QDialog>
 
 namespace Ui {

@@ -46,6 +46,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         plantdetail.h plantdetail.cpp plantdetail.ui
         mydb.h mydb.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET RoseGardenPlantCareSystem APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

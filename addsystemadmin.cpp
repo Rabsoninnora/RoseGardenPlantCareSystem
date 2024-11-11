@@ -16,10 +16,8 @@ AddSystemAdmin::~AddSystemAdmin()
 void AddSystemAdmin::on_ViewAccessDetail_clicked()
 {
 
-    db.open();
+    QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-
-    QSqlQuery QueryLoadData(db);
     QueryLoadData.prepare("SELECT * FROM Admin_login");
 
 
@@ -43,7 +41,7 @@ void AddSystemAdmin::on_ViewAccessDetail_clicked()
     }
 
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
 
 
 
@@ -52,16 +50,16 @@ void AddSystemAdmin::on_ViewAccessDetail_clicked()
 
 void AddSystemAdmin::on_InsertAccessDetail_clicked()
 {
-    db.open();
+    QSqlQuery InsertRecord( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery InsertRecord(db);
+
     InsertRecord.prepare( "INSERT INTO Admin_login(username,password) VALUES(:username,:password) ");
     InsertRecord.bindValue(":username", ui->lineEdit_UserName->text());
     InsertRecord.bindValue(":password",ui->lineEdit_Password->text());
 
     InsertRecord.exec();
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
 
     foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
 }
@@ -69,13 +67,13 @@ void AddSystemAdmin::on_InsertAccessDetail_clicked()
 
 void AddSystemAdmin::on_DeleteAccessDetail_clicked()
 {
-    db.open();
+    QSqlQuery Query_Delete_Data( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery Query_Delete_Data(db);
+
     Query_Delete_Data.prepare("DELETE FROM Admin_login WHERE ID="+ ui->lineEdit_ID->text() +"");
     Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
 
 
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}

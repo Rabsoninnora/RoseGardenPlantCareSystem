@@ -32,10 +32,8 @@ void PlantDetail::on_btnSearchPlant_clicked()
 
 
 
-    DB_SQLITE3.open();
+    QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-
-    QSqlQuery QueryLoadData(DB_SQLITE3);
     QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtPlantID->text() +"");
     if(QueryLoadData.exec())
     {
@@ -54,15 +52,12 @@ void PlantDetail::on_btnSearchPlant_clicked()
               ui->txt_price->setText(QueryLoadData.value(7).toString());
               ui->txt_Quantity->setText(QueryLoadData.value(8).toString());
 
-
-
-
         }
 
     }
 
     QSqlDatabase::database().commit();
-    DB_SQLITE3.close();
+    QSqlDatabase::database().close();
      Image.loadFromData(ImageDataFromDataBase, "JPG");
     //load image onto the UI
     ui->image_field->setPixmap(Image.scaled(w, h,Qt::KeepAspectRatio));

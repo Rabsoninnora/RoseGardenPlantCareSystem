@@ -20,14 +20,9 @@ void Species::on_btnSearch_clicked()
     QPixmap Image;
     QString ImageName;
 
-    DB_SQLITE3.open();
+    QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-
-    QSqlQuery QueryLoadData(DB_SQLITE3);
-    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtSpeciesName->text()+"");
-
-
-
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE species LIKE ="+ ui->txtSpeciesName->text() + "");
     int NumberOFRowsToDisplay=1;
 
     if(QueryLoadData.exec())
@@ -59,7 +54,7 @@ void Species::on_btnSearch_clicked()
     }
 
     QSqlDatabase::database().commit();
-    DB_SQLITE3.close();
+    QSqlDatabase::database().close();
 
        foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 

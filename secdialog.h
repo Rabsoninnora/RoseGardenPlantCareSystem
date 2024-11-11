@@ -1,7 +1,7 @@
 #ifndef SECDIALOG_H
 #define SECDIALOG_H
 #include <QMessageBox>
-
+#include "mydb.h"
 #include "addplant.h"
 #include "species.h"
 #include "viewplants.h"

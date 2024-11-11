@@ -1,6 +1,6 @@
 #ifndef SUPPLIERS_H
 #define SUPPLIERS_H
-#include"databaseheader.h"
+#include "mydb.h"
 
 #include <QDialog>
 

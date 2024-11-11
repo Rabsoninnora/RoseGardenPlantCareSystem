@@ -38,17 +38,10 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
 
 
 //////////////////////////////////////////////////////////////
-    DB_SQLITE3.open();
+    QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-
-    QSqlQuery QueryLoadData(DB_SQLITE3);
     QueryLoadData.prepare("SELECT * FROM addplant");
-    //////////////////////////////////////////////////
-
-
-
     int NumberOFRowsToDisplay=100;
-
     if(QueryLoadData.exec())
     {
         ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
@@ -86,7 +79,7 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
     }
 
     QSqlDatabase::database().commit();
-    DB_SQLITE3.close();
+    QSqlDatabase::database().close();
     /////////////////////////////////////////////////////////////////////////////////////////////
 
     ui->tableWidget->resizeRowsToContents();
@@ -104,13 +97,13 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
 
 void ViewPlants::on_DeletePlantsRecord_clicked()
 {
-    DB_SQLITE3.open();
+
     QSqlDatabase::database().transaction();
     QSqlQuery Query_Delete_Data(DB_SQLITE3);
     Query_Delete_Data.prepare("DELETE FROM addplant WHERE Plant_ID="+ ui->lineEdit_Delete->text() +"");
     Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
-    DB_SQLITE3.close();
+    QSqlDatabase::database().close();
 
 
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}

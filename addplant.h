@@ -1,6 +1,6 @@
 #ifndef ADDPLANT_H
 #define ADDPLANT_H
-#include"databaseheader.h"
+#include "mydb.h"
 
 #include <QDialog>
 

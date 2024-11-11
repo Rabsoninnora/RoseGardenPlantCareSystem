@@ -1,5 +1,6 @@
 #ifndef ADMINPANEL_H
 #define ADMINPANEL_H
+#include "mydb.h"
 #include <QMessageBox>
 #include "addsystemadmin.h"
 #include "viewgardentools.h"

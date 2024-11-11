@@ -1,6 +1,6 @@
 #ifndef SPECIES_H
 #define SPECIES_H
-#include"databaseheader.h"
+#include "mydb.h"
 
 #include <QDialog>
 

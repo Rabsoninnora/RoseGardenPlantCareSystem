@@ -18,10 +18,9 @@ void GardenerDetails::on_ViewEmployeeRecord_clicked()
 {
 
 
-    db.open();
-    QSqlDatabase::database().transaction();
 
-    QSqlQuery QueryLoadData(db);
+    QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
+
     QueryLoadData.prepare("SELECT * FROM addgardener");
 
 
@@ -49,24 +48,15 @@ void GardenerDetails::on_ViewEmployeeRecord_clicked()
     }
 
     QSqlDatabase::database().commit();
-    db.close();
-
-
-
-
-
-
-
-
+    QSqlDatabase::database().close();
 
 }
 
 
 void GardenerDetails::on_btn_Insert_Employee_clicked()
 {
-    db.open();
+    QSqlQuery InsertRecord( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery InsertRecord(db);
     InsertRecord.prepare( "INSERT INTO addgardener(Employee_id,National_id,Name,Middle_name,Last_name,job_title,Description) VALUES(:Employee_id,:National_id,:Name,:Middle_name,:Last_name,:job_title,:Description) ");
     InsertRecord.bindValue(":Employee_id", ui->lineEdit_Employee_id->text());
     InsertRecord.bindValue(":National_id",ui->lineEdit_National_id->text());
@@ -77,7 +67,7 @@ void GardenerDetails::on_btn_Insert_Employee_clicked()
     InsertRecord.bindValue(":Description",ui->lineEdit_Description->text());
     InsertRecord.exec();
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
 
     foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
 
@@ -86,9 +76,8 @@ void GardenerDetails::on_btn_Insert_Employee_clicked()
 
 void GardenerDetails::on_btn_Update_Employee_clicked()
 {
-    db.open();
+    QSqlQuery UpdateRecord( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery UpdateRecord(db);
     UpdateRecord.prepare(" UPDATE addgardener SET Employee_id=:Employee_id, National_id=:National_id, Name=:Name, Middle_name=:Middle_name, Last_name=:Last_name, job_title=:job_title, Description=:Description WHERE Employee_id=:Employee_id");
     UpdateRecord.bindValue(":Employee_id", ui->lineEdit_Employee_id->text());
     UpdateRecord.bindValue(":National_id", ui->lineEdit_National_id->text());
@@ -100,7 +89,7 @@ void GardenerDetails::on_btn_Update_Employee_clicked()
     UpdateRecord.exec();
 
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
 
     qDebug () <<"Error on update record" << UpdateRecord.lastError().text();
 
@@ -112,13 +101,13 @@ void GardenerDetails::on_btn_Update_Employee_clicked()
 
 void GardenerDetails::on_btn_Delete_Employee_clicked()
 {
-    db.open();
+    QSqlQuery Query_Delete_Data( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery Query_Delete_Data(db);
+
     Query_Delete_Data.prepare("DELETE FROM addgardener WHERE Employee_id="+ ui->lineEdit_Employee_id->text() +"");
     Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
-    db.close();
+    QSqlDatabase::database().close();
 
 
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}

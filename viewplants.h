@@ -1,6 +1,6 @@
 #ifndef VIEWPLANTS_H
 #define VIEWPLANTS_H
-#include "databaseheader.h"
+#include "mydb.h"
 #include <QTableWidgetItem>
 
 #include <QDialog>

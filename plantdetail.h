@@ -1,6 +1,6 @@
 #ifndef PLANTDETAIL_H
 #define PLANTDETAIL_H
-#include "databaseheader.h"
+#include "mydb.h"
 
 #include <QDialog>
 

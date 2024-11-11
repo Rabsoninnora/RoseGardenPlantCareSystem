@@ -18,13 +18,9 @@ AddGardenTool::~AddGardenTool()
 
 void AddGardenTool::on_btn_View_Record_clicked()
 {
-    DB_GardenTools.open();
+    QSqlQuery QueryReadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-
-    QSqlQuery QueryReadData(DB_GardenTools);
     QueryReadData.prepare("SELECT * FROM TOOLS");
-
-
 
     int NumberOFRowsToDisplay=1000;
 
@@ -47,7 +43,7 @@ void AddGardenTool::on_btn_View_Record_clicked()
     }
 
     QSqlDatabase::database().commit();
-    DB_GardenTools.close();
+    QSqlDatabase::database().close();
 
 }
 
@@ -55,13 +51,12 @@ void AddGardenTool::on_btn_View_Record_clicked()
 void AddGardenTool::on_btn_Delete_Record_clicked()
 {
 
-    DB_GardenTools.open();
+    QSqlQuery Query_Delete_Data( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery Query_Delete_Data(DB_GardenTools);
     Query_Delete_Data.prepare("DELETE FROM TOOLS WHERE tool_ID="+ ui->lineEdit_ID->text() +"");
     Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
-    DB_GardenTools.close();
+    QSqlDatabase::database().close();
 
 
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
@@ -72,9 +67,8 @@ void AddGardenTool::on_btn_Delete_Record_clicked()
 
 void AddGardenTool::on_btn_Insert_Record_clicked()
 {
-    DB_GardenTools.open();
+    QSqlQuery QueryInsertData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery QueryInsertData(DB_GardenTools);
 
     QueryInsertData.prepare("INSERT INTO TOOLS(tool_ID,Item_name,Quantity,Description) VALUES(:tool_ID,:Item_name,:Quantity,:Description)");
     QueryInsertData.bindValue(":tool_ID",ui->lineEdit_ID->text());
@@ -85,7 +79,7 @@ void AddGardenTool::on_btn_Insert_Record_clicked()
     QueryInsertData.exec();
 
     QSqlDatabase::database().commit();
-    DB_GardenTools.close();
+    QSqlDatabase::database().close();
 
     foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()) {
         widget->clear();
@@ -97,9 +91,8 @@ void AddGardenTool::on_btn_Insert_Record_clicked()
 
 void AddGardenTool::on_btn_Update_Record_clicked()
 {
-    DB_GardenTools.open();
+    QSqlQuery QueryUpdateData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery QueryUpdateData(DB_GardenTools);
     QueryUpdateData.prepare("UPDATE TOOLS SET tool_ID=:tool_ID,Item_name=:Item_name,Quantity=:Quantity,Description=:Description WHERE tool_ID=:tool_ID");
 
     QueryUpdateData.bindValue(":tool_ID",ui->lineEdit_ID->text());
@@ -110,7 +103,7 @@ void AddGardenTool::on_btn_Update_Record_clicked()
 
     QueryUpdateData.exec();
     QSqlDatabase::database().commit();
-    DB_GardenTools.close();
+    QSqlDatabase::database().close();
 
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){
         widget->clear();

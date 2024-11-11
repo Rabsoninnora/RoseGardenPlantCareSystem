@@ -13,10 +13,11 @@
 #include<QFileInfo>
 #include<QSqlQueryModel>
 #include <QMessageBox>
-#include "databaseheader.h"
+#include "mydb.h"
 #include <QMainWindow>
 #include "secdialog.h"
 #include  "adminpanel.h"
+
 
 
 
@@ -46,6 +47,7 @@ private slots:
 
     void on_btn_Admin_login_clicked();
 
+
 private:
     Ui::MainWindowPlantCare *ui;
     //Creating an object for QSqlDatabase for database connecting
@@ -57,7 +59,7 @@ private:
 
     SecDialog *secDialog;
 
-    AdminPanel *Admin_Dashboard;
+    AdminPanel *adminPanel;
 
     QSqlDatabase db;
 

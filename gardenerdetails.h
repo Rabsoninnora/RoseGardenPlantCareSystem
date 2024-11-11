@@ -1,6 +1,7 @@
 #ifndef GARDENERDETAILS_H
 #define GARDENERDETAILS_H
-#include"databaseheader.h"
+#include "mydb.h"
+
 
 
 #include <QDialog>

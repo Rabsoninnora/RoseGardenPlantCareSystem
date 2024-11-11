@@ -1,6 +1,6 @@
 #ifndef VIEWGARDENTOOLS_H
 #define VIEWGARDENTOOLS_H
-
+#include "mydb.h"
 #include <QDialog>
 
 namespace Ui {
