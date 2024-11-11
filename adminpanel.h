@@ -11,6 +11,11 @@
 #include "addgardener.h"
 #include "addplant.h"
 #include "gardenerdetails.h"
+#include "species.h"
+#include "viewplants.h"
+#include "viewsystemadmin.h"
+#include "plantdetail.h"
+
 
 #include <QDialog>
 
@@ -48,6 +53,14 @@ private slots:
 
     void on_AddPlant_clicked();
 
+    void on_btn_view_plant_detial_BY_ID_clicked();
+
+    void on_btn_view_plant_dmin_clicked();
+
+    void on_btn_search_species_admin_clicked();
+
+    void on_btn_view_Available_Plants_Admin_clicked();
+
 private:
     //Pointer varables
     Ui::AdminPanel *ui;
@@ -60,6 +73,11 @@ private:
     AddGardener *ptrAddGardener;
     GardenerDetails *ptrGardenerDetails;
     AddPlant    *ptrAddPlant;
+
+    Species     *ptrSpecies;
+    PlantDetail *ptrPlantDetail;
+    ViewPlants  *ptrViewPlants;
+
 };
 
 #endif // ADMINPANEL_H

@@ -22,7 +22,7 @@ void Species::on_btnSearch_clicked()
 
     QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QueryLoadData.prepare("SELECT * FROM addplant WHERE species LIKE ="+ ui->txtSpeciesName->text() + "");
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtSpeciesName->text() + "");
     int NumberOFRowsToDisplay=1;
 
     if(QueryLoadData.exec())
