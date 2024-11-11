@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1301</width>
-    <height>759</height>
+    <width>1407</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -511,6 +511,52 @@ QPushButton{
     <string>Quantity</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>60</y>
+     <width>1411</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:3px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>image_field</zorder>
+  <zorder>txtPlantID</zorder>
+  <zorder>btnSearchPlant</zorder>
+  <zorder>txt_Scientific_name</zorder>
+  <zorder>txtGenus</zorder>
+  <zorder>txt_Local_name</zorder>
+  <zorder>species</zorder>
+  <zorder>txt_Description</zorder>
+  <zorder>txt_status</zorder>
+  <zorder>txt_price</zorder>
+  <zorder>txt_Quantity</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
+  <zorder>label_8</zorder>
+  <zorder>label_9</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>
