@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1296</width>
+    <width>1381</width>
     <height>773</height>
    </rect>
   </property>
@@ -27,23 +27,6 @@
 
 background-image: url(:/images/beauty.png);</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>30</y>
-     <width>571</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 500 13pt &quot;Ubuntu&quot;;</string>
-   </property>
-   <property name="text">
-    <string> The Rose Garden System  |      User Access Control</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineEdit_ID">
    <property name="geometry">
     <rect>
@@ -164,6 +147,9 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="DeleteAccessDetail">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>540</x>
@@ -225,6 +211,31 @@ font: 500 13pt &quot;Ubuntu&quot;;</string>
      <string>Password</string>
     </property>
    </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>30</y>
+     <width>1381</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+
+  color: rgb(255, 255, 255);
+  font: 500 12pt &quot;Ubuntu&quot;;
+  border:3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string> Rose Garden Nursery</string>
+   </property>
   </widget>
  </widget>
  <resources/>

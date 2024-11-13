@@ -28,7 +28,7 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v 1.0</string>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -280,7 +280,7 @@ QPushButton {
     <string notr="true">
 QPushButton{
                     color: rgb(255, 255, 255);
-                    border:3px solid grey;
+                    border:3px solid white;
                     border-radius: 8px;
                     padding: 0 8px;
    

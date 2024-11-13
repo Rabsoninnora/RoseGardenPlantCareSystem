@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>867</width>
-    <height>673</height>
+    <width>1471</width>
+    <height>794</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,8 +24,8 @@ background-image: url(:/images/beauty.png);
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>70</y>
+     <x>440</x>
+     <y>230</y>
      <width>541</width>
      <height>455</height>
     </rect>
@@ -163,19 +163,19 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>550</y>
-     <width>151</width>
-     <height>51</height>
+     <x>790</x>
+     <y>700</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
  QPushButton {
-  border:3px solid gray;
+  border:1px solid white;
   border-radius: 10px;
   padding: 0 10px;
-  background: green;
+  background: grey;
  font: 500 12pt ;
  color: rgb(255, 255, 255);
 
@@ -188,26 +188,101 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>550</y>
-     <width>131</width>
-     <height>51</height>
+     <x>510</x>
+     <y>700</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
  QPushButton {
-  border:3px solid gray;
+  border:1px solid white;
   border-radius: 10px;
   padding: 0 10px;
-  background: green;
- font: 500 12pt ;
+  background: grey;
+ font: 700 12pt ;
  color: rgb(255, 255, 255);
 
 }</string>
    </property>
    <property name="text">
     <string> Save</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1471</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:6px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>1431</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+
+  color: rgb(255, 255, 255);
+  font: 800 13pt;
+  border:3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string> Rose Garden Nursery</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_employee_home">
+   <property name="geometry">
+    <rect>
+     <x>1350</x>
+     <y>110</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+ QPushButton {
+  border:6px solid gray;
+  border-radius: 10px;
+  padding: 0 10px;
+  background: grey;
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Home</string>
    </property>
   </widget>
  </widget>

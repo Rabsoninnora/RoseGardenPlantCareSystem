@@ -6,49 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1387</width>
-    <height>729</height>
+    <width>1470</width>
+    <height>856</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>The Rose Garden Nursery  System 1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);
-background-image: url(:/images/beauty.png);</string>
+   <string notr="true"> 
+QDialog{
+background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);
+
+}</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>30</y>
-     <width>521</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-QLabel{
-                    color: rgb(255, 255, 255);
-                    border:3px solid grey;
-                    border-radius: 8px;
-                    padding: 0 8px;
-   
-                    font: 700 13pt ;
-
-}
-
- </string>
-   </property>
-   <property name="text">
-    <string> The Rose Garden System  |      Employee Record</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="ViewEmployeeRecord">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>40</y>
+     <x>20</x>
+     <y>110</y>
      <width>171</width>
      <height>41</height>
     </rect>
@@ -58,10 +35,11 @@ QLabel{
 
 QPushButton{
                     color: rgb(255, 255, 255);
-                    border:3px solid green;
+                    border:1px solid white;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                   
+	                background-color: rgb(96, 97, 98);
                     font: 700 12pt ;
 
 }
@@ -76,8 +54,8 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>110</y>
-     <width>991</width>
+     <y>250</y>
+     <width>1081</width>
      <height>541</height>
     </rect>
    </property>
@@ -133,9 +111,9 @@ QPushButton{
   <widget class="QPushButton" name="btn_Insert_Employee">
    <property name="geometry">
     <rect>
-     <x>750</x>
-     <y>40</y>
-     <width>131</width>
+     <x>340</x>
+     <y>110</y>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
@@ -143,10 +121,10 @@ QPushButton{
     <string notr="true">
 QPushButton {
                     color: rgb(19, 255, 0);
-                    border:3px solid green;
+                    border:1px solid white;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                    background-color: rgb(96, 97, 98);
                     font: 700 12pt ;
 
 }
@@ -160,8 +138,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Update_Employee">
    <property name="geometry">
     <rect>
-     <x>890</x>
-     <y>40</y>
+     <x>200</x>
+     <y>110</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -169,11 +147,12 @@ QPushButton {
    <property name="styleSheet">
     <string notr="true">
 QPushButton {
-                    color: rgb(26, 95, 180);
-                    border:3px solid green;
+                    
+	               color: rgb(255, 255, 255);
+                    border:1px solid white;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                    background-color: rgb(96, 97, 98);
                     font: 700 12pt ;
 
 }
@@ -187,24 +166,26 @@ QPushButton {
   <widget class="QPushButton" name="btn_Delete_Employee">
    <property name="geometry">
     <rect>
-     <x>1040</x>
-     <y>40</y>
-     <width>131</width>
+     <x>460</x>
+     <y>110</y>
+     <width>111</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
 QPushButton {
-                    color: rgb(224, 27, 36);
-                    border:3px solid green;
+                    
+	                color: rgb(224, 27, 36);
+                    border:1px solid white;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                    background-color: rgb(96, 97, 98);
                     font: 700 12pt ;
 
 }
 
+ 
  </string>
    </property>
    <property name="text">
@@ -214,9 +195,9 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Employee_id">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>160</y>
-     <width>191</width>
+     <x>1130</x>
+     <y>270</y>
+     <width>241</width>
      <height>51</height>
     </rect>
    </property>
@@ -239,10 +220,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_National_id">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>220</y>
+     <x>1130</x>
+     <y>330</y>
      <width>241</width>
-     <height>51</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -262,8 +243,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_First_name">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>280</y>
+     <x>1130</x>
+     <y>400</y>
      <width>241</width>
      <height>61</height>
     </rect>
@@ -285,8 +266,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Middle_name">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>360</y>
+     <x>1130</x>
+     <y>470</y>
      <width>241</width>
      <height>61</height>
     </rect>
@@ -308,8 +289,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Last_name">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>430</y>
+     <x>1130</x>
+     <y>540</y>
      <width>241</width>
      <height>61</height>
     </rect>
@@ -331,10 +312,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_job_title">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>500</y>
+     <x>1130</x>
+     <y>620</y>
      <width>241</width>
-     <height>61</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -354,10 +335,10 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Description">
    <property name="geometry">
     <rect>
-     <x>1020</x>
-     <y>570</y>
+     <x>1130</x>
+     <y>690</y>
      <width>241</width>
-     <height>61</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -374,6 +355,70 @@ QPushButton {
     <string>Description</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1471</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:6px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>1431</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+
+  color: rgb(255, 255, 255);
+  font: 800 13pt;
+  border:3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string> Rose Garden Nursery</string>
+   </property>
+  </widget>
+  <zorder>tableWidget</zorder>
+  <zorder>lineEdit_Employee_id</zorder>
+  <zorder>lineEdit_National_id</zorder>
+  <zorder>lineEdit_First_name</zorder>
+  <zorder>lineEdit_Middle_name</zorder>
+  <zorder>lineEdit_Last_name</zorder>
+  <zorder>lineEdit_job_title</zorder>
+  <zorder>lineEdit_Description</zorder>
+  <zorder>label_9</zorder>
+  <zorder>ViewEmployeeRecord</zorder>
+  <zorder>btn_Insert_Employee</zorder>
+  <zorder>btn_Update_Employee</zorder>
+  <zorder>btn_Delete_Employee</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>

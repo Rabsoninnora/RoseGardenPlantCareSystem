@@ -18,7 +18,7 @@ void AddSystemAdmin::on_ViewAccessDetail_clicked()
 
     QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QueryLoadData.prepare("SELECT * FROM Admin_login");
+    QueryLoadData.prepare("SELECT * FROM User_login");
 
 
 
@@ -53,7 +53,7 @@ void AddSystemAdmin::on_InsertAccessDetail_clicked()
     QSqlQuery InsertRecord( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
 
-    InsertRecord.prepare( "INSERT INTO Admin_login(username,password) VALUES(:username,:password) ");
+    InsertRecord.prepare( "INSERT INTO User_login(username,password) VALUES(:username,:password) ");
     InsertRecord.bindValue(":username", ui->lineEdit_UserName->text());
     InsertRecord.bindValue(":password",ui->lineEdit_Password->text());
 
@@ -70,7 +70,7 @@ void AddSystemAdmin::on_DeleteAccessDetail_clicked()
     QSqlQuery Query_Delete_Data( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
 
-    Query_Delete_Data.prepare("DELETE FROM Admin_login WHERE ID="+ ui->lineEdit_ID->text() +"");
+    Query_Delete_Data.prepare("DELETE FROM User_login WHERE ID="+ ui->lineEdit_ID->text() +"");
     Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
     QSqlDatabase::database().close();

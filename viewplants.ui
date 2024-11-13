@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1495</width>
-    <height>741</height>
+    <width>1512</width>
+    <height>918</height>
    </rect>
   </property>
   <property name="acceptDrops">
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);
@@ -27,19 +27,19 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="ViewPlantsRecord">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>30</y>
-     <width>131</width>
-     <height>41</height>
+     <x>20</x>
+     <y>110</y>
+     <width>151</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-  border:3px solid rgb(255, 255, 255);
+  border:0px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
-  background: green;
- font: 500 12pt ;
+  background: grey;
+ font: 700 12pt ;
  color: rgb(255, 255, 255);
 
 }
@@ -53,8 +53,8 @@ background-image: url(:/images/beauty.png);
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>30</y>
-     <width>411</width>
+     <y>200</y>
+     <width>301</width>
      <height>41</height>
     </rect>
    </property>
@@ -72,25 +72,25 @@ QLabel {
 }</string>
    </property>
    <property name="text">
-    <string> The Rose Garden Nursery  | Plant Record</string>
+    <string> PLANT RECORD | SECTION </string>
    </property>
   </widget>
   <widget class="QPushButton" name="DeletePlantsRecord">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>30</y>
+     <x>450</x>
+     <y>110</y>
      <width>121</width>
-     <height>41</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-  border:3px solid rgb(255, 255, 255);
+  border:1px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
   background: red;
- font: 500 12pt ;
+ font: 700 12pt ;
  color: rgb(255, 255, 255);
 
 }</string>
@@ -102,21 +102,22 @@ QLabel {
   <widget class="QLineEdit" name="lineEdit_Delete">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>30</y>
-     <width>241</width>
-     <height>41</height>
+     <x>190</x>
+     <y>110</y>
+     <width>251</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
   QLineEdit {
-  border:3px solid rgb(255, 255, 255);
+  border:6px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px 10px;
   background: ;
  font: 600 11pt ;
  color: rgb(255, 255, 255);
+	
 
 }</string>
    </property>
@@ -128,7 +129,7 @@ QLabel {
    <property name="geometry">
     <rect>
      <x>35</x>
-     <y>110</y>
+     <y>250</y>
      <width>1371</width>
      <height>571</height>
     </rect>
@@ -205,8 +206,8 @@ QLabel {
   <widget class="QPushButton" name="btn_print_PDF">
    <property name="geometry">
     <rect>
-     <x>1040</x>
-     <y>30</y>
+     <x>580</x>
+     <y>120</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -227,11 +228,67 @@ QLabel {
     <string>Print to PDF</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1511</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+   
+ 
+	background-color: rgb(0, 85, 0);
+  border:3px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>1461</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid white;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>The Rose Garden Nursery</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
-  <zorder>ViewPlantsRecord</zorder>
-  <zorder>DeletePlantsRecord</zorder>
-  <zorder>lineEdit_Delete</zorder>
   <zorder>tableWidget</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>ViewPlantsRecord</zorder>
+  <zorder>lineEdit_Delete</zorder>
+  <zorder>DeletePlantsRecord</zorder>
   <zorder>btn_print_PDF</zorder>
  </widget>
  <resources/>

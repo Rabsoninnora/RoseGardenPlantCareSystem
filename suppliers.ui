@@ -6,45 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1291</width>
-    <height>764</height>
+    <width>1442</width>
+    <height>795</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);
 background-image: url(:/images/beauty.png);</string>
   </property>
-  <widget class="QLabel" name="The_Rose_Garden_Nursery_System">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>50</y>
-     <width>1291</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> QLabel {
-  color: rgb(255, 255, 255);
-  font: 500 12pt &quot;Ubuntu&quot;;
-  border:1px solid gray;
-  border-radius: 10px;
-  padding: 0 10px;
-  
-}</string>
-   </property>
-   <property name="text">
-    <string> The Rose Garden Nursery   |    Supplier Detail Section</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btn_View_Supplier">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>180</y>
+     <y>120</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -69,8 +46,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Insert_Supplier">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>180</y>
+     <x>210</x>
+     <y>120</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -95,8 +72,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Update_Supplier">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>180</y>
+     <x>320</x>
+     <y>120</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -121,8 +98,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Delete_Supplier">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>180</y>
+     <x>440</x>
+     <y>120</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -147,8 +124,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_SupplierID">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>240</y>
+     <x>990</x>
+     <y>300</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -172,8 +149,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Supplier_Legal_Name">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>320</y>
+     <x>990</x>
+     <y>370</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -196,8 +173,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Phone">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>400</y>
+     <x>990</x>
+     <y>440</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -220,8 +197,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_Product">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>560</y>
+     <x>990</x>
+     <y>580</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -244,8 +221,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_address">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>640</y>
+     <x>990</x>
+     <y>650</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -268,8 +245,8 @@ QPushButton {
   <widget class="QLineEdit" name="lineEdit_email">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>480</y>
+     <x>990</x>
+     <y>510</y>
      <width>311</width>
      <height>61</height>
     </rect>
@@ -293,8 +270,8 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>25</x>
-     <y>250</y>
-     <width>871</width>
+     <y>270</y>
+     <width>921</width>
      <height>451</height>
     </rect>
    </property>
@@ -342,6 +319,71 @@ QPushButton {
     </property>
    </column>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1441</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:3px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>1421</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid white;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>The Rose Garden Nursery</string>
+   </property>
+  </widget>
+  <zorder>lineEdit_SupplierID</zorder>
+  <zorder>lineEdit_Supplier_Legal_Name</zorder>
+  <zorder>lineEdit_Phone</zorder>
+  <zorder>lineEdit_Product</zorder>
+  <zorder>lineEdit_address</zorder>
+  <zorder>lineEdit_email</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>label_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>btn_View_Supplier</zorder>
+  <zorder>btn_Insert_Supplier</zorder>
+  <zorder>btn_Update_Supplier</zorder>
+  <zorder>btn_Delete_Supplier</zorder>
  </widget>
  <resources/>
  <connections/>
