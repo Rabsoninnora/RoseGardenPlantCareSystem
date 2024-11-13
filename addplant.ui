@@ -23,7 +23,7 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
@@ -31,7 +31,7 @@
   <property name="styleSheet">
    <string notr="true"> 
 QDialog{
-background-color: rgb(56, 144, 96);
+color: rgb(255, 255, 255);
 background-image: url(:/images/beauty.png);
 
 }</string>

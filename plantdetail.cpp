@@ -1,5 +1,6 @@
 #include "plantdetail.h"
 #include "ui_plantdetail.h"
+#include <QMessageBox>
 
 PlantDetail::PlantDetail(QWidget *parent)
     : QDialog(parent)
@@ -52,6 +53,7 @@ void PlantDetail::on_btnSearchPlant_clicked()
               ui->txt_price->setText(QueryLoadData.value(7).toString());
               ui->txt_Quantity->setText(QueryLoadData.value(8).toString());
 
+
         }
 
     }
@@ -61,7 +63,12 @@ void PlantDetail::on_btnSearchPlant_clicked()
      Image.loadFromData(ImageDataFromDataBase, "JPG");
     //load image onto the UI
     ui->image_field->setPixmap(Image.scaled(w, h,Qt::KeepAspectRatio));
+
+
+
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
+
+
 
 }
 

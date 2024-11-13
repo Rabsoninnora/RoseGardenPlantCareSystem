@@ -17,12 +17,11 @@
    <string>v1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);
+   <string notr="true">QDialog{
+background-color: rgb(56, 144, 96);
 background-image: url(:/images/beauty.png);
 
-
-
- </string>
+}</string>
   </property>
   <widget class="QPushButton" name="ViewPlantsRecord">
    <property name="geometry">
@@ -64,7 +63,7 @@ background-image: url(:/images/beauty.png);
 
 QLabel {
   color: rgb(255, 255, 255);
-  font: 500 12pt ;
+  font: 700 12pt ;
   border:1px solid  rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
@@ -111,7 +110,7 @@ QLabel {
    <property name="styleSheet">
     <string notr="true">
   QLineEdit {
-  border:6px solid rgb(255, 255, 255);
+  border:1px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 10px 10px;
   background: ;
@@ -207,18 +206,18 @@ QLabel {
    <property name="geometry">
     <rect>
      <x>580</x>
-     <y>120</y>
-     <width>131</width>
-     <height>41</height>
+     <y>110</y>
+     <width>141</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-  border:3px solid rgb(255, 255, 255);
+  border:1px solid rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
   background: green;
- font: 500 12pt ;
+ font: 700 12pt ;
  color: rgb(255, 255, 255);
 
 }

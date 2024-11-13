@@ -37,6 +37,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
         secDialog =new SecDialog(this);
         //calling secDialog object
         secDialog->show();
+        this->hide();
 
 
     }
@@ -60,6 +61,7 @@ void MainWindowPlantCare::on_pushButton_login_clicked()
                 secDialog =new SecDialog(this);
                 //calling secDialog object
                 secDialog->show();
+                this->hide();
             }
             else if(UserFindCount == 0)//If username and password is not correct
             {
@@ -121,7 +123,8 @@ void MainWindowPlantCare::on_btn_Admin_login_clicked()
         adminPanel =new AdminPanel(this);
 
         //calling admindashboard
-        secDialog->show();
+        adminPanel->show();
+        this->hide();
 
 
     }
@@ -146,6 +149,7 @@ void MainWindowPlantCare::on_btn_Admin_login_clicked()
 
                 //calling Admin object
                 adminPanel->show();
+                this->hide();
 
             }
             else if(UserFindCount == 0)//If username and password is not correct
