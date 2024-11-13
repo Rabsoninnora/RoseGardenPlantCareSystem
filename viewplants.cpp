@@ -97,9 +97,8 @@ void ViewPlants::on_ViewPlantsRecord_clicked()
 
 void ViewPlants::on_DeletePlantsRecord_clicked()
 {
-
+    QSqlQuery Query_Delete_Data( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QSqlQuery Query_Delete_Data(DB_SQLITE3);
     Query_Delete_Data.prepare("DELETE FROM addplant WHERE Plant_ID="+ ui->lineEdit_Delete->text() +"");
     Query_Delete_Data.exec();
     QSqlDatabase::database().commit();
