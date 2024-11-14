@@ -13,11 +13,14 @@
 #include <QVBoxLayout>
 #include <QByteArray>
 
+
 AddPlant::AddPlant(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::AddPlant)
 {
     ui->setupUi(this);
+
+
 
 
 
@@ -27,6 +30,7 @@ AddPlant::AddPlant(QWidget *parent)
 AddPlant::~AddPlant()
 {
     delete ui;
+
 }
 
 void AddPlant::on_btn_browse_image_clicked()
@@ -115,7 +119,7 @@ void AddPlant::on_btnSave_clicked()
 
 void AddPlant::on_pushButton_btn_home_clicked()
 {
-    QMessageBox::information(this, "Hi Rabson","Welcome back home");
+
 
 }
 

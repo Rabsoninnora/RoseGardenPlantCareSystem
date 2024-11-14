@@ -2,6 +2,7 @@
 #define ADDPLANT_H
 #include "mydb.h"
 
+
 #include <QDialog>
 
 namespace Ui {
@@ -37,6 +38,8 @@ private:
     QString ImageName;
 
      QByteArray imageData; // Adding this member variable to store image data
+
+
 };
 
 #endif // ADDPLANT_H

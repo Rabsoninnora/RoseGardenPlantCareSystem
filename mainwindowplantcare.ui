@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1219</width>
-    <height>731</height>
+    <height>811</height>
    </rect>
   </property>
   <property name="font">
@@ -21,13 +21,13 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true"> background-color: rgb(0, 85, 0);
+   <string notr="true">
 </string>
   </property>
   <property name="inputMethodHints">
@@ -43,12 +43,27 @@
       <height>381</height>
      </rect>
     </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="tabsClosable">
+     <bool>true</bool>
+    </property>
+    <property name="tabBarAutoHide">
+     <bool>true</bool>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Click here for User Login</string>
+      <string>Login as User</string>
      </attribute>
      <widget class="QGroupBox" name="loginBox">
       <property name="geometry">
@@ -215,7 +230,7 @@ QPushButton{
                     border:0px solid green;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                    background-color: rgb(0, 90, 0);
                     font: 600 11pt ;
 
 }
@@ -230,7 +245,7 @@ QPushButton{
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Click Here For Admin Login</string>
+      <string>Login as Admin</string>
      </attribute>
      <widget class="QGroupBox" name="loginBox_2">
       <property name="geometry">
@@ -398,7 +413,7 @@ QPushButton{
                     border:0px solid green;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                    background-color: rgb(0, 90, 0);
                     font: 600 11pt ;
 
 }
@@ -486,7 +501,7 @@ QPushButton{
                     border:3px solid green;
                     border-radius: 8px;
                     padding: 0 8px;
-   
+                    background-color: rgb(0, 85, 0);
                     font: 600 11pt ;
 
 }
@@ -494,14 +509,14 @@ QPushButton{
  </string>
     </property>
     <property name="text">
-     <string>Please login to perfom your operations</string>
+     <string>Please Login</string>
     </property>
    </widget>
    <widget class="QLabel" name="CopyRight_line">
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>660</y>
+      <y>750</y>
       <width>1791</width>
       <height>41</height>
      </rect>
@@ -516,6 +531,7 @@ QPushButton{
      <string notr="true">QLabel
 {
     
+	font: 9pt &quot;Segoe UI&quot;;
 	background-color: rgb(0, 0, 0);
 	
 	color: rgb(255, 255, 255);
@@ -539,6 +555,21 @@ QPushButton{
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
+ <tabstops>
+  <tabstop>pushButton</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>pushButton_login_3</tabstop>
+  <tabstop>lineEdit_password</tabstop>
+  <tabstop>lineEdit_username</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>btn_Admin_login</tabstop>
+  <tabstop>btn_Admin_Cancel</tabstop>
+  <tabstop>lineEdit_password_2</tabstop>
+  <tabstop>lineEdit_username_2</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_login</tabstop>
+  <tabstop>pushButton_2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
