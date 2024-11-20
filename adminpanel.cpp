@@ -51,28 +51,24 @@ AdminPanel::~AdminPanel()
 void AdminPanel::on_AddGardenTool_clicked()
 {
   ptrAddgardentool->show();
-    this->hide();
+
 }
 
 
 void AdminPanel::on_ViewGardenTools_clicked()
 {
     ptrViewGardenTools->show();
-    this->hide();
+
 }
 
 
-void AdminPanel::on_btn_Available_Plants_clicked()
-{
-   ptrAvailablePlants->show();
-    this->hide();
-}
+
 
 
 void AdminPanel::on_btn_Add_Admin_clicked()
 {
   ptrAddSystemAdmin->show();
-  this->hide();
+
 }
 
 
@@ -81,21 +77,21 @@ void AdminPanel::on_btn_Add_Admin_clicked()
 void AdminPanel::on_btn_Add_Supplier_clicked()
 {
     ptrSuppliers->show();
-    this->hide();
+
 }
 
 
 void AdminPanel::on_btn_Employees_clicked()
 {
    ptrAddGardener->show();
-    this->hide();
+
 }
 
 
 void AdminPanel::on_btn_employee_view_clicked()
 {
     ptrGardenerDetails->show();
-    this->hide();
+
 }
 
 
@@ -113,28 +109,28 @@ void AdminPanel::on_Admin_panel_close_app_clicked()
 void AdminPanel::on_AddPlant_clicked()
 {
     ptrAddPlant->show();
-    this->hide();
+
 }
 
 
 void AdminPanel::on_btn_view_plant_detial_BY_ID_clicked()
 {
  ptrPlantDetail->show();
- this->hide();
+
 }
 
 
 void AdminPanel::on_btn_view_plant_dmin_clicked()
 {
    ptrViewPlants->show();
-   this->hide();
+
 }
 
 
 void AdminPanel::on_btn_search_species_admin_clicked()
 {
    ptrSpecies->show();
-   this->hide();
+
 }
 
 

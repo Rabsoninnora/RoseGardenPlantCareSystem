@@ -21,31 +21,37 @@
 background-color: rgb(56, 144, 96);
 background-image: url(:/images/beauty.png);
 
+
+
 }</string>
   </property>
   <widget class="QPushButton" name="ViewPlantsRecord">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>110</y>
-     <width>151</width>
-     <height>51</height>
+     <y>80</y>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-  border:0px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: grey;
+    <string notr="true"> QPushButton {
+background-color: rgb(71, 71, 71);
+ 
+selection-color: rgb(0, 85, 0);
+ 
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 
-}
-</string>
+}</string>
    </property>
    <property name="text">
     <string>View Record</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <activeon>:/potted_succulent.jpg</activeon>
+    </iconset>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -67,6 +73,7 @@ QLabel {
   border:1px solid  rgb(255, 255, 255);
   border-radius: 10px;
   padding: 0 10px;
+ background: grey;
   
 }</string>
    </property>
@@ -78,33 +85,39 @@ QLabel {
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>110</y>
+     <y>80</y>
      <width>121</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-  border:1px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: red;
+    <string notr="true"> 
+
+
+ QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
  font: 700 12pt ;
- color: rgb(255, 255, 255);
+ color: rgb(255, 0, 0);
 
 }</string>
    </property>
    <property name="text">
     <string>Delete</string>
    </property>
+   <property name="icon">
+    <iconset>
+     <activeon>:/potted_succulent.jpg</activeon>
+    </iconset>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_Delete">
    <property name="geometry">
     <rect>
      <x>190</x>
-     <y>110</y>
+     <y>80</y>
      <width>251</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -206,9 +219,9 @@ QLabel {
    <property name="geometry">
     <rect>
      <x>580</x>
-     <y>110</y>
+     <y>80</y>
      <width>141</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -236,7 +249,7 @@ QLabel {
      <x>0</x>
      <y>0</y>
      <width>1511</width>
-     <height>171</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -260,7 +273,7 @@ QLabel {
      <x>20</x>
      <y>20</y>
      <width>1461</width>
-     <height>81</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -281,6 +294,48 @@ QPushButton{
     <string>The Rose Garden Nursery</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1240</x>
+     <y>30</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">selection-color: rgb(115, 115, 115);</string>
+   </property>
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <activeon>:/potted_succulent.jpg</activeon>
+    </iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>30</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">selection-color: rgb(115, 115, 115);</string>
+   </property>
+   <property name="text">
+    <string>Maximize</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <activeon>:/potted_succulent.jpg</activeon>
+    </iconset>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>tableWidget</zorder>
   <zorder>label_2</zorder>
@@ -289,7 +344,42 @@ QPushButton{
   <zorder>lineEdit_Delete</zorder>
   <zorder>DeletePlantsRecord</zorder>
   <zorder>btn_print_PDF</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>ViewPlants</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1265</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1288</x>
+     <y>176</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>ViewPlants</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1406</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1425</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

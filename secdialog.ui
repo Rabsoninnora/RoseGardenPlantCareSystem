@@ -34,24 +34,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-
-QDialog{
- 
-	background-color: rgb(0, 85, 0);
-
-  
-}
-
- QMessageBox{
-        
-    border:6px solid gray;
-    border-radius: 10px;
-    padding: 0 10px;
-    background: green;
-    font: 500 12pt ;
-    color: rgb(255, 255, 255);
-    };</string>
+   <string notr="true"> </string>
   </property>
   <property name="modal">
    <bool>false</bool>
@@ -59,8 +42,8 @@ QDialog{
   <widget class="QPushButton" name="ViewSpecies">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>110</y>
+     <x>420</x>
+     <y>80</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -100,8 +83,8 @@ QDialog{
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>110</y>
+     <x>280</x>
+     <y>80</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -138,8 +121,8 @@ QDialog{
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-30</x>
-     <y>-10</y>
+     <x>-110</x>
+     <y>130</y>
      <width>1851</width>
      <height>821</height>
     </rect>
@@ -181,7 +164,7 @@ QDialog{
      <x>0</x>
      <y>0</y>
      <width>1411</width>
-     <height>171</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -200,10 +183,10 @@ QDialog{
   <widget class="QPushButton" name="btn_logout">
    <property name="geometry">
     <rect>
-     <x>1110</x>
-     <y>110</y>
+     <x>1090</x>
+     <y>80</y>
      <width>101</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -230,8 +213,8 @@ QDialog{
   <widget class="QPushButton" name="btn_Plant_Detail">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>110</y>
+     <x>30</x>
+     <y>80</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -270,10 +253,10 @@ QPushButton {
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>27</x>
      <y>20</y>
-     <width>1408</width>
-     <height>81</height>
+     <width>1321</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -297,10 +280,10 @@ QPushButton{
   <widget class="QPushButton" name="btn_user_admin_close_app">
    <property name="geometry">
     <rect>
-     <x>1260</x>
-     <y>110</y>
+     <x>1230</x>
+     <y>80</y>
      <width>111</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -318,16 +301,77 @@ QPushButton{
     <string>Close App</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>30</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Maximize</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>1080</x>
+     <y>30</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
-  <zorder>ViewSpecies</zorder>
   <zorder>ViewPlants</zorder>
   <zorder>CopyRight_line</zorder>
   <zorder>btn_logout</zorder>
   <zorder>btn_Plant_Detail</zorder>
   <zorder>pushButton</zorder>
   <zorder>btn_user_admin_close_app</zorder>
+  <zorder>ViewSpecies</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_4</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>SecDialog</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1130</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1133</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>SecDialog</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1266</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1273</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

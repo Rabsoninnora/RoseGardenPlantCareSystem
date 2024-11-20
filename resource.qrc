@@ -8,6 +8,80 @@
         <file>beauty.png</file>
         <file>user.png</file>
         <file>search.png</file>
+        <file>RGS.jpg</file>
+        <file>RGS1.jpg</file>
+        <file>RGS2.webp</file>
+        <file>RGS3.jpg</file>
+        <file>RGS4.jpg</file>
+        <file>RGS5.jpg</file>
+        <file>RGS6.jpg</file>
+        <file>RGS7.jpg</file>
+        <file>RGS8.jpeg</file>
+        <file>RGS9.jpg</file>
+        <file>RGS10.jpg</file>
+        <file>RGS11.jpg</file>
+        <file>RGS13.webp</file>
+        <file>RGS14.png</file>
+        <file>RGS15.jpg</file>
+        <file>RGS16.jpg</file>
+        <file>RGS17.jpg</file>
+        <file>RGS18.jpg</file>
+        <file>RGS19.jpg</file>
+        <file>RGS20.jpg</file>
+        <file>RGS21.jpg</file>
+        <file>RGS22.jpg</file>
+        <file>RGS23.jpg</file>
+        <file>RGS24.jpg</file>
+        <file>RGS26.jpg</file>
+        <file>RGS27.webp</file>
+        <file>RGS28.jpg</file>
+        <file>RGS29.jpg</file>
+        <file>RGS30.jpg</file>
+        <file>RGS31.jpg</file>
+        <file>RGS32.jpg</file>
+        <file>RGS33.jpeg</file>
+        <file>RGS34.jpg</file>
+        <file>RGS35.jpg</file>
     </qresource>
-    <qresource prefix="/"/>
+    <qresource prefix="/">
+        <file>16.jpg</file>
+        <file>croton-plant-in-white-pot.jpg</file>
+        <file>flower.png</file>
+        <file>pothos-houseplant.jpg</file>
+        <file>potted_succulent.jpg</file>
+        <file>RGS.jpg</file>
+        <file>RGS1.jpg</file>
+        <file>RGS2.webp</file>
+        <file>RGS3.jpg</file>
+        <file>RGS4.jpg</file>
+        <file>RGS5.jpg</file>
+        <file>RGS6.jpg</file>
+        <file>RGS7.jpg</file>
+        <file>RGS8.jpeg</file>
+        <file>RGS9.jpg</file>
+        <file>RGS10.jpg</file>
+        <file>RGS11.jpg</file>
+        <file>RGS13.webp</file>
+        <file>RGS14.png</file>
+        <file>RGS15.jpg</file>
+        <file>RGS16.jpg</file>
+        <file>RGS17.jpg</file>
+        <file>RGS18.jpg</file>
+        <file>RGS19.jpg</file>
+        <file>RGS20.jpg</file>
+        <file>RGS21.jpg</file>
+        <file>RGS22.jpg</file>
+        <file>RGS23.jpg</file>
+        <file>RGS24.jpg</file>
+        <file>RGS26.jpg</file>
+        <file>RGS27.webp</file>
+        <file>RGS28.jpg</file>
+        <file>RGS29.jpg</file>
+        <file>RGS30.jpg</file>
+        <file>RGS31.jpg</file>
+        <file>RGS32.jpg</file>
+        <file>RGS33.jpeg</file>
+        <file>RGS34.jpg</file>
+        <file>RGS35.jpg</file>
+    </qresource>
 </RCC>

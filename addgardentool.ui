@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1320</width>
-    <height>765</height>
+    <width>1471</width>
+    <height>743</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,25 +24,19 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btn_View_Record">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>120</y>
+     <x>20</x>
+     <y>80</y>
      <width>161</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-QPushButton{
-                    color: rgb(255, 255, 255);
-                    border:3px solid green;
-                    border-radius: 8px;
-                    padding: 0 8px;
-   
-                    font: 700 12pt ;
-
-}
-
- </string>
+    <string notr="true"> QPushButton {
+background-color: rgb(71, 71, 71); 
+ 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -51,24 +45,20 @@ QPushButton{
   <widget class="QPushButton" name="btn_Insert_Record">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>120</y>
+     <x>190</x>
+     <y>80</y>
      <width>141</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-QPushButton{
-                    color: rgb(255, 255, 255);
-                    border:3px solid green;
-                    border-radius: 8px;
-                    padding: 0 8px;
-   
-                    font: 700 12pt ;
+    <string notr="true"> QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
 
 }
-
  </string>
    </property>
    <property name="text">
@@ -78,26 +68,20 @@ QPushButton{
   <widget class="QPushButton" name="btn_Delete_Record">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>120</y>
+     <x>520</x>
+     <y>80</y>
      <width>161</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-
-QPushButton{
-                    color: rgb(255, 0, 0);
-                    border:3px solid green;
-                    border-radius: 8px;
-                    padding: 0 8px;
-   
-                    font: 700 12pt ;
-
+    <string notr="true">  
+QPushButton {
+background-color: rgb(71, 71, 71);
+font: 700 12pt;
+color: rgb(255, 0, 0);
 }
-
- </string>
+</string>
    </property>
    <property name="text">
     <string>Delete Record</string>
@@ -106,24 +90,20 @@ QPushButton{
   <widget class="QPushButton" name="btn_Update_Record">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>120</y>
+     <x>340</x>
+     <y>80</y>
      <width>171</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-QPushButton{
-                    color: rgb(255, 255, 255);
-                    border:3px solid green;
-                    border-radius: 8px;
-                    padding: 0 8px;
-   
-                    font: 700 12pt ;
+    <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
 
 }
-
  </string>
    </property>
    <property name="text">
@@ -134,7 +114,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>280</y>
+     <y>230</y>
      <width>851</width>
      <height>421</height>
     </rect>
@@ -177,7 +157,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>900</x>
-     <y>370</y>
+     <y>300</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -201,7 +181,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>900</x>
-     <y>440</y>
+     <y>380</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -225,7 +205,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>900</x>
-     <y>500</y>
+     <y>450</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -249,7 +229,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>900</x>
-     <y>560</y>
+     <y>520</y>
      <width>371</width>
      <height>91</height>
     </rect>
@@ -269,30 +249,153 @@ QPushButton{
     <string>Description</string>
    </property>
   </widget>
-  <widget class="QLabel" name="The_Rose_Garden_Nursery_System">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>30</y>
-     <width>661</width>
+     <x>20</x>
+     <y>170</y>
+     <width>301</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> QLabel {
+    <string notr="true">
+QLabel {
   color: rgb(255, 255, 255);
-  font: 500 12pt &quot;Ubuntu&quot;;
-  border:1px solid gray;
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string> GARDEN TOOL  | SECTION </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1471</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:6px solid green;
   border-radius: 10px;
   padding: 0 10px;
   
 }</string>
    </property>
    <property name="text">
-    <string> The Rose Garden Nursery  System |    Garden Tool Section</string>
+    <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>1431</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+
+  color: rgb(255, 255, 255);
+  font: 800 13pt;
+  border:3px solid white;
+  border-radius: 10px;
+  padding: 0 10px;
+
+}</string>
+   </property>
+   <property name="text">
+    <string> Rose Garden Nursery</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>1340</x>
+     <y>30</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Maximize </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>30</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+  </widget>
+  <zorder>tableWidget</zorder>
+  <zorder>lineEdit_ID</zorder>
+  <zorder>lineEdit_Item_name</zorder>
+  <zorder>lineEdit_Quantity</zorder>
+  <zorder>lineEdit_Description</zorder>
+  <zorder>label</zorder>
+  <zorder>label_9</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>btn_View_Record</zorder>
+  <zorder>btn_Insert_Record</zorder>
+  <zorder>btn_Update_Record</zorder>
+  <zorder>btn_Delete_Record</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>AddGardenTool</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1277</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1275</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>AddGardenTool</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1385</x>
+     <y>43</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1382</x>
+     <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

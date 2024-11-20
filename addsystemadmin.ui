@@ -31,7 +31,7 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>820</x>
-     <y>390</y>
+     <y>360</y>
      <width>141</width>
      <height>51</height>
     </rect>
@@ -54,7 +54,7 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>820</x>
-     <y>460</y>
+     <y>450</y>
      <width>281</width>
      <height>51</height>
     </rect>
@@ -152,7 +152,7 @@ background-image: url(:/images/beauty.png);</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>540</x>
+     <x>400</x>
      <y>140</y>
      <width>141</width>
      <height>41</height>

@@ -80,16 +80,11 @@ background-image: url(:/images/beauty.png);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-
- QPushButton {
-  border:6px solid white;
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 500 12pt ;
+    <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71); 
+selection-color: rgb(0, 85, 0); 
+ font: 700 12pt ;
  color: rgb(255, 255, 255);
-
 }</string>
    </property>
    <property name="text">
@@ -561,6 +556,29 @@ QPushButton{
     <string>Home</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>621</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string> VIEW PLANT DETAIL  | SECTION </string>
+   </property>
+  </widget>
   <zorder>image_field</zorder>
   <zorder>txtPlantID</zorder>
   <zorder>btnSearchPlant</zorder>
@@ -583,6 +601,7 @@ QPushButton{
   <zorder>label_9</zorder>
   <zorder>pushButton</zorder>
   <zorder>btn_home_plantdetail</zorder>
+  <zorder>label_10</zorder>
  </widget>
  <resources/>
  <connections/>

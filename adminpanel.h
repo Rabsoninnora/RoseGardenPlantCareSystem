@@ -38,7 +38,7 @@ private slots:
 
     void on_ViewGardenTools_clicked();
 
-    void on_btn_Available_Plants_clicked();
+
 
     void on_btn_Add_Admin_clicked();
 

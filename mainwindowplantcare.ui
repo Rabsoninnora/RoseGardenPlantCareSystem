@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1219</width>
-    <height>811</height>
+    <height>878</height>
    </rect>
   </property>
   <property name="font">
@@ -27,49 +27,48 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-</string>
+   <string notr="true"/>
   </property>
   <property name="inputMethodHints">
    <set>Qt::ImhNone</set>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QToolBox" name="toolBox">
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>210</y>
+      <y>260</y>
       <width>751</width>
-      <height>381</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="toolTipDuration">
      <number>-1</number>
     </property>
-    <property name="currentIndex">
-     <number>1</number>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
     </property>
-    <property name="iconSize">
-     <size>
-      <width>16</width>
-      <height>16</height>
-     </size>
-    </property>
-    <property name="tabsClosable">
-     <bool>true</bool>
-    </property>
-    <property name="tabBarAutoHide">
-     <bool>true</bool>
-    </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
+    <widget class="QWidget" name="toolBoxPage1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>751</width>
+       <height>377</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+     </attribute>
+     <attribute name="label">
       <string>Login as User</string>
      </attribute>
-     <widget class="QGroupBox" name="loginBox">
+     <widget class="QFrame" name="loginBox">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>20</y>
+        <x>-10</x>
+        <y>40</y>
         <width>751</width>
         <height>341</height>
        </rect>
@@ -97,9 +96,6 @@ background-image: url(:/images/beauty.png);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
 }</string>
-      </property>
-      <property name="title">
-       <string/>
       </property>
       <widget class="QPushButton" name="pushButton_login">
        <property name="geometry">
@@ -243,15 +239,27 @@ QPushButton{
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Login as Admin</string>
+    <widget class="QWidget" name="toolBoxPage2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>751</width>
+       <height>377</height>
+      </rect>
+     </property>
+     <attribute name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
      </attribute>
-     <widget class="QGroupBox" name="loginBox_2">
+     <attribute name="label">
+      <string>Login as Administrator</string>
+     </attribute>
+     <widget class="QFrame" name="loginBox_2">
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>20</y>
+        <y>0</y>
         <width>751</width>
         <height>341</height>
        </rect>
@@ -259,9 +267,9 @@ QPushButton{
       <property name="styleSheet">
        <string notr="true">
  
-QGroupBox {
 
-background-color: rgb(38, 162, 105);
+QGroupBox {
+ 
 
 font: 700 12pt;
 color: rgb(255, 255, 255);
@@ -280,9 +288,6 @@ background-image: url(:/images/beauty.png);
   font: 700 12pt ;
   color: rgb(0, 0, 0);;
 }</string>
-      </property>
-      <property name="title">
-       <string/>
       </property>
       <widget class="QPushButton" name="btn_Admin_login">
        <property name="geometry">
@@ -488,8 +493,8 @@ QPushButton{
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>140</y>
+      <x>350</x>
+      <y>160</y>
       <width>481</width>
       <height>41</height>
      </rect>
@@ -509,7 +514,7 @@ QPushButton{
  </string>
     </property>
     <property name="text">
-     <string>Please Login</string>
+     <string>Please select your account type</string>
     </property>
    </widget>
    <widget class="QLabel" name="CopyRight_line">
@@ -549,7 +554,7 @@ QPushButton{
      <x>0</x>
      <y>0</y>
      <width>1219</width>
-     <height>25</height>
+     <height>32</height>
     </rect>
    </property>
   </widget>
@@ -557,7 +562,7 @@ QPushButton{
  </widget>
  <tabstops>
   <tabstop>pushButton</tabstop>
-  <tabstop>tabWidget</tabstop>
+  <tabstop>toolBox</tabstop>
   <tabstop>pushButton_login_3</tabstop>
   <tabstop>lineEdit_password</tabstop>
   <tabstop>lineEdit_username</tabstop>
@@ -570,6 +575,8 @@ QPushButton{
   <tabstop>pushButton_login</tabstop>
   <tabstop>pushButton_2</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

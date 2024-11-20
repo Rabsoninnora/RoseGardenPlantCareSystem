@@ -14,30 +14,29 @@
    <string>v1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);
-background-image: url(:/images/beauty.png);</string>
+   <string notr="true"> QDialog{
+background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);
+
+
+}</string>
   </property>
   <widget class="QPushButton" name="btn_View_Supplier">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>120</y>
+     <x>10</x>
+     <y>80</y>
      <width>161</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 500 13pt  &quot;Ubuntu&quot;;
- color: rgb(255, 255, 255)
-
-}
-</string>
+    <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71); 
+ 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
    </property>
    <property name="text">
     <string>View Record</string>
@@ -46,24 +45,21 @@ QPushButton {
   <widget class="QPushButton" name="btn_Insert_Supplier">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>120</y>
+     <x>180</x>
+     <y>80</y>
      <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> 
-QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 500 15pt  &quot;Ubuntu&quot;;
- color: rgb(19, 255, 0);
+    <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
 
 }
-</string>
+ </string>
    </property>
    <property name="text">
     <string>Insert</string>
@@ -72,8 +68,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Update_Supplier">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>120</y>
+     <x>300</x>
+     <y>80</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -81,14 +77,13 @@ QPushButton {
    <property name="styleSheet">
     <string notr="true">
 QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 500 13pt  &quot;Ubuntu&quot;;
- color: blue;
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
 
 }
+ 
 </string>
    </property>
    <property name="text">
@@ -98,8 +93,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Delete_Supplier">
    <property name="geometry">
     <rect>
-     <x>440</x>
-     <y>120</y>
+     <x>420</x>
+     <y>80</y>
      <width>101</width>
      <height>41</height>
     </rect>
@@ -107,13 +102,9 @@ QPushButton {
    <property name="styleSheet">
     <string notr="true"> 
 QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 500 13pt  &quot;Ubuntu&quot;;
- color: red;
-
+background-color: rgb(71, 71, 71);
+font: 700 12pt;
+color: rgb(255, 0, 0);
 }
 </string>
    </property>
@@ -328,7 +319,7 @@ QPushButton {
      <x>0</x>
      <y>0</y>
      <width>1441</width>
-     <height>171</height>
+     <height>131</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -350,7 +341,7 @@ QPushButton {
      <x>10</x>
      <y>20</y>
      <width>1421</width>
-     <height>81</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -371,6 +362,55 @@ QPushButton{
     <string>The Rose Garden Nursery</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>1310</x>
+     <y>30</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Maximize</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>1190</x>
+     <y>30</y>
+     <width>111</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>621</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string> SUPPLIER MANAGEMENT  | SECTION </string>
+   </property>
+  </widget>
   <zorder>lineEdit_SupplierID</zorder>
   <zorder>lineEdit_Supplier_Legal_Name</zorder>
   <zorder>lineEdit_Phone</zorder>
@@ -384,7 +424,43 @@ QPushButton{
   <zorder>btn_Insert_Supplier</zorder>
   <zorder>btn_Update_Supplier</zorder>
   <zorder>btn_Delete_Supplier</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>Suppliers</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1241</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1244</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>Suppliers</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1358</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1364</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -46,6 +46,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
         plantdetail.h plantdetail.cpp plantdetail.ui
         mydb.h mydb.cpp
+        adminlogin.h adminlogin.cpp adminlogin.ui
+        userlogin.h userlogin.cpp userlogin.ui
 
     )
 # Define target properties for Android with Qt 6 as:

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1111</width>
-    <height>632</height>
+    <width>1287</width>
+    <height>851</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,10 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QPushButton" name="btnSearch">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>60</y>
-     <width>191</width>
-     <height>51</height>
+     <x>730</x>
+     <y>210</y>
+     <width>141</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -42,14 +42,23 @@ background-image: url(:/images/beauty.png);</string>
    <property name="text">
     <string>Search</string>
    </property>
+   <property name="icon">
+    <iconset theme="system-search"/>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="txtSpeciesName">
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>50</y>
+     <y>200</y>
      <width>271</width>
-     <height>61</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -72,8 +81,8 @@ background-image: url(:/images/beauty.png);</string>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>50</y>
+     <x>60</x>
+     <y>210</y>
      <width>221</width>
      <height>51</height>
     </rect>
@@ -97,7 +106,7 @@ background-image: url(:/images/beauty.png);</string>
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>170</y>
+     <y>340</y>
      <width>841</width>
      <height>411</height>
     </rect>

@@ -25,7 +25,7 @@ background-image: url(:/images/beauty.png);
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>110</y>
+     <y>100</y>
      <width>171</width>
      <height>41</height>
     </rect>
@@ -112,7 +112,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>110</y>
+     <y>100</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -139,7 +139,7 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>110</y>
+     <y>100</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -167,7 +167,7 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>460</x>
-     <y>110</y>
+     <y>100</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -386,7 +386,7 @@ QPushButton {
      <x>10</x>
      <y>20</y>
      <width>1431</width>
-     <height>71</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -405,6 +405,29 @@ QPushButton{
     <string> Rose Garden Nursery</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>551</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string> EMPLOYEE MANAGEMENT  | SECTION </string>
+   </property>
+  </widget>
   <zorder>tableWidget</zorder>
   <zorder>lineEdit_Employee_id</zorder>
   <zorder>lineEdit_National_id</zorder>
@@ -419,6 +442,7 @@ QPushButton{
   <zorder>btn_Update_Employee</zorder>
   <zorder>btn_Delete_Employee</zorder>
   <zorder>pushButton</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -222,12 +222,10 @@ background-image: url(:/images/beauty.png);
    <property name="styleSheet">
     <string notr="true">
  QPushButton {
-  border:1px solid white;
-  border-radius: 10px;
-  padding: 0 10px;
-  background: grey;
+ 
  font: 700 13pt ;
  color: rgb(255, 255, 255);
+background-color: rgb(63, 63, 63);
 
 }</string>
    </property>
@@ -247,12 +245,10 @@ background-image: url(:/images/beauty.png);
    <property name="styleSheet">
     <string notr="true">
  QPushButton {
-  border:1px solid white;
-  border-radius: 10px;
-  padding: 0 10px;
-  background: grey;
+  
  font: 700 13pt ;
  color: rgb(255, 255, 255);
+background-color: rgb(63, 63, 63);
 
 }</string>
    </property>
@@ -266,7 +262,7 @@ background-image: url(:/images/beauty.png);
      <x>1350</x>
      <y>100</y>
      <width>91</width>
-     <height>41</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -297,12 +293,10 @@ background-image: url(:/images/beauty.png);
    <property name="styleSheet">
     <string notr="true">
  QPushButton {
-  border:1px solid white;
-  border-radius: 10px;
-  padding: 0 10px;
-  background: grey;
+  
  font: 700 12pt ;
  color: rgb(255, 255, 255);
+background-color: rgb(63, 63, 63);
 
 }</string>
    </property>
@@ -342,7 +336,7 @@ background-image: url(:/images/beauty.png);
      <x>0</x>
      <y>0</y>
      <width>1471</width>
-     <height>161</height>
+     <height>141</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -364,7 +358,7 @@ background-image: url(:/images/beauty.png);
      <x>20</x>
      <y>20</y>
      <width>1431</width>
-     <height>71</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -383,6 +377,55 @@ QPushButton{
     <string> Rose Garden Nursery</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1270</x>
+     <y>40</y>
+     <width>71</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Minimize</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>1350</x>
+     <y>40</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Maximize </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>301</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string>    ADD PLANT | SECTION </string>
+   </property>
+  </widget>
   <zorder>formLayoutWidget</zorder>
   <zorder>btnSave</zorder>
   <zorder>btnReset</zorder>
@@ -391,7 +434,43 @@ QPushButton{
   <zorder>label_9</zorder>
   <zorder>pushButton</zorder>
   <zorder>pushButton_btn_home</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>AddPlant</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1373</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1350</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>AddPlant</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1309</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1264</x>
+     <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
