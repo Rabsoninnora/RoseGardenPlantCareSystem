@@ -6,6 +6,7 @@ AvailablePlants::AvailablePlants(QWidget *parent)
     , ui(new Ui::AvailablePlants)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 }
 
 AvailablePlants::~AvailablePlants()

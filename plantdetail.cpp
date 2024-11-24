@@ -7,6 +7,7 @@ PlantDetail::PlantDetail(QWidget *parent)
     , ui(new Ui::PlantDetail)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 
 

@@ -9,6 +9,8 @@ UserLogin::UserLogin(QWidget *parent)
     , ui(new Ui::UserLogin)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+
 }
 
 UserLogin::~UserLogin()
@@ -21,15 +23,15 @@ void UserLogin::on_pushButton_login_clicked()
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
 
-    if(username== "innora" && password == "659489+") //Default developer login
+    if(username== "innora" && password == "659489") //Default developer login
     {
-        QMessageBox::information(this, "Welcome","Login is successful!");
+
 
         //creating a constructor for System Dashboard
         secDialog =new SecDialog(this);
         //calling secDialog object
         secDialog->show();
-
+        this->hide();
 
 
     }
@@ -47,12 +49,13 @@ void UserLogin::on_pushButton_login_clicked()
             }
             if(UserFindCount == 1)//If username and password is correct
             {
-                QMessageBox::information(this,"Welcome","login successful");
+
 
                 //creating a constructor for System Dashboard
                 secDialog =new SecDialog(this);
                 //calling secDialog object
                 secDialog->show();
+                this->hide();
 
             }
             else if(UserFindCount == 0)//If username and password is not correct
@@ -83,10 +86,10 @@ void UserLogin::on_pushButton_login_3_clicked()
 {
 
     QMessageBox::StandardButton reply;
-    reply=QMessageBox::warning(this,"Warning!!", "Close the Application?",QMessageBox::Yes | QMessageBox::No);
+    reply=QMessageBox::warning(this,"Warning!!", "you are closing this form?",QMessageBox::Yes | QMessageBox::No);
     if(reply==QMessageBox::Yes)
     {
-        QApplication::quit();
+        this->close();
     }
 
 }

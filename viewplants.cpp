@@ -7,6 +7,13 @@ ViewPlants::ViewPlants(QWidget *parent)
     , ui(new Ui::ViewPlants)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+
+    ptrSpecies = new Species();
+    ptrPlantDetail = new PlantDetail();
+
+
+
 
     if(!DatabaseManager::instance().openDatabase("C:/Project@rabson/RoseGardenPlantCareSystem/databases/RoseGardenPlantCareSystem.db")){
 
@@ -27,6 +34,8 @@ ViewPlants::ViewPlants(QWidget *parent)
 ViewPlants::~ViewPlants()
 {
     delete ui;
+    delete ptrSpecies;
+    delete ptrPlantDetail;
 
 }
 
@@ -109,8 +118,16 @@ void ViewPlants::on_DeletePlantsRecord_clicked()
 }
 
 
-void ViewPlants::on_btn_print_PDF_clicked()
-{
 
+
+void ViewPlants::on_btn_view_plant_detial_BY_ID_clicked()
+{
+    ptrPlantDetail->show();
+}
+
+
+void ViewPlants::on_btn_search_species_admin_clicked()
+{
+    ptrSpecies->show();
 }
 

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true"> 
@@ -363,7 +363,7 @@ QPushButton {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1471</width>
+     <width>16777215</width>
      <height>161</height>
     </rect>
    </property>
@@ -428,6 +428,26 @@ QLabel {
     <string> EMPLOYEE MANAGEMENT  | SECTION </string>
    </property>
   </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>1320</x>
+     <y>170</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Normal Screen</string>
+   </property>
+  </widget>
   <zorder>tableWidget</zorder>
   <zorder>lineEdit_Employee_id</zorder>
   <zorder>lineEdit_National_id</zorder>
@@ -443,7 +463,25 @@ QLabel {
   <zorder>btn_Delete_Employee</zorder>
   <zorder>pushButton</zorder>
   <zorder>label</zorder>
+  <zorder>radioButton</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>GardenerDetails</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1395</x>
+     <y>189</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1417</x>
+     <y>277</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -42,7 +42,7 @@ background-image: url(:/images/beauty.png);
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>580</x>
+     <x>640</x>
      <y>190</y>
      <width>541</width>
      <height>513</height>
@@ -213,7 +213,7 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>660</x>
+     <x>700</x>
      <y>710</y>
      <width>111</width>
      <height>41</height>
@@ -236,7 +236,7 @@ background-color: rgb(63, 63, 63);
   <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
-     <x>930</x>
+     <x>990</x>
      <y>710</y>
      <width>111</width>
      <height>41</height>
@@ -284,8 +284,8 @@ background-color: rgb(63, 63, 63);
   <widget class="QPushButton" name="btn_browse_image">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>180</y>
+     <x>280</x>
+     <y>190</y>
      <width>181</width>
      <height>41</height>
     </rect>
@@ -307,7 +307,7 @@ background-color: rgb(63, 63, 63);
   <widget class="QLabel" name="image_field">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>150</x>
      <y>240</y>
      <width>451</width>
      <height>421</height>
@@ -335,7 +335,7 @@ background-color: rgb(63, 63, 63);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1471</width>
+     <width>16777215</width>
      <height>141</height>
     </rect>
    </property>
@@ -426,6 +426,26 @@ QLabel {
     <string>    ADD PLANT | SECTION </string>
    </property>
   </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>1320</x>
+     <y>160</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Normal Screen</string>
+   </property>
+  </widget>
   <zorder>formLayoutWidget</zorder>
   <zorder>btnSave</zorder>
   <zorder>btnReset</zorder>
@@ -437,6 +457,7 @@ QLabel {
   <zorder>pushButton_2</zorder>
   <zorder>pushButton_3</zorder>
   <zorder>label</zorder>
+  <zorder>radioButton</zorder>
  </widget>
  <resources/>
  <connections>
@@ -469,6 +490,22 @@ QLabel {
     <hint type="destinationlabel">
      <x>1264</x>
      <y>317</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddPlant</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1384</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1411</x>
+     <y>386</y>
     </hint>
    </hints>
   </connection>

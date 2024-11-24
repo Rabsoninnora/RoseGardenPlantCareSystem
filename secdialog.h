@@ -41,6 +41,8 @@ private slots:
 
     void on_btn_Plant_Detail_clicked();
 
+    void on_btn_user_admin_close_app_clicked();
+
 private:
     Ui::SecDialog *ui;
     //creating objects

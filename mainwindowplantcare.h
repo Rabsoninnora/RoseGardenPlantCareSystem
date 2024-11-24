@@ -1,22 +1,11 @@
 #ifndef MAINWINDOWPLANTCARE_H
 #define MAINWINDOWPLANTCARE_H
-#include<QSqlDatabase>
-#include<QSqlDriver>
-#include<QSqlError>
-#include<QSqlQuery>
-#include<QSqlTableModel>
-#include<QSqlResult>
-#include<QDebug>
-#include<QFile>
-#include<QBuffer>
-#include<QByteArray>
-#include<QFileInfo>
-#include<QSqlQueryModel>
-#include <QMessageBox>
-#include "mydb.h"
+
+#include "adminlogin.h"
+#include "userlogin.h"
+
 #include <QMainWindow>
-#include "secdialog.h"
-#include  "adminpanel.h"
+
 
 
 
@@ -40,28 +29,20 @@ public:
 
 
 private slots:
-    void on_pushButton_login_clicked();
 
 
-    void on_pushButton_login_3_clicked();
+    void on_pushButton_3_clicked();
 
-    void on_btn_Admin_login_clicked();
-
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindowPlantCare *ui;
-    //Creating an object for QSqlDatabase for database connecting
 
-     /*
-     creating an object for SecDialog
-     and Admin_Dashboard
-     */
+    AdminLogin   *ptrAdminLogin;
 
-    SecDialog *secDialog;
+    UserLogin    *ptrUserLogin;
 
-    AdminPanel *adminPanel;
 
-    QSqlDatabase db;
 
 
 };

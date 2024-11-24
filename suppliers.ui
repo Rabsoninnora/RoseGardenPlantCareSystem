@@ -318,7 +318,7 @@ color: rgb(255, 0, 0);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1441</width>
+     <width>16777215</width>
      <height>131</height>
     </rect>
    </property>
@@ -411,6 +411,26 @@ QLabel {
     <string> SUPPLIER MANAGEMENT  | SECTION </string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1260</x>
+     <y>140</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>zc</string>
+   </property>
+  </widget>
   <zorder>lineEdit_SupplierID</zorder>
   <zorder>lineEdit_Supplier_Legal_Name</zorder>
   <zorder>lineEdit_Phone</zorder>
@@ -419,7 +439,6 @@ QLabel {
   <zorder>lineEdit_email</zorder>
   <zorder>tableWidget</zorder>
   <zorder>label_2</zorder>
-  <zorder>pushButton</zorder>
   <zorder>btn_View_Supplier</zorder>
   <zorder>btn_Insert_Supplier</zorder>
   <zorder>btn_Update_Supplier</zorder>
@@ -427,6 +446,8 @@ QLabel {
   <zorder>pushButton_3</zorder>
   <zorder>pushButton_4</zorder>
   <zorder>label</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections>

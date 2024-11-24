@@ -16,6 +16,7 @@ AddGardener::AddGardener(QWidget *parent)
     , ui(new Ui::AddGardener)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 
 }

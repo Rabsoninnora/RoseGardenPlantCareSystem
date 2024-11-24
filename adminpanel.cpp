@@ -7,6 +7,7 @@ AdminPanel::AdminPanel(QWidget *parent)
     , ui(new Ui::AdminPanel)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
     ptrAddPlant = new AddPlant();
     ptrAddgardentool   = new AddGardenTool();
@@ -18,8 +19,7 @@ AdminPanel::AdminPanel(QWidget *parent)
     ptrAddGardener     = new AddGardener();
     ptrGardenerDetails = new GardenerDetails();
     ptrViewPlants = new ViewPlants();
-    ptrSpecies = new Species();
-    ptrPlantDetail = new PlantDetail();
+
 
 
 }
@@ -36,8 +36,7 @@ AdminPanel::~AdminPanel()
     delete ptrAddGardener;
     delete ptrGardenerDetails;
     delete ptrAddPlant;
-    delete ptrPlantDetail;
-    delete ptrSpecies;
+
     delete ptrViewPlants;
 
     delete ui;
@@ -113,11 +112,6 @@ void AdminPanel::on_AddPlant_clicked()
 }
 
 
-void AdminPanel::on_btn_view_plant_detial_BY_ID_clicked()
-{
- ptrPlantDetail->show();
-
-}
 
 
 void AdminPanel::on_btn_view_plant_dmin_clicked()
@@ -127,11 +121,7 @@ void AdminPanel::on_btn_view_plant_dmin_clicked()
 }
 
 
-void AdminPanel::on_btn_search_species_admin_clicked()
-{
-   ptrSpecies->show();
 
-}
 
 
 void AdminPanel::on_btn_view_Available_Plants_Admin_clicked()

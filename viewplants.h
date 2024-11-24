@@ -2,6 +2,8 @@
 #define VIEWPLANTS_H
 #include "mydb.h"
 #include <QTableWidgetItem>
+#include "species.h"
+#include "plantdetail.h"
 
 #include <QDialog>
 
@@ -25,7 +27,11 @@ private slots:
 
     void on_DeletePlantsRecord_clicked();
 
-    void on_btn_print_PDF_clicked();
+
+
+    void on_btn_view_plant_detial_BY_ID_clicked();
+
+    void on_btn_search_species_admin_clicked();
 
 private:
     Ui::ViewPlants *ui;
@@ -33,6 +39,9 @@ private:
     QSqlDatabase DB_SQLITE3;
     ViewPlants *tableWidget;
     ViewPlants *NumberOFRowsToDisplay;
+
+    Species     *ptrSpecies;
+    PlantDetail *ptrPlantDetail;
 
 };
 

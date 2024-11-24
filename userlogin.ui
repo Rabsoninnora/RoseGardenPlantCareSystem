@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>1277</width>
-    <height>763</height>
+    <height>785</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>v1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog{
@@ -27,7 +27,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1277</width>
+     <width>16777215</width>
      <height>101</height>
     </rect>
    </property>
@@ -107,7 +107,7 @@ QPushButton{
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>390</x>
      <y>360</y>
      <width>461</width>
      <height>331</height>
@@ -117,8 +117,8 @@ QPushButton{
     <string notr="true">
 QFrame{
 border-color:3px solid  rgb(0, 0, 0);
-background-color: rgb(131, 131, 131);
-	background-image: url(:/images/RGS13.webp);
+background-color: rgb(131, 131, 131);   
+background-image: url(:/images/RGS10.jpg);
 
 
 }</string>
@@ -132,10 +132,10 @@ background-color: rgb(131, 131, 131);
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>20</y>
-      <width>171</width>
-      <height>41</height>
+      <x>170</x>
+      <y>0</y>
+      <width>121</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -153,11 +153,17 @@ QPushButton{
  </string>
     </property>
     <property name="text">
-     <string> User Login</string>
+     <string/>
     </property>
     <property name="icon">
      <iconset resource="resource.qrc">
       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>45</width>
+      <height>45</height>
+     </size>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit_username">
@@ -271,9 +277,46 @@ QPushButton{
     </property>
    </widget>
   </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>100</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Normal Screen</string>
+   </property>
+  </widget>
  </widget>
  <resources>
   <include location="resource.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>UserLogin</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1204</x>
+     <y>119</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1211</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

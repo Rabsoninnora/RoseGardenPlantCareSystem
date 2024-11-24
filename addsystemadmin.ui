@@ -20,7 +20,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);

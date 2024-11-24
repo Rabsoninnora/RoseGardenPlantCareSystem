@@ -6,6 +6,7 @@ AddSystemAdmin::AddSystemAdmin(QWidget *parent)
     , ui(new Ui::AddSystemAdmin)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 }
 
 AddSystemAdmin::~AddSystemAdmin()

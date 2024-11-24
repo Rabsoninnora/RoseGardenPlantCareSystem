@@ -16,40 +16,12 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(56, 144, 96);</string>
   </property>
-  <widget class="QPushButton" name="btn_View_Nursery_Plants_admin">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>70</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">  
-QPushButton {
-  border:1px solid rgb(255, 255, 255);
-  
-  background-color: rgb(63, 63, 63);
-  font: 500 11pt;
- color: rgb(255, 255, 255)
-
-}
-
-
-
- </string>
-   </property>
-   <property name="text">
-    <string>Nursery Plants</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btn_Add_Admin">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>110</y>
-     <width>151</width>
+     <x>1080</x>
+     <y>70</y>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -69,13 +41,13 @@ QPushButton {
  </string>
    </property>
    <property name="text">
-    <string>Add System User</string>
+    <string>Add User</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_Add_Supplier">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>420</x>
      <y>70</y>
      <width>121</width>
      <height>31</height>
@@ -100,7 +72,7 @@ QPushButton {
   <widget class="QPushButton" name="ViewGardenTools">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>910</x>
      <y>110</y>
      <width>121</width>
      <height>31</height>
@@ -128,8 +100,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_view_Available_Plants_Admin">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>110</y>
+     <x>270</x>
+     <y>70</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -156,7 +128,7 @@ QPushButton {
   <widget class="QPushButton" name="AddGardenTool">
    <property name="geometry">
     <rect>
-     <x>660</x>
+     <x>550</x>
      <y>70</y>
      <width>171</width>
      <height>31</height>
@@ -184,7 +156,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_Employees">
    <property name="geometry">
     <rect>
-     <x>840</x>
+     <x>910</x>
      <y>70</y>
      <width>151</width>
      <height>31</height>
@@ -231,8 +203,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_employee_view">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>110</y>
+     <x>730</x>
+     <y>70</y>
      <width>171</width>
      <height>31</height>
     </rect>
@@ -260,7 +232,7 @@ QPushButton {
    <property name="geometry">
     <rect>
      <x>-280</x>
-     <y>170</y>
+     <y>120</y>
      <width>1851</width>
      <height>821</height>
     </rect>
@@ -301,8 +273,8 @@ QPushButton {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1411</width>
-     <height>171</height>
+     <width>16777215</width>
+     <height>145</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -391,8 +363,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_view_plant_dmin">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>110</y>
+     <x>140</x>
+     <y>70</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -480,85 +452,24 @@ QPushButton {
     <string>Log out</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_view_plant_detial_BY_ID">
+  <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>110</y>
-     <width>211</width>
-     <height>31</height>
+     <x>1230</x>
+     <y>180</y>
+     <width>16777215</width>
+     <height>26</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Ubuntu</family>
-     <pointsize>11</pointsize>
-     <italic>false</italic>
-     <fontweight>Medium</fontweight>
-    </font>
-   </property>
    <property name="styleSheet">
-    <string notr="true">  
-QPushButton {
-  border:1px solid rgb(255, 255, 255);
-  
-  background-color: rgb(63, 63, 63);
-  font: 500 11pt;
- color: rgb(255, 255, 255)
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
 
-}
-</string>
+}</string>
    </property>
    <property name="text">
-    <string>View Plant Detail By ID</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="btn_search_species_admin">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>70</y>
-     <width>211</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Ubuntu</family>
-     <pointsize>11</pointsize>
-     <italic>false</italic>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">   
-QPushButton {
-  border:1px solid rgb(255, 255, 255);
-  
-  background-color: rgb(63, 63, 63);
-  font: 400 11pt;
- color: rgb(255, 255, 255)
-
-}
-
-
-
- </string>
-   </property>
-   <property name="text">
-    <string>Search Species</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
+    <string>Normal Screen</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -577,10 +488,25 @@ QPushButton {
   <zorder>btn_Add_Admin</zorder>
   <zorder>Admin_panel_close_log_out</zorder>
   <zorder>Admin_panel_close_app</zorder>
-  <zorder>btn_view_plant_detial_BY_ID</zorder>
-  <zorder>btn_search_species_admin</zorder>
-  <zorder>btn_View_Nursery_Plants_admin</zorder>
+  <zorder>radioButton</zorder>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AdminPanel</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1305</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1308</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

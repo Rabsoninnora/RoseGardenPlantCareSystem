@@ -7,6 +7,7 @@ GardenerDetails::GardenerDetails(QWidget *parent)
     , ui(new Ui::GardenerDetails)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 }
 
 GardenerDetails::~GardenerDetails()

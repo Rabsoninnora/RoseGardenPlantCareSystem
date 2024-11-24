@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>The Rose Garden Nursery  System 1.0</string>
+   <string>v1.0</string>
   </property>
   <property name="styleSheet">
    <string notr="true">
@@ -24,7 +24,7 @@ background-image: url(:/images/beauty.png);
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>440</x>
+     <x>520</x>
      <y>230</y>
      <width>541</width>
      <height>455</height>
@@ -163,7 +163,7 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnReset">
    <property name="geometry">
     <rect>
-     <x>790</x>
+     <x>950</x>
      <y>700</y>
      <width>101</width>
      <height>41</height>
@@ -188,7 +188,7 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnSave">
    <property name="geometry">
     <rect>
-     <x>510</x>
+     <x>540</x>
      <y>700</y>
      <width>101</width>
      <height>41</height>
@@ -218,7 +218,7 @@ background-image: url(:/images/beauty.png);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1471</width>
+     <width>16777215</width>
      <height>161</height>
     </rect>
    </property>
@@ -285,7 +285,44 @@ QPushButton{
     <string>Home</string>
    </property>
   </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>1340</x>
+     <y>170</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Normal Screen</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AddGardener</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1384</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1396</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -53,11 +53,9 @@ private slots:
 
     void on_AddPlant_clicked();
 
-    void on_btn_view_plant_detial_BY_ID_clicked();
 
     void on_btn_view_plant_dmin_clicked();
 
-    void on_btn_search_species_admin_clicked();
 
     void on_btn_view_Available_Plants_Admin_clicked();
 
@@ -74,8 +72,7 @@ private:
     GardenerDetails *ptrGardenerDetails;
     AddPlant    *ptrAddPlant;
 
-    Species     *ptrSpecies;
-    PlantDetail *ptrPlantDetail;
+
     ViewPlants  *ptrViewPlants;
 
 };

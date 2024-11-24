@@ -30,7 +30,7 @@ background-image: url(:/images/beauty.png);
     <rect>
      <x>20</x>
      <y>80</y>
-     <width>161</width>
+     <width>241</width>
      <height>41</height>
     </rect>
    </property>
@@ -46,7 +46,7 @@ selection-color: rgb(0, 85, 0);
 }</string>
    </property>
    <property name="text">
-    <string>View Record</string>
+    <string>View Plants Record</string>
    </property>
    <property name="icon">
     <iconset>
@@ -84,8 +84,8 @@ QLabel {
   <widget class="QPushButton" name="DeletePlantsRecord">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>80</y>
+     <x>620</x>
+     <y>200</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -114,8 +114,8 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLineEdit" name="lineEdit_Delete">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>80</y>
+     <x>360</x>
+     <y>200</y>
      <width>251</width>
      <height>41</height>
     </rect>
@@ -215,31 +215,6 @@ selection-color: rgb(0, 85, 0);
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="btn_print_PDF">
-   <property name="geometry">
-    <rect>
-     <x>580</x>
-     <y>80</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-  border:1px solid rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 0 10px;
-  background: green;
- font: 700 12pt ;
- color: rgb(255, 255, 255);
-
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Print to PDF</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="enabled">
     <bool>false</bool>
@@ -248,7 +223,7 @@ selection-color: rgb(0, 85, 0);
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1511</width>
+     <width>16777215</width>
      <height>131</height>
     </rect>
    </property>
@@ -294,7 +269,7 @@ QPushButton{
     <string>The Rose Garden Nursery</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QRadioButton" name="radioButton_2">
    <property name="geometry">
     <rect>
      <x>1240</x>
@@ -315,7 +290,7 @@ QPushButton{
     </iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QRadioButton" name="radioButton_3">
    <property name="geometry">
     <rect>
      <x>1360</x>
@@ -336,6 +311,68 @@ QPushButton{
     </iconset>
    </property>
   </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>1360</x>
+     <y>140</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Normal Screen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_view_plant_detial_BY_ID">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>80</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71); 
+ 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>View Plant Detail</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_search_species_admin">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>80</y>
+     <width>281</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71); 
+ 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string> View Plant Detail By ID</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>tableWidget</zorder>
   <zorder>label_2</zorder>
@@ -343,41 +380,27 @@ QPushButton{
   <zorder>ViewPlantsRecord</zorder>
   <zorder>lineEdit_Delete</zorder>
   <zorder>DeletePlantsRecord</zorder>
-  <zorder>btn_print_PDF</zorder>
-  <zorder>pushButton_2</zorder>
-  <zorder>pushButton_3</zorder>
+  <zorder>radioButton_2</zorder>
+  <zorder>radioButton_3</zorder>
+  <zorder>radioButton</zorder>
+  <zorder>btn_view_plant_detial_BY_ID</zorder>
+  <zorder>btn_search_species_admin</zorder>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_2</sender>
+   <sender>radioButton</sender>
    <signal>clicked()</signal>
    <receiver>ViewPlants</receiver>
-   <slot>showMinimized()</slot>
+   <slot>showNormal()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1265</x>
-     <y>47</y>
+     <x>1424</x>
+     <y>160</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1288</x>
-     <y>176</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_3</sender>
-   <signal>clicked()</signal>
-   <receiver>ViewPlants</receiver>
-   <slot>showMaximized()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1406</x>
-     <y>51</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1425</x>
-     <y>200</y>
+     <x>1456</x>
+     <y>284</y>
     </hint>
    </hints>
   </connection>

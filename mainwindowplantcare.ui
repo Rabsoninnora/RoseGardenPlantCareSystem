@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1219</width>
-    <height>878</height>
+    <width>1289</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="font">
@@ -27,411 +27,15 @@
    <enum>Qt::LeftToRight</enum>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true"> 
+ 
+background-color: rgb(255, 255, 255);
+ </string>
   </property>
   <property name="inputMethodHints">
    <set>Qt::ImhNone</set>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QToolBox" name="toolBox">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>260</y>
-      <width>751</width>
-      <height>461</height>
-     </rect>
-    </property>
-    <property name="toolTipDuration">
-     <number>-1</number>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QWidget" name="toolBoxPage1">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>751</width>
-       <height>377</height>
-      </rect>
-     </property>
-     <attribute name="icon">
-      <iconset resource="resource.qrc">
-       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
-     </attribute>
-     <attribute name="label">
-      <string>Login as User</string>
-     </attribute>
-     <widget class="QFrame" name="loginBox">
-      <property name="geometry">
-       <rect>
-        <x>-10</x>
-        <y>40</y>
-        <width>751</width>
-        <height>341</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
- 
-QGroupBox {
-
-background-color: rgb(38, 162, 105);
-font: 700 12pt;
-color: rgb(255, 255, 255);
-border:0px solid green;
-border-radius: 100px;
-background-image: url(:/images/beauty.png);
- 
-
-}
-
- QLineEdit {
-  border:3px solid gray;
-  
-  
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <widget class="QPushButton" name="pushButton_login">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>220</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-
-
- QPushButton {
-  border:3px solid solid gray;
-  border-radius: 10px;
-  padding: 0 8px;
-  background: green;
- font: 700 12pt ;
- color: rgb(255, 255, 255);
-   
-}</string>
-       </property>
-       <property name="text">
-        <string>Submit</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_login_3">
-       <property name="geometry">
-        <rect>
-         <x>430</x>
-         <y>220</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> 
-
-
- QPushButton {
-  border:3px solid solid gray;
-  border-radius: 10px;
-  padding: 0 8px;
-  background: green;
- font: 700 12pt ;
- color: rgb(255, 255, 255);
-   
-}</string>
-       </property>
-       <property name="text">
-        <string>Cancel</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_password">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>140</y>
-         <width>321</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
- QLineEdit {
-  border:3px solid solid gray;
-  border-radius: 10px;
-  padding: 12px 12px;
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>Enter your password</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_username">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>60</y>
-         <width>321</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> QLineEdit {
-  border:3px solid solid gray;
-  border-radius: 10px;
-  padding: 12px 12px;
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>Enter your username</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>10</y>
-         <width>171</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-QPushButton{
-                    color: rgb(255, 255, 255);
-                    border:0px solid green;
-                    border-radius: 8px;
-                    padding: 0 8px;
-                    background-color: rgb(0, 90, 0);
-                    font: 600 11pt ;
-
-}
-
- </string>
-       </property>
-       <property name="text">
-        <string> User Login</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="toolBoxPage2">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>751</width>
-       <height>377</height>
-      </rect>
-     </property>
-     <attribute name="icon">
-      <iconset resource="resource.qrc">
-       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
-     </attribute>
-     <attribute name="label">
-      <string>Login as Administrator</string>
-     </attribute>
-     <widget class="QFrame" name="loginBox_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>751</width>
-        <height>341</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">
- 
-
-QGroupBox {
- 
-
-font: 700 12pt;
-color: rgb(255, 255, 255);
-border:0px solid green;
-border-radius: 100px;
-background-image: url(:/images/beauty.png);
- 
-
-}
-
- QLineEdit {
-  border:3px solid gray;
-  
-  
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-      </property>
-      <widget class="QPushButton" name="btn_Admin_login">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>220</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> 
-
-
- QPushButton {
-  border:3px solid solid gray;
-  border-radius: 10px;
-  padding: 0 8px;
-  background: green;
- font: 700 12pt ;
- color: rgb(255, 255, 255);
-   
-}</string>
-       </property>
-       <property name="text">
-        <string>Submit</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="btn_Admin_Cancel">
-       <property name="geometry">
-        <rect>
-         <x>430</x>
-         <y>220</y>
-         <width>111</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> 
-
-
- QPushButton {
-  border:3px solid solid gray;
-  border-radius: 10px;
-  padding: 0 8px;
-  background: green;
- font: 700 12pt ;
- color: rgb(255, 255, 255);
-   
-}</string>
-       </property>
-       <property name="text">
-        <string>Cancel</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_password_2">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>140</y>
-         <width>321</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
- QLineEdit {
-  border:3px solid rgb(58, 169, 200);
-  border-radius: 10px;
-  padding: 12px 12px;
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-}</string>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>Enter your password</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="lineEdit_username_2">
-       <property name="geometry">
-        <rect>
-         <x>220</x>
-         <y>60</y>
-         <width>321</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true"> QLineEdit {
-  border:3px solid  rgb(58, 169, 200);
-  border-radius: 10px;
-  padding: 12px 12px;
-  background: rgb(255, 255, 255);
-  font: 700 12pt ;
-  color: rgb(0, 0, 0);;
-} </string>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Normal</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>Enter your username</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_4">
-       <property name="geometry">
-        <rect>
-         <x>280</x>
-         <y>10</y>
-         <width>171</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">
-QPushButton{
-                    color: rgb(255, 255, 255);
-                    border:0px solid green;
-                    border-radius: 8px;
-                    padding: 0 8px;
-                    background-color: rgb(0, 90, 0);
-                    font: 600 11pt ;
-
-}
-
- </string>
-       </property>
-       <property name="text">
-        <string> Admin Login</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="enabled">
      <bool>false</bool>
@@ -440,7 +44,7 @@ QPushButton{
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1219</width>
+      <width>16777215</width>
       <height>101</height>
      </rect>
     </property>
@@ -466,7 +70,7 @@ QPushButton{
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>350</x>
       <y>20</y>
       <width>731</width>
       <height>51</height>
@@ -481,6 +85,7 @@ QPushButton{
                     padding: 0 8px;
    
                     font: 700 13pt ;
+                   background-color: rgb(0, 85, 0);
 
 }
 
@@ -493,10 +98,10 @@ QPushButton{
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>510</x>
       <y>160</y>
       <width>481</width>
-      <height>41</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -507,7 +112,7 @@ QPushButton{
                     border-radius: 8px;
                     padding: 0 8px;
                     background-color: rgb(0, 85, 0);
-                    font: 600 11pt ;
+                    font: 700 12pt ;
 
 }
 
@@ -520,7 +125,7 @@ QPushButton{
    <widget class="QLabel" name="CopyRight_line">
     <property name="geometry">
      <rect>
-      <x>-10</x>
+      <x>0</x>
       <y>750</y>
       <width>1791</width>
       <height>41</height>
@@ -547,14 +152,154 @@ QPushButton{
      <string>      Rose Garden Plant Care System | Copyright © 2024 |Developed by Rabson Innocent Phiri</string>
     </property>
    </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>350</y>
+      <width>441</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+
+ 
+	background-image: url(:/images/RGS31.jpg);
+
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>20</y>
+       <width>201</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">   QPushButton{
+
+	background-color: rgb(0, 85, 0);
+    
+	font: 700 11pt &quot;Segoe UI&quot;;
+	color: rgb(255, 255, 255);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>System Admin</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>350</y>
+      <width>411</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+
+ 
+	background-image: url(:/images/RGS31.jpg);
+
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>191</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+
+    background-color: rgb(0, 85, 0);
+    font: 700 11pt &quot;Segoe UI&quot;;
+    color: rgb(255, 255, 255);
+
+}</string>
+     </property>
+     <property name="text">
+      <string>System User</string>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>110</y>
+      <width>16777215</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+    </property>
+    <property name="text">
+     <string>Normal Screen</string>
+    </property>
+   </widget>
+   <zorder>label_2</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>CopyRight_line</zorder>
+   <zorder>frame</zorder>
+   <zorder>frame_2</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>radioButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1219</width>
-     <height>32</height>
+     <width>1289</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>
@@ -562,21 +307,27 @@ QPushButton{
  </widget>
  <tabstops>
   <tabstop>pushButton</tabstop>
-  <tabstop>toolBox</tabstop>
-  <tabstop>pushButton_login_3</tabstop>
-  <tabstop>lineEdit_password</tabstop>
-  <tabstop>lineEdit_username</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>btn_Admin_login</tabstop>
-  <tabstop>btn_Admin_Cancel</tabstop>
-  <tabstop>lineEdit_password_2</tabstop>
-  <tabstop>lineEdit_username_2</tabstop>
-  <tabstop>pushButton_4</tabstop>
-  <tabstop>pushButton_login</tabstop>
   <tabstop>pushButton_2</tabstop>
  </tabstops>
  <resources>
   <include location="resource.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindowPlantCare</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1231</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1233</x>
+     <y>242</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

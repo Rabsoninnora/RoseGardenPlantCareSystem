@@ -7,7 +7,7 @@ SecDialog::SecDialog(QWidget *parent)
 
 {
     ui->setupUi(this);
-
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 
     ptrSpecies = new Species();
@@ -51,6 +51,18 @@ void SecDialog::on_ViewPlants_clicked()
 
 void SecDialog::on_btn_logout_clicked()
 {
+    this->close();
+}
+
+
+void SecDialog::on_btn_Plant_Detail_clicked()
+{
+    ptrPlantDetail->show();
+}
+
+
+void SecDialog::on_btn_user_admin_close_app_clicked()
+{
     QMessageBox::StandardButton reply;
     reply=QMessageBox::warning(this,"Warning!", "You're about to Close the Application?",QMessageBox::Yes | QMessageBox::No);
     if(reply==QMessageBox::Yes)
@@ -58,11 +70,5 @@ void SecDialog::on_btn_logout_clicked()
         QApplication::quit();
     }
 
-}
-
-
-void SecDialog::on_btn_Plant_Detail_clicked()
-{
-    ptrPlantDetail->show();
 }
 

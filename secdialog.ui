@@ -34,7 +34,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"> </string>
+   <string notr="true"/>
   </property>
   <property name="modal">
    <bool>false</bool>
@@ -83,7 +83,7 @@
   <widget class="QPushButton" name="ViewPlants">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>270</x>
      <y>80</y>
      <width>131</width>
      <height>41</height>
@@ -121,8 +121,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-110</x>
-     <y>130</y>
+     <x>-90</x>
+     <y>100</y>
      <width>1851</width>
      <height>821</height>
     </rect>
@@ -139,7 +139,7 @@
     <rect>
      <x>0</x>
      <y>760</y>
-     <width>1411</width>
+     <width>16777215</width>
      <height>41</height>
     </rect>
    </property>
@@ -163,7 +163,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1411</width>
+     <width>16777215</width>
      <height>131</height>
     </rect>
    </property>
@@ -183,7 +183,7 @@
   <widget class="QPushButton" name="btn_logout">
    <property name="geometry">
     <rect>
-     <x>1090</x>
+     <x>1150</x>
      <y>80</y>
      <width>101</width>
      <height>31</height>
@@ -280,9 +280,9 @@ QPushButton{
   <widget class="QPushButton" name="btn_user_admin_close_app">
    <property name="geometry">
     <rect>
-     <x>1230</x>
+     <x>1270</x>
      <y>80</y>
-     <width>111</width>
+     <width>71</width>
      <height>31</height>
     </rect>
    </property>
@@ -298,33 +298,67 @@ QPushButton{
 }</string>
    </property>
    <property name="text">
-    <string>Close App</string>
+    <string>Exit</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QRadioButton" name="radioButton_3">
    <property name="geometry">
     <rect>
-     <x>1220</x>
-     <y>30</y>
-     <width>111</width>
-     <height>29</height>
+     <x>1230</x>
+     <y>180</y>
+     <width>16777215</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string>Maximize</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QRadioButton" name="radioButton_4">
    <property name="geometry">
     <rect>
-     <x>1080</x>
-     <y>30</y>
-     <width>111</width>
-     <height>29</height>
+     <x>1230</x>
+     <y>220</y>
+     <width>16777215</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
    </property>
    <property name="text">
     <string>Minimize</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>140</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Normal Screen</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -336,39 +370,56 @@ QPushButton{
   <zorder>pushButton</zorder>
   <zorder>btn_user_admin_close_app</zorder>
   <zorder>ViewSpecies</zorder>
-  <zorder>pushButton_3</zorder>
-  <zorder>pushButton_4</zorder>
+  <zorder>radioButton_3</zorder>
+  <zorder>radioButton_4</zorder>
+  <zorder>radioButton</zorder>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>radioButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SecDialog</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1307</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1319</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>SecDialog</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1263</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1263</x>
+     <y>269</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_4</sender>
    <signal>clicked()</signal>
    <receiver>SecDialog</receiver>
    <slot>showMinimized()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1130</x>
-     <y>44</y>
+     <x>1368</x>
+     <y>229</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1133</x>
-     <y>214</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_3</sender>
-   <signal>clicked()</signal>
-   <receiver>SecDialog</receiver>
-   <slot>showMaximized()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1266</x>
-     <y>45</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1273</x>
+     <x>1368</x>
      <y>273</y>
     </hint>
    </hints>

@@ -31,12 +31,16 @@ class AdminLogin : public QDialog
 
 public:
     explicit AdminLogin(QWidget *parent = nullptr);
+
     ~AdminLogin();
+
 
 private slots:
     void on_btn_Admin_login_clicked();
 
     void on_btn_Admin_Cancel_clicked();
+
+    void on_btn_log_back_clicked();
 
 private:
     Ui::AdminLogin *ui;

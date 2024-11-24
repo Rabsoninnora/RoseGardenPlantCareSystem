@@ -6,6 +6,7 @@ ViewSystemAdmin::ViewSystemAdmin(QWidget *parent)
     , ui(new Ui::ViewSystemAdmin)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 }
 
 ViewSystemAdmin::~ViewSystemAdmin()

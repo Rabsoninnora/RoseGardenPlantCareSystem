@@ -6,6 +6,7 @@ ViewGardenTools::ViewGardenTools(QWidget *parent)
     , ui(new Ui::ViewGardenTools)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 }
 
 ViewGardenTools::~ViewGardenTools()

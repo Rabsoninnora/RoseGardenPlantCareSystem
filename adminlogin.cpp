@@ -10,6 +10,8 @@ AdminLogin::AdminLogin(QWidget *parent)
     , ui(new Ui::AdminLogin)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+
 }
 
 AdminLogin::~AdminLogin()
@@ -25,7 +27,7 @@ void AdminLogin::on_btn_Admin_login_clicked()
 
     QString password = ui->lineEdit_password_2->text();
 
-    if(username== "innora" && password == "659489+") //Default developer login
+    if(username== "innora" && password == "659489") //Default developer login
     {
 
 
@@ -34,7 +36,7 @@ void AdminLogin::on_btn_Admin_login_clicked()
 
         //calling admindashboard
         adminPanel->show();
-
+        this->hide();
 
 
     }
@@ -59,6 +61,7 @@ void AdminLogin::on_btn_Admin_login_clicked()
 
                 //calling Admin object
                 adminPanel->show();
+                this->hide();
 
 
             }
@@ -88,10 +91,16 @@ void AdminLogin::on_btn_Admin_login_clicked()
 void AdminLogin::on_btn_Admin_Cancel_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply=QMessageBox::warning(this,"Warning!!", "Close the Application?",QMessageBox::Yes | QMessageBox::No);
+    reply=QMessageBox::warning(this,"Warning!!", "you are closing this form?",QMessageBox::Yes | QMessageBox::No);
     if(reply==QMessageBox::Yes)
     {
-        QApplication::quit();
+        this->close();
     }
+}
+
+
+void AdminLogin::on_btn_log_back_clicked()
+{
+    this->close();
 }
 

@@ -33,7 +33,9 @@
 QFrame{
 border-color:3px solid  rgb(0, 0, 0);
 background-color: rgb(131, 131, 131);
-	background-image: url(:/images/RGS13.webp);
+
+background-image: url(:/images/RGS10.jpg);
+  
 
 
 }</string>
@@ -157,10 +159,10 @@ background-color: rgb(131, 131, 131);
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>20</y>
-      <width>171</width>
-      <height>41</height>
+      <x>180</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -178,11 +180,17 @@ QPushButton{
  </string>
     </property>
     <property name="text">
-     <string> Admin Login</string>
+     <string> </string>
     </property>
     <property name="icon">
      <iconset resource="resource.qrc">
       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>45</width>
+      <height>45</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -194,7 +202,7 @@ QPushButton{
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1277</width>
+     <width>16777215</width>
      <height>101</height>
     </rect>
    </property>
@@ -269,6 +277,31 @@ QPushButton{
    </property>
    <property name="text">
     <string>Please Login</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_log_back">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>100</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+QPushButton{
+                    color: rgb(255, 255, 255);
+                   
+                    background-color: rgb(0, 90, 0);
+                    font: 600 11pt ;
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

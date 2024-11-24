@@ -7,6 +7,7 @@ AddGardenTool::AddGardenTool(QWidget *parent)
     , ui(new Ui::AddGardenTool)
 {
     ui->setupUi(this);
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 
 }

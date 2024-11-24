@@ -7,7 +7,7 @@ Suppliers::Suppliers(QWidget *parent)
     , ui(new Ui::Suppliers)
 {
     ui->setupUi(this);
-
+    setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 }
 
