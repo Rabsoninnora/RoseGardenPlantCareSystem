@@ -131,3 +131,9 @@ void ViewPlants::on_btn_search_species_admin_clicked()
     ptrSpecies->show();
 }
 
+
+void ViewPlants::on_btn_back_viewPlant_clicked()
+{
+    this->show();
+}
+

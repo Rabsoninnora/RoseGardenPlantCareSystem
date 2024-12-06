@@ -16,20 +16,27 @@ Species::~Species()
 }
 
 void Species::on_btnSearch_clicked()
-{
+{   QString sValue = ui->txtSpeciesName->text();
     QByteArray ImageDataFromDataBase;
     QPixmap Image;
     QString ImageName;
 
     QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QueryLoadData.prepare("SELECT * FROM addplant WHERE species MATCH="+ ui->txtSpeciesName->text() + "");
-    int NumberOFRowsToDisplay=1;
+
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE species  like '%" + sValue + "%'");
+    QueryLoadData.bindValue(":sValue", sValue);
+    int NumberOFRowsToDisplay=1000;
 
     if(QueryLoadData.exec())
     {
+
+
+
         ui->tableWidget->setRowCount(NumberOFRowsToDisplay);
         int RowNumber =0;
+
+
         while (QueryLoadData.next()) {
             ImageName = QueryLoadData.value("Image_Name").toString();
             ImageDataFromDataBase = QByteArray::fromBase64(QueryLoadData.value("Image_Data").toByteArray());
@@ -52,6 +59,7 @@ void Species::on_btnSearch_clicked()
 
         }
 
+
     }
 
     QSqlDatabase::database().commit();
@@ -60,5 +68,11 @@ void Species::on_btnSearch_clicked()
        foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 
 
+}
+
+
+void Species::on_pushButton_2_clicked()
+{
+    this->close();
 }
 

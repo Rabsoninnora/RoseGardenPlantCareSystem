@@ -27,6 +27,8 @@ private slots:
 
 
 
+    void on_btn_supplier_back_clicked();
+
 private:
     Ui::Suppliers *ui;
     //QSqlDatabase Object

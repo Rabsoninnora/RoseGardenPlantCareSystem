@@ -43,7 +43,7 @@
    <property name="geometry">
     <rect>
      <x>420</x>
-     <y>80</y>
+     <y>100</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -51,21 +51,24 @@
    <property name="font">
     <font>
      <family>Ubuntu</family>
-     <pointsize>11</pointsize>
+     <pointsize>12</pointsize>
      <italic>false</italic>
      <fontweight>Medium</fontweight>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"> QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
+  border:0px solid rgb(255, 255, 255);
+   
   background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
+  font: 500 12pt;
  color: rgb(255, 255, 255)
 
-}</string>
+}
+
+ 
+
+ </string>
    </property>
    <property name="text">
     <string>Search Species</string>
@@ -84,7 +87,7 @@
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>80</y>
+     <y>100</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -92,18 +95,16 @@
    <property name="font">
     <font>
      <family>Ubuntu</family>
-     <pointsize>11</pointsize>
+     <pointsize>12</pointsize>
      <italic>false</italic>
      <fontweight>Medium</fontweight>
     </font>
    </property>
    <property name="styleSheet">
     <string notr="true"> QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
+  border:0px solid rgb(255, 255, 255);
   background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
+ font: 500 12pt ;
  color: rgb(255, 255, 255)
 
 }</string>
@@ -121,10 +122,10 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-90</x>
-     <y>100</y>
+     <x>-60</x>
+     <y>140</y>
      <width>1851</width>
-     <height>821</height>
+     <height>801</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -163,8 +164,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>16777215</width>
-     <height>131</height>
+     <width>16777211</width>
+     <height>151</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -180,41 +181,11 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_logout">
-   <property name="geometry">
-    <rect>
-     <x>1150</x>
-     <y>80</y>
-     <width>101</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"> QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
-  background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
- color: rgb(255, 255, 255)
-
-}</string>
-   </property>
-   <property name="text">
-    <string>Logout</string>
-   </property>
-   <property name="autoDefault">
-    <bool>false</bool>
-   </property>
-   <property name="flat">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btn_Plant_Detail">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>80</y>
+     <y>100</y>
      <width>221</width>
      <height>41</height>
     </rect>
@@ -222,23 +193,19 @@
    <property name="font">
     <font>
      <family>Ubuntu</family>
-     <pointsize>11</pointsize>
+     <pointsize>12</pointsize>
      <italic>false</italic>
      <fontweight>Medium</fontweight>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">  
-QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
+    <string notr="true">  QPushButton {
+  border:0px solid rgb(255, 255, 255);
   background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
+ font: 500 12pt ;
  color: rgb(255, 255, 255)
 
-}
-</string>
+}</string>
    </property>
    <property name="text">
     <string> View Plant Detail By ID</string>
@@ -250,52 +217,25 @@ QPushButton {
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>27</x>
-     <y>20</y>
-     <width>1321</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
-QPushButton{
-                    color: rgb(255, 255, 255);
-                    border:3px solid white;
-                    border-radius: 8px;
-                    padding: 0 8px;
-   
-                    font: 700 13pt ;
-
-}
-
- </string>
-   </property>
-   <property name="text">
-    <string>The Rose Garden Nursery</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="btn_user_admin_close_app">
    <property name="geometry">
     <rect>
-     <x>1270</x>
-     <y>80</y>
+     <x>1330</x>
+     <y>100</y>
      <width>71</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true"> QPushButton {
-  border:3px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  padding: 0 8px;
+    <string notr="true">  QPushButton {
+  border:0px solid rgb(255, 255, 255);
+   
   background: green;
-  font: 500 11pt &quot;Ubuntu&quot;;
- color: rgb(255, 255, 255)
+  font: 500 12pt; 
+	color: rgb(255, 0, 0);
 
-}</string>
+}
+</string>
    </property>
    <property name="text">
     <string>Exit</string>
@@ -305,7 +245,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>1230</x>
-     <y>180</y>
+     <y>190</y>
      <width>16777215</width>
      <height>21</height>
     </rect>
@@ -345,7 +285,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>1230</x>
-     <y>140</y>
+     <y>160</y>
      <width>16777215</width>
      <height>26</height>
     </rect>
@@ -361,18 +301,97 @@ QPushButton{
     <string>Normal Screen</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_back_userdashboard">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>100</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+
+ QPushButton {
+  
+  
+ background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_logout_1">
+   <property name="geometry">
+    <rect>
+     <x>1220</x>
+     <y>100</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+
+ QPushButton {
+  
+  
+ background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>30</y>
+     <width>731</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+                   background-color: rgb(0, 85, 0);
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>The Rose Garden Nursery</string>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>ViewPlants</zorder>
   <zorder>CopyRight_line</zorder>
-  <zorder>btn_logout</zorder>
   <zorder>btn_Plant_Detail</zorder>
-  <zorder>pushButton</zorder>
   <zorder>btn_user_admin_close_app</zorder>
   <zorder>ViewSpecies</zorder>
   <zorder>radioButton_3</zorder>
-  <zorder>radioButton_4</zorder>
   <zorder>radioButton</zorder>
+  <zorder>btn_back_userdashboard</zorder>
+  <zorder>btn_logout_1</zorder>
+  <zorder>radioButton_4</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections>

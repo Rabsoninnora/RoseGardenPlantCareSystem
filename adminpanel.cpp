@@ -9,6 +9,7 @@ AdminPanel::AdminPanel(QWidget *parent)
     ui->setupUi(this);
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
+
     ptrAddPlant = new AddPlant();
     ptrAddgardentool   = new AddGardenTool();
     ptrViewGardenTools = new ViewGardenTools();
@@ -19,6 +20,7 @@ AdminPanel::AdminPanel(QWidget *parent)
     ptrAddGardener     = new AddGardener();
     ptrGardenerDetails = new GardenerDetails();
     ptrViewPlants = new ViewPlants();
+    ptrAddUser = new AddUser();
 
 
 
@@ -38,6 +40,7 @@ AdminPanel::~AdminPanel()
     delete ptrAddPlant;
 
     delete ptrViewPlants;
+    delete ptrAddUser;
 
     delete ui;
 
@@ -66,7 +69,7 @@ void AdminPanel::on_ViewGardenTools_clicked()
 
 void AdminPanel::on_btn_Add_Admin_clicked()
 {
-  ptrAddSystemAdmin->show();
+  ptrAddUser->show();
 
 }
 

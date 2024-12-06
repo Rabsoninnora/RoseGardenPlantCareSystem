@@ -87,7 +87,10 @@ void AddPlant::on_btnSave_clicked()
     QString ImageName =FileInfo.fileName();
     QSqlQuery QueryInsertData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QueryInsertData.prepare("INSERT INTO addplant(scientific_name, Genus, common_name, species, description, status, price, quantity, Image_Data, Image_Name) VALUES(:scientific_name,:Genus,:common_name,:species,:description,:status,:price,:quantity,:Image_Data,:Image_Name)");
+    QueryInsertData.prepare("INSERT INTO addplant(scientific_name, Genus, common_name, species, description,"
+                            " status, price, quantity, Image_Data, Image_Name)"
+                            " VALUES(:scientific_name,:Genus,:common_name,:species,:description,"
+                            ":status,:price,:quantity,:Image_Data,:Image_Name)");
     QueryInsertData.addBindValue(scientific_name);
     QueryInsertData.addBindValue(Genus);
     QueryInsertData.addBindValue(common_name);
@@ -98,11 +101,15 @@ void AddPlant::on_btnSave_clicked()
     QueryInsertData.addBindValue(quantity);
     QueryInsertData.bindValue(":Image_Name", ImageName);
     QueryInsertData.addBindValue(imageData); // Use the stored image data
-
     QueryInsertData.exec();
+    qDebug() << "Hi Rabson !Database closed successfully, Happy coding!";
 
+    /*    Security approach in coding
+    The addBindValue(..........);  placeholder is used to bind the user input safely.
+    bindValue is used to bind the actual value entered by the user to the placeholder in the query
+    This approach ensures that your query is safe from SQL injection attacks and efficiently performs it's function.
 
-    qDebug() << "Database closed successfully, Happy coding!";
+   */
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear();}
 

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1407</width>
+    <width>1289</width>
     <height>800</height>
    </rect>
   </property>
@@ -14,14 +14,17 @@
    <string>v1.0</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(56, 144, 96);</string>
+   <string notr="true">QDialog{
+
+	background-color: rgb(255, 255, 255);
+}</string>
   </property>
   <widget class="QPushButton" name="btn_Add_Admin">
    <property name="geometry">
     <rect>
-     <x>1080</x>
-     <y>70</y>
-     <width>101</width>
+     <x>480</x>
+     <y>120</y>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
@@ -47,9 +50,9 @@ QPushButton {
   <widget class="QPushButton" name="btn_Add_Supplier">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>70</y>
-     <width>121</width>
+     <x>140</x>
+     <y>120</y>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -72,8 +75,8 @@ QPushButton {
   <widget class="QPushButton" name="ViewGardenTools">
    <property name="geometry">
     <rect>
-     <x>910</x>
-     <y>110</y>
+     <x>650</x>
+     <y>80</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -100,8 +103,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_view_Available_Plants_Admin">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>70</y>
+     <x>140</x>
+     <y>80</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -128,8 +131,8 @@ QPushButton {
   <widget class="QPushButton" name="AddGardenTool">
    <property name="geometry">
     <rect>
-     <x>550</x>
-     <y>70</y>
+     <x>300</x>
+     <y>80</y>
      <width>171</width>
      <height>31</height>
     </rect>
@@ -156,8 +159,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Employees">
    <property name="geometry">
     <rect>
-     <x>910</x>
-     <y>70</y>
+     <x>480</x>
+     <y>80</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -203,8 +206,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_employee_view">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>70</y>
+     <x>300</x>
+     <y>120</y>
      <width>171</width>
      <height>31</height>
     </rect>
@@ -231,8 +234,8 @@ QPushButton {
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>-280</x>
-     <y>120</y>
+     <x>-60</x>
+     <y>140</y>
      <width>1851</width>
      <height>821</height>
     </rect>
@@ -249,7 +252,7 @@ QPushButton {
     <rect>
      <x>0</x>
      <y>760</y>
-     <width>1411</width>
+     <width>1615</width>
      <height>41</height>
     </rect>
    </property>
@@ -274,7 +277,7 @@ QPushButton {
      <x>0</x>
      <y>0</y>
      <width>16777215</width>
-     <height>145</height>
+     <height>165</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -293,9 +296,9 @@ QPushButton {
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1408</width>
+     <x>10</x>
+     <y>10</y>
+     <width>1270</width>
      <height>61</height>
     </rect>
    </property>
@@ -322,7 +325,7 @@ QPushButton{
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>70</y>
+     <y>80</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -363,8 +366,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_view_plant_dmin">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>70</y>
+     <x>10</x>
+     <y>120</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -405,8 +408,8 @@ QPushButton {
   <widget class="QPushButton" name="Admin_panel_close_app">
    <property name="geometry">
     <rect>
-     <x>1330</x>
-     <y>70</y>
+     <x>1180</x>
+     <y>90</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -430,8 +433,8 @@ QPushButton {
   <widget class="QPushButton" name="Admin_panel_close_log_out">
    <property name="geometry">
     <rect>
-     <x>1230</x>
-     <y>70</y>
+     <x>1060</x>
+     <y>90</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -455,7 +458,7 @@ QPushButton {
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>1230</x>
+     <x>1060</x>
      <y>180</y>
      <width>16777215</width>
      <height>26</height>
@@ -470,6 +473,26 @@ QPushButton {
    </property>
    <property name="text">
     <string>Normal Screen</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>1060</x>
+     <y>220</y>
+     <width>16777215</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton{
+	background-color: rgb(0, 98, 0);
+    color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Maximize Screen</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -489,6 +512,7 @@ QPushButton {
   <zorder>Admin_panel_close_log_out</zorder>
   <zorder>Admin_panel_close_app</zorder>
   <zorder>radioButton</zorder>
+  <zorder>radioButton_2</zorder>
  </widget>
  <resources/>
  <connections>
@@ -503,8 +527,24 @@ QPushButton {
      <y>198</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1308</x>
+     <x>1288</x>
      <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>radioButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>AdminPanel</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1085</x>
+     <y>239</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1084</x>
+     <y>272</y>
     </hint>
    </hints>
   </connection>

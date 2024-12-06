@@ -33,10 +33,10 @@ void PlantDetail::on_btnSearchPlant_clicked()
     int h=ui->image_field->height();
 
 
-
     QSqlQuery QueryLoadData( MyDB::getInstance()->getDBInstance());
     QSqlDatabase::database().transaction();
-    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtPlantID->text() +"");
+    QueryLoadData.prepare("SELECT * FROM addplant WHERE Plant_ID="+ ui->txtPlantID->text() + "");
+
     if(QueryLoadData.exec())
     {
 

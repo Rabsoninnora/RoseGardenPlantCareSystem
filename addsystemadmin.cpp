@@ -32,7 +32,7 @@ void AddSystemAdmin::on_ViewAccessDetail_clicked()
         while (QueryLoadData.next()) {
 
 
-            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryLoadData.value("ID").toString())));
+            ui->tableWidget->setItem( RowNumber, 0, new QTableWidgetItem(QString(QueryLoadData.value("User_ID").toString())));
             ui->tableWidget->setItem( RowNumber, 1, new QTableWidgetItem(QString(QueryLoadData.value("username").toString())));
             ui->tableWidget->setItem( RowNumber, 2, new QTableWidgetItem(QString(QueryLoadData.value("password").toString())));
             RowNumber = RowNumber +1;

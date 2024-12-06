@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddUser</class>
+ <widget class="QDialog" name="AddUser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1327</width>
+    <height>803</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"> QDialog{
+background-color: rgb(56, 144, 96);
+background-image: url(:/images/beauty.png);
+
+
+}</string>
+  </property>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>16777215</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  QLabel {
+  background-color: rgb(0, 85, 0);
+  border:3px solid green;
+  border-radius: 10px;
+  padding: 0 10px;
+  
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>1251</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:3px solid white;
+                    border-radius: 8px;
+                    padding: 0 8px;
+   
+                    font: 700 13pt ;
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>The Rose Garden Nursery</string>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>240</y>
+     <width>1291</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+
+
+background-color: rgb(0, 147, 0);
+</string>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Triangular</enum>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="tabsClosable">
+    <bool>false</bool>
+   </property>
+   <property name="tabBarAutoHide">
+    <bool>false</bool>
+   </property>
+   <widget class="QWidget" name="Users">
+    <attribute name="title">
+     <string>Users</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>761</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+ QTableWidget 
+{
+
+  border:6px solid gray;
+  border-radius: 10px;
+  background: rgb(58, 169, 200);
+  color: rgb(0, 0, 0);;
+
+}
+</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>User_ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>User_name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="btn_Insert_User">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>370</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
+
+}
+ </string>
+     </property>
+     <property name="text">
+      <string>Insert</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Reset_User">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>370</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
+
+}
+ </string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_User_Password">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>300</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Password *</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_User_name">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>220</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>User name *</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_View_User">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>130</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71); 
+ 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>View Record</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Update_User">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>130</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
+
+}
+ 
+</string>
+     </property>
+     <property name="text">
+      <string>Update</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_User_ID">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>130</y>
+       <width>171</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter ID *</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Delete_User">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>130</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> 
+QPushButton {
+background-color: rgb(71, 71, 71);
+font: 700 12pt;
+color: rgb(255, 0, 0);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>150</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:0px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+                    background-color: rgb(0, 90, 0);
+                    font: 600 11pt ;
+
+}
+
+ </string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>45</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Admin">
+    <attribute name="title">
+     <string>Admin</string>
+    </attribute>
+    <widget class="QTableWidget" name="tableWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>200</y>
+       <width>761</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+ QTableWidget 
+{
+
+  border:6px solid gray;
+  border-radius: 10px;
+  background: rgb(58, 169, 200);
+  color: rgb(0, 0, 0);;
+
+}
+</string>
+     </property>
+     <column>
+      <property name="text">
+       <string>User_ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>User_name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="btn_View_admin">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>130</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71); 
+ 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>View Record</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Update_admin">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>130</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
+
+}
+ 
+</string>
+     </property>
+     <property name="text">
+      <string>Update</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Admin_ID">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>130</y>
+       <width>171</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter ID *</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Delete_admin">
+     <property name="geometry">
+      <rect>
+       <x>690</x>
+       <y>130</y>
+       <width>101</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> 
+QPushButton {
+background-color: rgb(71, 71, 71);
+font: 700 12pt;
+color: rgb(255, 0, 0);
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Delete</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_username_admin">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>220</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>User name *</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_admin_password">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>300</y>
+       <width>341</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">  QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Password *</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Insert_admin">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>370</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
+
+}
+ </string>
+     </property>
+     <property name="text">
+      <string>Insert</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Reset_admin">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>370</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+background-color: rgb(71, 71, 71);
+selection-color: rgb(0, 85, 0);
+font: 700 12pt ;
+color: rgb(19, 255, 0);
+
+}
+ </string>
+     </property>
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>150</y>
+       <width>121</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton{
+                    color: rgb(255, 255, 255);
+                    border:0px solid green;
+                    border-radius: 8px;
+                    padding: 0 8px;
+                    background-color: rgb(0, 90, 0);
+                    font: 600 11pt ;
+
+}
+
+ </string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/images/user.png</normaloff>:/images/user.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>45</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>150</y>
+     <width>431</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string> USER MANAGEMENT  | SECTION </string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

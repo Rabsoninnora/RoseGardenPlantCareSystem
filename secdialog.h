@@ -37,11 +37,15 @@ private slots:
 
 
 
-    void on_btn_logout_clicked();
+
 
     void on_btn_Plant_Detail_clicked();
 
     void on_btn_user_admin_close_app_clicked();
+
+    void on_btn_back_userdashboard_clicked();
+
+    void on_btn_logout_1_clicked();
 
 private:
     Ui::SecDialog *ui;

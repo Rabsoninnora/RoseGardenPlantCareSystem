@@ -1,6 +1,7 @@
 #ifndef SPECIES_H
 #define SPECIES_H
 #include "mydb.h"
+#include <QMessageBox>
 
 #include <QDialog>
 
@@ -18,6 +19,8 @@ public:
 
 private slots:
     void on_btnSearch_clicked();
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::Species *ui;

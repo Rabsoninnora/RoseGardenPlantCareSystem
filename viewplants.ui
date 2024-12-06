@@ -39,14 +39,14 @@ background-image: url(:/images/beauty.png);
 background-color: rgb(71, 71, 71);
  
 selection-color: rgb(0, 85, 0);
- 
+  background: green;
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 
 }</string>
    </property>
    <property name="text">
-    <string>View Plants Record</string>
+    <string>View All Plants</string>
    </property>
    <property name="icon">
     <iconset>
@@ -97,6 +97,7 @@ QLabel {
  QPushButton {
 background-color: rgb(71, 71, 71);
 selection-color: rgb(0, 85, 0);
+ background: green;
  font: 700 12pt ;
  color: rgb(255, 0, 0);
 
@@ -147,7 +148,7 @@ selection-color: rgb(0, 85, 0);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
+    <string notr="true"> 
  QTableWidget 
 {
 
@@ -343,13 +344,13 @@ QPushButton{
    <property name="styleSheet">
     <string notr="true">QPushButton {
 background-color: rgb(71, 71, 71); 
- 
+  background: green;
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
-    <string>View Plant Detail</string>
+    <string>View Plant Record</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_search_species_admin">
@@ -364,13 +365,38 @@ background-color: rgb(71, 71, 71);
    <property name="styleSheet">
     <string notr="true">QPushButton {
 background-color: rgb(71, 71, 71); 
- 
+  background: green;
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 }</string>
    </property>
    <property name="text">
-    <string> View Plant Detail By ID</string>
+    <string>Search Species</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_back_viewPlant">
+   <property name="geometry">
+    <rect>
+     <x>1250</x>
+     <y>80</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+
+ QPushButton {
+  
+  
+ background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -385,6 +411,7 @@ background-color: rgb(71, 71, 71);
   <zorder>radioButton</zorder>
   <zorder>btn_view_plant_detial_BY_ID</zorder>
   <zorder>btn_search_species_admin</zorder>
+  <zorder>btn_back_viewPlant</zorder>
  </widget>
  <resources/>
  <connections>

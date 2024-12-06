@@ -15,6 +15,7 @@
 #include "viewplants.h"
 #include "viewsystemadmin.h"
 #include "plantdetail.h"
+#include "adduser.h"
 
 
 #include <QDialog>
@@ -74,6 +75,8 @@ private:
 
 
     ViewPlants  *ptrViewPlants;
+
+    AddUser *ptrAddUser;
 
 };
 

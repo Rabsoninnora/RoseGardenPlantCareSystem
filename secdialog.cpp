@@ -7,7 +7,9 @@ SecDialog::SecDialog(QWidget *parent)
 
 {
     ui->setupUi(this);
+    this->showFullScreen();
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
+
 
 
     ptrSpecies = new Species();
@@ -49,10 +51,7 @@ void SecDialog::on_ViewPlants_clicked()
 
 
 
-void SecDialog::on_btn_logout_clicked()
-{
-    this->close();
-}
+
 
 
 void SecDialog::on_btn_Plant_Detail_clicked()
@@ -70,5 +69,17 @@ void SecDialog::on_btn_user_admin_close_app_clicked()
         QApplication::quit();
     }
 
+}
+
+
+void SecDialog::on_btn_back_userdashboard_clicked()
+{
+    this->close();
+}
+
+
+void SecDialog::on_btn_logout_1_clicked()
+{
+     this->close();
 }
 

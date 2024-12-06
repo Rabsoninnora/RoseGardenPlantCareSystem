@@ -33,6 +33,8 @@ private slots:
 
     void on_btn_search_species_admin_clicked();
 
+    void on_btn_back_viewPlant_clicked();
+
 private:
     Ui::ViewPlants *ui;
 

@@ -78,3 +78,9 @@ void Suppliers::on_btn_Delete_Supplier_clicked()
 }
 
 
+
+void Suppliers::on_btn_supplier_back_clicked()
+{
+    this->close();
+}
+
