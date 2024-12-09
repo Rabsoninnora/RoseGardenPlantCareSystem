@@ -81,7 +81,7 @@ void PlantDetail::on_btn_sell_plant_clicked()
 
 
         // Get the Plant ID from the UI
-        QString Plant_ID = ui->txtPlantID->text();
+        QString Plant_ID = ui->txt_plant_ID->text();
 
         // Get the current quantity from the UI
         int currentQuantity = ui->txt_Quantity->text().toInt();
@@ -108,6 +108,12 @@ void PlantDetail::on_btn_sell_plant_clicked()
         query.bindValue(":quantity", currentQuantity - quantityToSell); // Update to the new quantity
 
         query.bindValue(":Plant_ID", Plant_ID);
+        query.exec();
+
+        QSqlDatabase::database().commit();
+        QSqlDatabase::database().close();
+
+        foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
 
         if (!query.exec()) {
             QMessageBox::critical(this, "Database Error", "Failed to update quantity: " + query.lastError().text());
