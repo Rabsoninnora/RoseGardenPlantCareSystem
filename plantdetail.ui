@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1407</width>
-    <height>800</height>
+    <width>1490</width>
+    <height>851</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,15 +19,19 @@ QDialog{
 background-color: rgb(56, 144, 96);
 background-image: url(:/images/beauty.png);
 
+}
+
+QMessageBox{
+	background-color: rgb(255, 255, 255);
 }</string>
   </property>
   <widget class="QLabel" name="image_field">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>230</y>
-     <width>451</width>
-     <height>421</height>
+     <x>20</x>
+     <y>260</y>
+     <width>381</width>
+     <height>311</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -47,9 +51,9 @@ background-image: url(:/images/beauty.png);
   <widget class="QLineEdit" name="txtPlantID">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>150</y>
-     <width>271</width>
+     <x>20</x>
+     <y>190</y>
+     <width>221</width>
      <height>51</height>
     </rect>
    </property>
@@ -73,16 +77,17 @@ background-image: url(:/images/beauty.png);
   <widget class="QPushButton" name="btnSearchPlant">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>141</width>
+     <x>280</x>
+     <y>190</y>
+     <width>121</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-background-color: rgb(71, 71, 71); 
-selection-color: rgb(0, 85, 0); 
+
+background-color: rgb(0, 144, 0);
+selection-color: blue; 
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 }</string>
@@ -100,10 +105,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="txt_Scientific_name">
    <property name="geometry">
     <rect>
-     <x>730</x>
+     <x>590</x>
      <y>180</y>
-     <width>351</width>
-     <height>51</height>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -123,10 +128,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="txtGenus">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>240</y>
-     <width>351</width>
-     <height>51</height>
+     <x>590</x>
+     <y>230</y>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -146,10 +151,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="txt_Local_name">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>300</y>
-     <width>351</width>
-     <height>51</height>
+     <x>590</x>
+     <y>280</y>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -169,10 +174,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="species">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>360</y>
-     <width>351</width>
-     <height>51</height>
+     <x>590</x>
+     <y>330</y>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -192,10 +197,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="txt_Description">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>420</y>
-     <width>532</width>
-     <height>161</height>
+     <x>590</x>
+     <y>530</y>
+     <width>311</width>
+     <height>241</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -215,10 +220,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="txt_status">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>590</y>
-     <width>351</width>
-     <height>51</height>
+     <x>590</x>
+     <y>380</y>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -238,10 +243,10 @@ selection-color: rgb(0, 85, 0);
   <widget class="QLabel" name="txt_price">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>650</y>
-     <width>351</width>
-     <height>51</height>
+     <x>590</x>
+     <y>430</y>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -255,27 +260,29 @@ selection-color: rgb(0, 85, 0);
 };</string>
    </property>
    <property name="text">
-    <string>Price ZMW</string>
+    <string>Unity Price ZMW</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>210</x>
      <y>30</y>
-     <width>1381</width>
+     <width>1081</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">
 QPushButton{
-
+ 
   color: rgb(255, 255, 255);
-  font: 500 12pt &quot;Ubuntu&quot;;
+  font: 700 12pt &quot;Ubuntu&quot;;
   border:3px solid white;
   border-radius: 10px;
   padding: 0 10px;
+
+  
 
 }</string>
    </property>
@@ -286,10 +293,10 @@ QPushButton{
   <widget class="QLabel" name="txt_Quantity">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>710</y>
-     <width>351</width>
-     <height>51</height>
+     <x>590</x>
+     <y>480</y>
+     <width>311</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -309,10 +316,10 @@ QPushButton{
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>410</x>
      <y>180</y>
-     <width>191</width>
-     <height>51</height>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -334,10 +341,10 @@ QPushButton{
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>240</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>230</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -359,10 +366,10 @@ QPushButton{
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>300</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>280</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -384,10 +391,10 @@ QPushButton{
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>360</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>330</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -409,10 +416,10 @@ QPushButton{
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>480</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>640</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -434,10 +441,10 @@ QPushButton{
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>590</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>380</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -459,10 +466,10 @@ QPushButton{
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>650</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>430</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -478,16 +485,16 @@ QPushButton{
 };</string>
    </property>
    <property name="text">
-    <string>Price ZMW</string>
+    <string>Unit Price ZMW </string>
    </property>
   </widget>
   <widget class="QLabel" name="label_8">
    <property name="geometry">
     <rect>
-     <x>530</x>
-     <y>710</y>
-     <width>191</width>
-     <height>51</height>
+     <x>410</x>
+     <y>480</y>
+     <width>171</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -503,7 +510,7 @@ QPushButton{
 };</string>
    </property>
    <property name="text">
-    <string>Quantity</string>
+    <string>Total Quantity</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -534,9 +541,9 @@ QPushButton{
   <widget class="QLabel" name="label_10">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>380</x>
      <y>80</y>
-     <width>621</width>
+     <width>661</width>
      <height>41</height>
     </rect>
    </property>
@@ -546,12 +553,15 @@ QLabel {
   color: rgb(255, 255, 255);
   font: 700 12pt ;
   border:1px solid  rgb(255, 255, 255);
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(0, 144, 0);
   
 }</string>
    </property>
    <property name="text">
-    <string> VIEW PLANT DETAIL  | SECTION </string>
+    <string>PLANT STORE  | SECTION </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QRadioButton" name="radioButton">
@@ -572,6 +582,133 @@ QLabel {
    </property>
    <property name="text">
     <string>Normal Screen</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="textEdit_receipt">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>530</y>
+     <width>311</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+ QLabel {
+  border:2px solid gray;
+  border-radius: 10px;
+  padding: 8px 8px;
+  background: rgb(255, 255, 255);
+ 
+};</string>
+   </property>
+   <property name="text">
+    <string>Receipt</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sell_plant">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>390</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ background-color: rgb(0, 144, 0);
+selection-color: rgb(0, 85, 0); 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Sale</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_quantity">
+   <property name="geometry">
+    <rect>
+     <x>950</x>
+     <y>320</y>
+     <width>261</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QLineEdit {
+  border:3px solid gray;
+  border-radius: 10px;
+  padding: 12px 12px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>Enter quantity to Sale</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>1010</x>
+     <y>250</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(100, 100, 100);
+  
+}</string>
+   </property>
+   <property name="text">
+    <string>Make A Sale</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>1250</x>
+     <y>170</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+ 
+ background-color: rgb(0, 144, 0);
+ selection-color: rgb(0, 85, 0); 
+ font: 700 12pt ;
+ color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
    </property>
   </widget>
   <zorder>image_field</zorder>
@@ -597,6 +734,11 @@ QLabel {
   <zorder>pushButton</zorder>
   <zorder>label_10</zorder>
   <zorder>radioButton</zorder>
+  <zorder>textEdit_receipt</zorder>
+  <zorder>btn_sell_plant</zorder>
+  <zorder>lineEdit_quantity</zorder>
+  <zorder>label_11</zorder>
+  <zorder>btn_back</zorder>
  </widget>
  <resources/>
  <connections>

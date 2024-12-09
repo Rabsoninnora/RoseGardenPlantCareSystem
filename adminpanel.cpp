@@ -7,6 +7,7 @@ AdminPanel::AdminPanel(QWidget *parent)
     , ui(new Ui::AdminPanel)
 {
     ui->setupUi(this);
+    this->showFullScreen();
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 

@@ -7,6 +7,7 @@ PlantDetail::PlantDetail(QWidget *parent)
     , ui(new Ui::PlantDetail)
 {
     ui->setupUi(this);
+    this->showFullScreen();
     setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint);
 
 
@@ -69,6 +70,64 @@ void PlantDetail::on_btnSearchPlant_clicked()
 
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 
+
+
+}
+
+
+void PlantDetail::on_btn_sell_plant_clicked()
+{
+
+
+
+        // Get the Plant ID from the UI
+        QString Plant_ID = ui->txtPlantID->text();
+
+        // Get the current quantity from the UI
+        int currentQuantity = ui->txt_Quantity->text().toInt();
+
+        // Get the quantity to sell from the line edit
+        int quantityToSell = ui->lineEdit_quantity->text().toInt();
+
+        // Validate the quantity to sell
+        if (quantityToSell <= 0 || quantityToSell > currentQuantity) {
+            QMessageBox::warning(this, "Invalid Quantity", "Please enter a valid quantity to sell.");
+            return;
+        }
+
+
+        ////////
+
+
+        // Update the quantity in the database
+
+        QSqlQuery query(MyDB::getInstance()->getDBInstance());
+
+        query.prepare("UPDATE addplant SET quantity = :quantity WHERE Plant_ID = :Plant_ID");
+
+        query.bindValue(":quantity", currentQuantity - quantityToSell); // Update to the new quantity
+
+        query.bindValue(":Plant_ID", Plant_ID);
+
+        if (!query.exec()) {
+            QMessageBox::critical(this, "Database Error", "Failed to update quantity: " + query.lastError().text());
+            return;
+        }
+
+        // Generate receipt
+        double pricePerUnit = ui->txt_price->text().toDouble();
+        double totalPrice = pricePerUnit * quantityToSell;
+        QString receipt = QString("Rose Garden Nursery Receipt:\nPlant ID: %1\nQuantity Sold: %2\nTotal Price: ZMK%3")
+                              .arg(Plant_ID)
+                              .arg(quantityToSell)
+                              .arg(totalPrice);
+
+
+        // Display the receipt
+        ui->textEdit_receipt->setText(receipt);
+
+        // Refresh the quantity display
+        ui->txt_Quantity->setText(QString::number(currentQuantity - quantityToSell));
 
 
 }

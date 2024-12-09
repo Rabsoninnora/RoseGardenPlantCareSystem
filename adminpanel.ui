@@ -22,9 +22,9 @@
   <widget class="QPushButton" name="btn_Add_Admin">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>630</x>
      <y>120</y>
-     <width>151</width>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
@@ -33,9 +33,9 @@
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 500 11pt;
- color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255)
 
 }
 
@@ -50,7 +50,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_Add_Supplier">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>250</x>
      <y>120</y>
      <width>141</width>
      <height>31</height>
@@ -61,9 +61,9 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
-  font: 500 11pt;
- color: rgb(255, 255, 255)
+   background-color: rgb(0, 144, 0);
+   font: 500 11pt;
+   color: rgb(255, 255, 255)
 
 }
 </string>
@@ -75,9 +75,9 @@ QPushButton {
   <widget class="QPushButton" name="ViewGardenTools">
    <property name="geometry">
     <rect>
-     <x>650</x>
+     <x>830</x>
      <y>80</y>
-     <width>121</width>
+     <width>151</width>
      <height>31</height>
     </rect>
    </property>
@@ -86,9 +86,9 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 500 11pt;
- color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255)
 
 }
 
@@ -103,7 +103,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_view_Available_Plants_Admin">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>250</x>
      <y>80</y>
      <width>141</width>
      <height>31</height>
@@ -114,9 +114,9 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 500 11pt;
- color: rgb(255, 255, 255)
+   color: rgb(255, 255, 255)
 
 }
 
@@ -131,7 +131,7 @@ QPushButton {
   <widget class="QPushButton" name="AddGardenTool">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>430</x>
      <y>80</y>
      <width>171</width>
      <height>31</height>
@@ -142,9 +142,9 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 500 11pt;
- color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255)
 
 }
 
@@ -159,9 +159,9 @@ QPushButton {
   <widget class="QPushButton" name="btn_Employees">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>630</x>
      <y>80</y>
-     <width>151</width>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
@@ -170,7 +170,7 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 500 11pt;
  color: rgb(255, 255, 255)
 
@@ -206,7 +206,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_employee_view">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>430</x>
      <y>120</y>
      <width>171</width>
      <height>31</height>
@@ -217,7 +217,7 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 500 11pt;
  color: rgb(255, 255, 255)
 
@@ -296,9 +296,9 @@ QPushButton {
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>199</x>
      <y>10</y>
-     <width>1270</width>
+     <width>891</width>
      <height>61</height>
     </rect>
    </property>
@@ -324,7 +324,7 @@ QPushButton{
   <widget class="QPushButton" name="AddPlant">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>100</x>
      <y>80</y>
      <width>121</width>
      <height>31</height>
@@ -343,7 +343,7 @@ QPushButton{
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
+  background-color: rgb(0, 144, 0);
   font: 400 10pt;
  color: rgb(255, 255, 255)
 
@@ -366,7 +366,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_view_plant_dmin">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>100</x>
      <y>120</y>
      <width>121</width>
      <height>31</height>
@@ -385,8 +385,8 @@ QPushButton {
 QPushButton {
   border:1px solid rgb(255, 255, 255);
   
-  background-color: rgb(63, 63, 63);
-  font: 500 11pt;
+ background-color: rgb(0, 144, 0);
+ font: 500 11pt;
  color: rgb(255, 255, 255)
 
 }
