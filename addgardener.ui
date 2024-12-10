@@ -260,31 +260,6 @@ QPushButton{
     <string> Rose Garden Nursery</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_employee_home">
-   <property name="geometry">
-    <rect>
-     <x>1350</x>
-     <y>110</y>
-     <width>91</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">
- QPushButton {
-  border:6px solid gray;
-  border-radius: 10px;
-  padding: 0 10px;
-  background: grey;
- font: 700 12pt ;
- color: rgb(255, 255, 255);
-
-}</string>
-   </property>
-   <property name="text">
-    <string>Home</string>
-   </property>
-  </widget>
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
@@ -303,6 +278,31 @@ QPushButton{
    </property>
    <property name="text">
     <string>Normal Screen</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>1320</x>
+     <y>110</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+
+ QPushButton {
+  
+  
+ background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

@@ -115,3 +115,9 @@ void AddGardenTool::on_btn_Update_Record_clicked()
     qDebug()<<"Update error:" <<QueryUpdateData.lastError();
 }
 
+
+void AddGardenTool::on_btn_back_clicked()
+{
+    this->close();
+}
+

@@ -70,7 +70,7 @@ background-color: rgb(255, 255, 255);
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>350</x>
+      <x>400</x>
       <y>20</y>
       <width>731</width>
       <height>51</height>

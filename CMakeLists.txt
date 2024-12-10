@@ -38,9 +38,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         adminpanel.h adminpanel.cpp adminpanel.ui
         databaseheader.h
         addgardentool.h addgardentool.cpp addgardentool.ui
-        viewgardentools.h viewgardentools.cpp viewgardentools.ui
-        addsystemadmin.h addsystemadmin.cpp addsystemadmin.ui
-        viewsystemadmin.h viewsystemadmin.cpp viewsystemadmin.ui
+
+
+
         availableplants.h availableplants.cpp availableplants.ui
         suppliers.h suppliers.cpp suppliers.ui
 

@@ -134,6 +134,6 @@ void ViewPlants::on_btn_search_species_admin_clicked()
 
 void ViewPlants::on_btn_back_viewPlant_clicked()
 {
-    this->show();
+    this->close();
 }
 

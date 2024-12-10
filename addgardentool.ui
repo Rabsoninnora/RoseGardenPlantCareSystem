@@ -368,6 +368,31 @@ QPushButton{
     <string>Normal Screen</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="btn_back">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>80</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+
+ QPushButton {
+  
+  
+ background: green;
+ font: 500 12pt ;
+ color: rgb(255, 255, 255);
+
+}</string>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
   <zorder>tableWidget</zorder>
   <zorder>lineEdit_ID</zorder>
   <zorder>lineEdit_Item_name</zorder>
@@ -383,6 +408,7 @@ QPushButton{
   <zorder>btn_Update_Record</zorder>
   <zorder>btn_Delete_Record</zorder>
   <zorder>radioButton</zorder>
+  <zorder>btn_back</zorder>
  </widget>
  <resources/>
  <connections>

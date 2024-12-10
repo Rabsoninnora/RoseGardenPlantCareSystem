@@ -350,7 +350,7 @@ background-color: rgb(71, 71, 71);
 }</string>
    </property>
    <property name="text">
-    <string>View Plant Record</string>
+    <string>Sale Plants</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_search_species_admin">

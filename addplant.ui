@@ -278,7 +278,7 @@ background-color: rgb(63, 63, 63);
 }</string>
    </property>
    <property name="text">
-    <string>Home</string>
+    <string>Back</string>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_browse_image">

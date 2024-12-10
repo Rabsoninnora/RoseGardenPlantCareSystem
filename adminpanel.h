@@ -2,9 +2,6 @@
 #define ADMINPANEL_H
 #include "mydb.h"
 #include <QMessageBox>
-#include "addsystemadmin.h"
-#include "viewgardentools.h"
-#include "viewsystemadmin.h"
 #include "addgardentool.h"
 #include "availableplants.h"
 #include "suppliers.h"
@@ -13,7 +10,6 @@
 #include "gardenerdetails.h"
 #include "species.h"
 #include "viewplants.h"
-#include "viewsystemadmin.h"
 #include "plantdetail.h"
 #include "adduser.h"
 
@@ -37,7 +33,7 @@ private slots:
 
     void on_AddGardenTool_clicked();
 
-    void on_ViewGardenTools_clicked();
+   // void on_ViewGardenTools_clicked();
 
 
 
@@ -64,9 +60,9 @@ private:
     //Pointer varables
     Ui::AdminPanel *ui;
     AddGardenTool *ptrAddgardentool;
-    ViewGardenTools *ptrViewGardenTools;
-    AddSystemAdmin *ptrAddSystemAdmin;
-    ViewSystemAdmin *ptrViewSystemAdmin;
+    //ViewGardenTools *ptrViewGardenTools;
+    //AddSystemAdmin *ptrAddSystemAdmin;
+    //ViewSystemAdmin *ptrViewSystemAdmin;
     AvailablePlants *ptrAvailablePlants;
     Suppliers        *ptrSuppliers;
     AddGardener *ptrAddGardener;

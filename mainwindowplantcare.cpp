@@ -10,6 +10,7 @@ MainWindowPlantCare::MainWindowPlantCare(QWidget *parent)
     ui->setupUi(this);
     this->showFullScreen();
 
+
     //Add admin login and user login separately
     ptrAdminLogin = new AdminLogin();
     ptrUserLogin  = new UserLogin();

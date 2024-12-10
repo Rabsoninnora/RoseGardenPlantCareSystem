@@ -24,6 +24,8 @@ private slots:
 
     void on_btn_Update_Record_clicked();
 
+    void on_btn_back_clicked();
+
 private:
     Ui::AddGardenTool *ui;
     QSqlDatabase DB_GardenTools;

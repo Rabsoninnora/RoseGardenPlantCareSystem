@@ -127,7 +127,7 @@ void AddPlant::on_btnSave_clicked()
 
 void AddPlant::on_pushButton_btn_home_clicked()
 {
-
+    this->close();
 
 }
 

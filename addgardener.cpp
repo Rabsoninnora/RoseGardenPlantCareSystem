@@ -85,3 +85,12 @@ void AddGardener::on_btnReset_clicked()
     }
 }
 
+
+void AddGardener::on_btn_back_clicked()
+{
+    this->close();
+}
+
+
+
+
