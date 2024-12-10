@@ -122,16 +122,13 @@ selection-color: rgb(0, 85, 0);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-  QLineEdit {
-  border:1px solid rgb(255, 255, 255);
+    <string notr="true">   QLineEdit {
+  border:3px solid gray;
   border-radius: 10px;
-  padding: 10px 10px;
-  background: ;
- font: 600 11pt ;
- color: rgb(255, 255, 255);
-	
-
+  padding: 6px 6px;
+  background: rgb(255, 255, 255);
+  font: 700 12pt ;
+  color: rgb(0, 0, 0);;
 }</string>
    </property>
    <property name="placeholderText">
