@@ -54,6 +54,12 @@ void AddUser::on_btn_Update_User_clicked()
 
 void AddUser::on_btn_Delete_User_clicked()
 {
+    QSqlQuery Query_Delete_Data( MyDB::getInstance()->getDBInstance());
+    QSqlDatabase::database().transaction();
+    Query_Delete_Data.prepare("DELETE FROM User_login WHERE User_ID="+ ui->lineEdit_User_ID->text() +"");
+    Query_Delete_Data.exec();
+    QSqlDatabase::database().commit();
+    QSqlDatabase::database().close();
 
 }
 
@@ -120,7 +126,8 @@ void AddUser::on_btn_Insert_admin_clicked()
 
     InsertRecord.prepare( "INSERT INTO Admin_login(username,password) VALUES(:username,:password) ");
     InsertRecord.bindValue(":username", ui->lineEdit_username_admin->text());
-    InsertRecord.bindValue(":password",ui->lineEdit_User_Password->text());
+
+    InsertRecord.bindValue(":password",ui->lineEdit_admin_password->text());
 
     InsertRecord.exec();
     QSqlDatabase::database().commit();
