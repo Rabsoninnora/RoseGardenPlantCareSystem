@@ -1,6 +1,8 @@
 #include "plantdetail.h"
 #include "ui_plantdetail.h"
 #include <QMessageBox>
+#include <QDate>
+#include<QDateTime>
 
 PlantDetail::PlantDetail(QWidget *parent)
     : QDialog(parent)
@@ -120,21 +122,84 @@ void PlantDetail::on_btn_sell_plant_clicked()
             return;
         }
 
+        ////////////////////
+
         // Generate receipt
+
         double pricePerUnit = ui->txt_price->text().toDouble();
+
         double totalPrice = pricePerUnit * quantityToSell;
-        QString receipt = QString("Rose Garden Nursery Receipt:\nPlant ID: %1\nQuantity Sold: %2\nTotal Price: ZMK%3")
+
+        // Get current date
+
+        QDate currentDate = QDate::currentDate();
+
+        QString date = currentDate.toString("dd MMMM yyyy");
+
+
+        // Generate receipt number
+
+        static int receiptCounter = 1;
+
+        QString receiptNumber = "RG" + QString::number(receiptCounter, 10, 3).rightJustified(3, '0');
+        receiptCounter++;
+
+
+        QString receipt = QString("Rose Garden Nursery Receipt:\tTPIN:859489\n"
+
+                                  "Date: %1\n"
+
+                                  "Receipt Number: %2\n"
+
+                                  "Scientific Name: %3\n"
+
+                                  "Genus: %4\n"
+
+                                  "Local Name: %5\n"
+
+                                  "Plant ID: %6\n"
+
+                                  "Unit Price: ZMK%7\n"
+
+                                  "Quantity Sold: %8\n"
+
+                                  "Total Price: ZMK%9\n\n"
+
+                                  "Thank you for shopping at Rose Garden Nursery!")
+
+                              .arg(date)
+
+                              .arg(receiptNumber)
+
+                              .arg(ui->txt_Scientific_name->text())
+
+                              .arg(ui->txtGenus->text())
+
+                              .arg(ui->txt_Local_name->text())
+
                               .arg(Plant_ID)
+
+                              .arg(pricePerUnit)
+
                               .arg(quantityToSell)
+
                               .arg(totalPrice);
 
 
         // Display the receipt
+
         ui->textEdit_receipt->setText(receipt);
 
+
         // Refresh the quantity display
+
         ui->txt_Quantity->setText(QString::number(currentQuantity - quantityToSell));
 
+}
 
+
+void PlantDetail::on_btn_back_clicked()
+{
+    this->close();
 }
 

@@ -94,3 +94,9 @@ void UserLogin::on_pushButton_login_3_clicked()
 
 }
 
+
+void UserLogin::on_btn_log_back_clicked()
+{
+    this->close();
+}
+

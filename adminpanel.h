@@ -56,6 +56,8 @@ private slots:
 
     void on_btn_view_Available_Plants_Admin_clicked();
 
+    void on_Admin_panel_close_log_out_clicked();
+
 private:
     //Pointer varables
     Ui::AdminPanel *ui;

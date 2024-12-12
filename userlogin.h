@@ -38,6 +38,8 @@ private slots:
 
     void on_pushButton_login_3_clicked();
 
+    void on_btn_log_back_clicked();
+
 private:
     Ui::UserLogin *ui;
 

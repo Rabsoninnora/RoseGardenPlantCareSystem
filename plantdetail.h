@@ -21,6 +21,8 @@ private slots:
 
     void on_btn_sell_plant_clicked();
 
+    void on_btn_back_clicked();
+
 private:
     Ui::PlantDetail *ui;
 

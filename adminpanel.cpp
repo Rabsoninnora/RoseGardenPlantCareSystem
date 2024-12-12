@@ -126,3 +126,9 @@ void AdminPanel::on_btn_view_Available_Plants_Admin_clicked()
 
 }
 
+
+void AdminPanel::on_Admin_panel_close_log_out_clicked()
+{
+    this->close();
+}
+

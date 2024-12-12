@@ -666,7 +666,7 @@ selection-color: rgb(0, 85, 0);
      <x>990</x>
      <y>170</y>
      <width>151</width>
-     <height>41</height>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -674,8 +674,9 @@ selection-color: rgb(0, 85, 0);
 QLabel {
   color: rgb(255, 255, 255);
   font: 700 12pt ;
-  border:1px solid  rgb(255, 255, 255);
-  background-color: rgb(100, 100, 100);
+  border:5px solid  rgb(255, 255, 255);
+  
+  background-color: rgb(0, 144, 0);
   
 }</string>
    </property>
