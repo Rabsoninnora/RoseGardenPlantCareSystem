@@ -82,6 +82,12 @@ QPushButton{
      <height>571</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">  background-color: rgb(0, 85, 0);
 
@@ -96,7 +102,7 @@ QPushButton{
     <enum>QTabWidget::Triangular</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <property name="iconSize">
     <size>
@@ -247,16 +253,16 @@ color: rgb(19, 255, 0);
     <widget class="QPushButton" name="btn_View_User">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>50</x>
        <y>130</y>
-       <width>161</width>
+       <width>141</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-background-color: rgb(71, 71, 71); 
  
+background-color: rgb(0, 90, 0); 
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 }</string>
@@ -277,7 +283,7 @@ background-color: rgb(71, 71, 71);
      <property name="styleSheet">
       <string notr="true">
 QPushButton {
-background-color: rgb(71, 71, 71);
+background-color: rgb(0, 90, 0);
 selection-color: rgb(0, 85, 0);
 font: 700 12pt ;
 color: rgb(19, 255, 0);
@@ -325,7 +331,7 @@ color: rgb(19, 255, 0);
      <property name="styleSheet">
       <string notr="true"> 
 QPushButton {
-background-color: rgb(71, 71, 71);
+background-color: rgb(0, 90, 0);
 font: 700 12pt;
 color: rgb(255, 0, 0);
 }
@@ -351,7 +357,7 @@ QPushButton{
                     border:0px solid green;
                     border-radius: 8px;
                     padding: 0 8px;
-                    background-color: rgb(0, 90, 0);
+                    background-color: rgb(19, 255, 0);
                     font: 600 11pt ;
 
 }
@@ -370,6 +376,29 @@ QPushButton{
        <width>45</width>
        <height>45</height>
       </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(0, 90, 0);
+  
+}</string>
+     </property>
+     <property name="text">
+      <string>User Details</string>
      </property>
     </widget>
    </widget>
@@ -418,16 +447,15 @@ QPushButton{
     <widget class="QPushButton" name="btn_View_admin">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>60</x>
        <y>130</y>
-       <width>161</width>
+       <width>131</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-background-color: rgb(71, 71, 71); 
- 
+ background-color: rgb(0, 90, 0);
  font: 700 12pt ;
  color: rgb(255, 255, 255);
 }</string>
@@ -448,7 +476,7 @@ background-color: rgb(71, 71, 71);
      <property name="styleSheet">
       <string notr="true">
 QPushButton {
-background-color: rgb(71, 71, 71);
+background-color: rgb(0, 90, 0);
 selection-color: rgb(0, 85, 0);
 font: 700 12pt ;
 color: rgb(19, 255, 0);
@@ -496,7 +524,7 @@ color: rgb(19, 255, 0);
      <property name="styleSheet">
       <string notr="true"> 
 QPushButton {
-background-color: rgb(71, 71, 71);
+background-color: rgb(0, 90, 0);
 font: 700 12pt;
 color: rgb(255, 0, 0);
 }
@@ -635,6 +663,29 @@ QPushButton{
       </size>
      </property>
     </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QLabel {
+  color: rgb(255, 255, 255);
+  font: 700 12pt ;
+  border:1px solid  rgb(255, 255, 255);
+  background-color: rgb(0, 90, 0);
+  
+}</string>
+     </property>
+     <property name="text">
+      <string>Admin Details</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QLabel" name="label">
@@ -642,7 +693,7 @@ QPushButton{
     <rect>
      <x>460</x>
      <y>150</y>
-     <width>431</width>
+     <width>341</width>
      <height>41</height>
     </rect>
    </property>
@@ -652,12 +703,37 @@ QLabel {
   color: rgb(255, 255, 255);
   font: 700 12pt ;
   border:1px solid  rgb(255, 255, 255);
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(0, 90, 0);
   
 }</string>
    </property>
    <property name="text">
     <string> USER MANAGEMENT  | SECTION </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_log_back">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>150</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> 
+QPushButton{
+                    color: rgb(255, 255, 255);
+                   
+                    background-color: rgb(0, 90, 0);
+                    font: 600 11pt ;
+
+}
+
+ </string>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

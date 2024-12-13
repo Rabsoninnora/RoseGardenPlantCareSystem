@@ -29,13 +29,6 @@ MainWindowPlantCare::~MainWindowPlantCare()
 
 
 
-
-
-
-
-
-
-
 void MainWindowPlantCare::on_pushButton_3_clicked()
 {
   ptrAdminLogin->show();

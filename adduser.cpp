@@ -49,6 +49,49 @@ void AddUser::on_btn_View_User_clicked()
 void AddUser::on_btn_Update_User_clicked()
 {
 
+    QSqlQuery QueryUpdateData(MyDB::getInstance()->getDBInstance());
+
+    QSqlDatabase::database().transaction();
+
+    QueryUpdateData.prepare("UPDATE User_login SET username=:username, password=:password WHERE User_ID=:User_ID");
+
+
+    QueryUpdateData.bindValue(":User_ID", ui->lineEdit_User_ID->text());
+
+    QueryUpdateData.bindValue(":username", ui->lineEdit_User_name->text());
+
+    QueryUpdateData.bindValue(":password", ui->lineEdit_User_Password->text());
+
+
+    if (QueryUpdateData.exec()) {
+
+        QSqlDatabase::database().commit();
+
+    } else {
+
+        qDebug() << "Update error:" << QueryUpdateData.lastError();
+
+        QSqlDatabase::database().rollback();
+
+    }
+
+
+
+    QSqlDatabase::database().close();
+
+
+    // Clear input fields
+
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()) {
+
+        widget->clear();
+
+    }
+
+
+    // Refresh the user table
+
+    on_btn_View_User_clicked();
 }
 
 
@@ -61,6 +104,10 @@ void AddUser::on_btn_Delete_User_clicked()
     QSqlDatabase::database().commit();
     QSqlDatabase::database().close();
 
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear();}
+    // Refresh the user table
+
+    on_btn_View_User_clicked();
 }
 
 
@@ -134,5 +181,100 @@ void AddUser::on_btn_Insert_admin_clicked()
     QSqlDatabase::database().close();
 
     foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
+}
+
+
+void AddUser::on_btn_log_back_clicked()
+{
+    this->close();
+}
+
+
+void AddUser::on_btn_Delete_admin_clicked()
+{
+
+
+    QSqlQuery Query_Delete_Data(MyDB::getInstance()->getDBInstance());
+
+    QSqlDatabase::database().transaction();
+    Query_Delete_Data.prepare("DELETE FROM Admin_login WHERE ID="+ ui->lineEdit_Admin_ID->text() +"");
+
+    if (Query_Delete_Data.exec()) {
+
+        QSqlDatabase::database().commit();
+
+    } else {
+
+        qDebug() << "Delete error:" << Query_Delete_Data.lastError();
+
+        QSqlDatabase::database().rollback();
+
+    }
+
+
+    QSqlDatabase::database().close();
+
+
+    // Clear input fields
+
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()) {
+
+        widget->clear();
+
+    }
+
+
+    // Refresh the user table
+
+    on_btn_View_User_clicked();
+}
+
+
+void AddUser::on_btn_Update_admin_clicked()
+{
+
+    QSqlQuery QueryUpdateData(MyDB::getInstance()->getDBInstance());
+
+    QSqlDatabase::database().transaction();
+
+    QueryUpdateData.prepare("UPDATE Admin_login SET username=:username, password=:password WHERE ID=:ID");
+
+
+    QueryUpdateData.bindValue(":ID", ui->lineEdit_Admin_ID->text());
+
+    QueryUpdateData.bindValue(":username", ui->lineEdit_username_admin->text());
+
+    QueryUpdateData.bindValue(":password", ui->lineEdit_admin_password->text());
+
+
+    if (QueryUpdateData.exec()) {
+
+        QSqlDatabase::database().commit();
+
+    } else {
+
+        qDebug() << "Update error:" << QueryUpdateData.lastError();
+
+        QSqlDatabase::database().rollback();
+
+    }
+
+
+
+    QSqlDatabase::database().close();
+
+
+    // Clear input fields
+
+    foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()) {
+
+        widget->clear();
+
+    }
+
+    // Refresh the user table
+
+    on_btn_View_User_clicked();
+
 }
 

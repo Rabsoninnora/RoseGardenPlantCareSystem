@@ -30,6 +30,14 @@ private slots:
 
     void on_btn_Insert_admin_clicked();
 
+    void on_btn_log_back_clicked();
+
+
+
+    void on_btn_Delete_admin_clicked();
+
+    void on_btn_Update_admin_clicked();
+
 private:
     Ui::AddUser *ui;
     //QSqlDatabase Object
