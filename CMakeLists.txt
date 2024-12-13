@@ -41,7 +41,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
 
 
 
-        availableplants.h availableplants.cpp availableplants.ui
+
         suppliers.h suppliers.cpp suppliers.ui
 
         plantdetail.h plantdetail.cpp plantdetail.ui

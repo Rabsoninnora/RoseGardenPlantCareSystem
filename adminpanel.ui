@@ -22,7 +22,7 @@
   <widget class="QPushButton" name="btn_Add_Admin">
    <property name="geometry">
     <rect>
-     <x>860</x>
+     <x>620</x>
      <y>120</y>
      <width>171</width>
      <height>31</height>
@@ -50,8 +50,8 @@ QPushButton {
   <widget class="QPushButton" name="btn_Add_Supplier">
    <property name="geometry">
     <rect>
-     <x>420</x>
-     <y>120</y>
+     <x>820</x>
+     <y>80</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -72,38 +72,10 @@ QPushButton {
     <string>Add Supplier</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btn_view_Available_Plants_Admin">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>80</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">  
-QPushButton {
-  border:1px solid rgb(255, 255, 255);
-  
-  background-color: rgb(0, 144, 0);
-  font: 500 11pt;
-   color: rgb(255, 255, 255)
-
-}
-
-
-
- </string>
-   </property>
-   <property name="text">
-    <string>Available Plants</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="AddGardenTool">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>400</x>
      <y>80</y>
      <width>171</width>
      <height>31</height>
@@ -131,7 +103,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_Employees">
    <property name="geometry">
     <rect>
-     <x>860</x>
+     <x>620</x>
      <y>80</y>
      <width>171</width>
      <height>31</height>
@@ -178,7 +150,7 @@ QPushButton {
   <widget class="QPushButton" name="btn_employee_view">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>400</x>
      <y>120</y>
      <width>171</width>
      <height>31</height>
@@ -268,7 +240,7 @@ QPushButton {
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>159</x>
+     <x>210</x>
      <y>10</y>
      <width>1011</width>
      <height>61</height>
@@ -413,11 +385,11 @@ QPushButton {
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton {
-  border:3px solid rgb(255, 255, 255);
+  border:1px solid rgb(255, 255, 255);
   border-radius: 0px;
   padding: 0 10px;
-  background: blue;
- font: 500 11pt  &quot;Ubuntu&quot;;
+ background-color: rgb(0, 144, 0);
+ font: 500 11pt ;
  color: rgb(255, 255, 255)
 
 }
@@ -475,7 +447,6 @@ QPushButton {
   <zorder>pushButton</zorder>
   <zorder>AddPlant</zorder>
   <zorder>btn_view_plant_dmin</zorder>
-  <zorder>btn_view_Available_Plants_Admin</zorder>
   <zorder>btn_employee_view</zorder>
   <zorder>btn_Add_Supplier</zorder>
   <zorder>AddGardenTool</zorder>

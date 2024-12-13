@@ -14,7 +14,6 @@ AdminPanel::AdminPanel(QWidget *parent)
     ptrAddPlant = new AddPlant();
     ptrAddgardentool   = new AddGardenTool();
 
-    ptrAvailablePlants = new AvailablePlants();
     ptrSuppliers       = new Suppliers();
     ptrAddGardener     = new AddGardener();
     ptrGardenerDetails = new GardenerDetails();
@@ -31,7 +30,6 @@ AdminPanel::~AdminPanel()
     delete ptrAddgardentool;
 
 
-    delete ptrAvailablePlants;
     delete ptrSuppliers;
     delete ptrAddGardener;
     delete ptrGardenerDetails;
@@ -121,10 +119,7 @@ void AdminPanel::on_btn_view_plant_dmin_clicked()
 
 
 
-void AdminPanel::on_btn_view_Available_Plants_Admin_clicked()
-{
 
-}
 
 
 void AdminPanel::on_Admin_panel_close_log_out_clicked()

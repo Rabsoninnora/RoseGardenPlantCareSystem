@@ -3,7 +3,6 @@
 #include "mydb.h"
 #include <QMessageBox>
 #include "addgardentool.h"
-#include "availableplants.h"
 #include "suppliers.h"
 #include "addgardener.h"
 #include "addplant.h"
@@ -54,7 +53,6 @@ private slots:
     void on_btn_view_plant_dmin_clicked();
 
 
-    void on_btn_view_Available_Plants_Admin_clicked();
 
     void on_Admin_panel_close_log_out_clicked();
 
@@ -65,7 +63,6 @@ private:
     //ViewGardenTools *ptrViewGardenTools;
     //AddSystemAdmin *ptrAddSystemAdmin;
     //ViewSystemAdmin *ptrViewSystemAdmin;
-    AvailablePlants *ptrAvailablePlants;
     Suppliers        *ptrSuppliers;
     AddGardener *ptrAddGardener;
     GardenerDetails *ptrGardenerDetails;

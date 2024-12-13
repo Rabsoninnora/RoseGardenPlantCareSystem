@@ -208,7 +208,7 @@
 }</string>
    </property>
    <property name="text">
-    <string> View Plant Detail By ID</string>
+    <string>Make A Sale</string>
    </property>
    <property name="autoDefault">
     <bool>false</bool>

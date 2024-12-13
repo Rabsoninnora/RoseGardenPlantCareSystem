@@ -63,18 +63,109 @@ void Suppliers::on_btn_Insert_Supplier_clicked()
 
     foreach(QLineEdit *widget, this->findChildren<QLineEdit*>()){widget->clear();}
 
+
+    // Refresh the supplier table
+
+    on_btn_View_Supplier_clicked();
+
 }
 
 
 void Suppliers::on_btn_Update_Supplier_clicked()
 {
+    QSqlQuery QueryUpdateData(MyDB::getInstance()->getDBInstance());
+
+    QSqlDatabase::database().transaction();
+
+    QueryUpdateData.prepare("UPDATE Contacts SET Business_Name=:Business_Name, Phone=:Phone, Product=:Product, Business_Addr=:Business_Addr, Email_addr=:Email_addr WHERE Contact_ID=:Contact_ID");
+
+
+    QueryUpdateData.bindValue(":Contact_ID", ui->lineEdit_SupplierID->text());
+
+    QueryUpdateData.bindValue(":Business_Name", ui->lineEdit_Supplier_Legal_Name->text());
+
+    QueryUpdateData.bindValue(":Phone", ui->lineEdit_Phone->text());
+
+    QueryUpdateData.bindValue(":Product", ui->lineEdit_Product->text());
+
+    QueryUpdateData.bindValue(":Business_Addr", ui->lineEdit_address->text());
+
+    QueryUpdateData.bindValue(":Email_addr", ui->lineEdit_email->text());
+
+
+    if (QueryUpdateData.exec()) {
+
+        QSqlDatabase::database().commit();
+
+    } else {
+
+        qDebug() << "Update error:" << QueryUpdateData.lastError();
+
+        QSqlDatabase::database().rollback();
+
+    }
+
+
+    QSqlDatabase::database().close();
+
+
+    // Clear input fields
+
+    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) { widget->clear(); }
+
+
+    // Refresh the supplier table
+
+    on_btn_View_Supplier_clicked();
 
 }
 
 
 void Suppliers::on_btn_Delete_Supplier_clicked()
 {
+    QSqlQuery QueryDeleteData(MyDB::getInstance()->getDBInstance());
 
+    QSqlDatabase::database().transaction();
+
+
+
+    // Prepare the delete statement
+
+    QueryDeleteData.prepare("DELETE FROM Contacts WHERE Contact_ID = :Contact_ID");
+
+    QueryDeleteData.bindValue(":Contact_ID", ui->lineEdit_SupplierID->text());
+
+
+    // Execute the delete query
+
+    if (QueryDeleteData.exec()) {
+
+        QSqlDatabase::database().commit();
+
+    } else {
+
+        qDebug() << "Delete error:" << QueryDeleteData.lastError();
+
+        QSqlDatabase::database().rollback();
+
+    }
+
+
+    QSqlDatabase::database().close();
+
+
+    // Clear input fields
+
+    foreach (QLineEdit *widget, this->findChildren<QLineEdit*>()) {
+
+        widget->clear();
+
+    }
+
+
+    // Refresh the supplier table
+
+    on_btn_View_Supplier_clicked();
 }
 
 
