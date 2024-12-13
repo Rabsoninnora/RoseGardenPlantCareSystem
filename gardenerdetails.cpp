@@ -114,3 +114,9 @@ void GardenerDetails::on_btn_Delete_Employee_clicked()
     foreach(QLineEdit *widget,this->findChildren<QLineEdit*>()){widget->clear();}
 }
 
+
+void GardenerDetails::on_btn_back_clicked()
+{
+    this->close();
+}
+

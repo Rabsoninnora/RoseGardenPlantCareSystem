@@ -27,6 +27,8 @@ private slots:
 
     void on_btn_Delete_Employee_clicked();
 
+    void on_btn_back_clicked();
+
 private:
     Ui::GardenerDetails *ui;
     //QSqlDatabase object to be used in the gardenerdetails.cpp file
