@@ -4,6 +4,7 @@
 #include<QLineEdit>
 #include<QSqlQuery>
 #include "mydb.h"
+#include <QCryptographicHash>
 UserLogin::UserLogin(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::UserLogin)
@@ -23,7 +24,11 @@ void UserLogin::on_pushButton_login_clicked()
     QString username = ui->lineEdit_username->text();
     QString password = ui->lineEdit_password->text();
 
-    if(username== "innora" && password == "659489") //Default developer login
+    // Hashing the password using SHA-256
+
+    QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
+
+    if(username == "innora" && hashedPassword == "659489") //Default developer login
     {
 
 
@@ -38,16 +43,26 @@ void UserLogin::on_pushButton_login_clicked()
     else
     {
 
-        QSqlQuery GetUser( MyDB::getInstance()->getDBInstance());
-        GetUser.prepare(" SELECT * FROM User_login WHERE username='" + username +"' AND password='" + password +"' ");
-        if(GetUser.exec())
+        QSqlQuery GetUser (MyDB::getInstance()->getDBInstance());
+
+        GetUser.prepare("SELECT * FROM User_login WHERE username = :username AND password = :password");
+
+        GetUser.bindValue(":username", username);
+
+        GetUser.bindValue(":password", hashedPassword); // Use the hashed password
+
+
+        if (GetUser.exec())
+
         {
+
             int UserFindCount = 0;
-            while(GetUser.next())
+
+            while (GetUser.next())
             {
                 UserFindCount = UserFindCount + 1; // If username and password is correct
             }
-            if(UserFindCount == 1)//If username and password is correct
+            if(UserFindCount == 1)  // If username and password is correct
             {
 
 
