@@ -4,7 +4,7 @@
 #include<QLineEdit>
 #include<QSqlQuery>
 #include "mydb.h"
-
+#include <QCryptographicHash>
 AdminLogin::AdminLogin(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::AdminLogin)
@@ -26,8 +26,9 @@ void AdminLogin::on_btn_Admin_login_clicked()
     QString username = ui->lineEdit_username_2->text();
 
     QString password = ui->lineEdit_password_2->text();
+    QByteArray hashedPassword = QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256).toHex();
 
-    if(username== "innora" && password == "659489") //Default developer login
+    if(username == "innora" && hashedPassword == "659489") //Default developer login
     {
 
 
@@ -44,7 +45,12 @@ void AdminLogin::on_btn_Admin_login_clicked()
     {
 
         QSqlQuery GetUser( MyDB::getInstance()->getDBInstance());
-        GetUser.prepare(" SELECT * FROM User_login WHERE username='" + username +"' AND password='" + password +"' ");
+        GetUser.prepare("SELECT * FROM Admin_login WHERE username = :username AND password = :password");
+
+        GetUser.bindValue(":username", username);
+
+        GetUser.bindValue(":password", hashedPassword); // Use the hashed password
+
         if(GetUser.exec())
         {
             int UserFindCount = 0;
